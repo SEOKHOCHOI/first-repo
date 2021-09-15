@@ -94,6 +94,42 @@ SELECT TO_CHAR(TO_DATE('15:14:30', 'hh24:mi:ss'), 'am hh:mi:ss') FROM DUAL;
 SELECT TO_DATE(20210914, 'yyyymmdd') FROM DUAL;
 SELECT TO_DATE(210914, 'yymmdd') FROM DUAL;
 
+-- RR : 2 자리 년도의 변환에 사용하는 포멧
+--      00 ~ 49 -> 2000 ~ 2049 년도로 인식
+--      50 ~ 99 -> 1950 ~ 1999 년도로 인식
+
+
+SELECT TO_NUMBER('10,000', '999,999') FROM DUAL;
+SELECT TO_NUMBER('$10,000', 'L999,999') FROM DUAL; -- 로케일 설정이 필요함
+SELECT TO_NUMBER('￦10,000', 'L999,999') FROM DUAL; -- 로케일 설정이 필요함
+SELECT TO_NUMBER('FF', 'XX') FROM DUAL; -- 16진수 변환
+SELECT TO_NUMBER('12AC4F', 'XXXXXX') FROM DUAL; -- 16진수 변환
+
+
+SELECT NVL(NULL, '없음'), NVL('Hello', '없음') FROM DUAL;
+SELECT DEPARTMENT_ID, NVL(DEPARTMENT_ID, 0) FROM EMPLOYEES WHERE DEPARTMENT_ID IS NULL;
+
+SELECT NVL2(NULL, '있음', '없음'), NVL2('Hello', '있음', '없음') FROM DUAL;
+SELECT DEPARTMENT_ID, NVL2(DEPARTMENT_ID, '부서있음', '부서없음') FROM EMPLOYEES;
+
+
+SELECT DECODE('A', 'A', 65, 'B', 66, 'C', 67, 0) AS COL1
+     , DECODE('B', 'A', 65, 'B', 66, 'C', 67, 0) AS COL2
+     , DECODE('C', 'A', 65, 'B', 66, 'C', 67, 0) AS COL3
+     , DECODE('D', 'A', 65, 'B', 66, 'C', 67, 0) AS COL4
+  FROM DUAL;
+
+SELECT REGION_ID
+     , DECODE(REGION_ID, 1, '유럽', 2, '아메리카', 3, '아시아', 4, '중앙아시아', '아프리카')
+  FROM REGIONS;
+
+SELECT SALARY
+     , CASE WHEN SALARY <= 3000 THEN '낮은급여'
+            WHEN SALARY <= 8000 THEN '중간급여'
+            ELSE '높은급여'
+        END
+  FROM EMPLOYEES;
+
 
 
 
@@ -103,7 +139,10 @@ SELECT * FROM NLS_SESSION_PARAMETERS;
 -- SESSION 으로 설정(로그아웃하면 다시 기본설정으로 돌아옴)
 ALTER SESSION SET NLS_TERRITORY = KOREA; -- 영역설정
 ALTER SESSION SET NLS_LANGUAGE = KOREAN; -- 언어설정
+ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD HH24:MI:SS'; -- 기본 출력 포멧 설정
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD-MON-RR';
 
+SELECT CURRENT_DATE FROM DUAL;
 
 -- 타임존 설정
 -- SYSDATE : 시스템의 날짜정보를 가져오기 때문에 시스템 자체 타임존을 변경하지 않는 이상.
