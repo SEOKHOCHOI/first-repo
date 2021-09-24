@@ -1,0 +1,157 @@
+SELECT EMPLOYEE_ID
+     , FIRST_NAME || ' ' || LAST_NAME
+     , SALARY
+  FROM EMPLOYEES
+ ORDER BY SALARY;
+
+SELECT ROWNUM   -- 급여가 가장 낮은 5명 조회를 하고 싶지만 결과가 틀림
+     , EMPLOYEE_ID
+     , FIRST_NAME || ' ' || LAST_NAME
+     , SALARY
+  FROM EMPLOYEES
+ WHERE ROWNUM <= 5
+ ORDER BY SALARY;
+
+SELECT EMPLOYEE_ID
+     , FIRST_NAME || ' ' || LAST_NAME
+     , SALARY
+  FROM (SELECT * FROM EMPLOYEES ORDER BY SALARY)
+ WHERE ROWNUM <= 5;
+
+
+SELECT EMPLOYEE_ID
+     , FIRST_NAME || ' ' || LAST_NAME
+     , SALARY
+     , RANK() OVER (ORDER BY SALARY DESC) AS 순위
+  FROM EMPLOYEES;
+
+WITH SALARY_RANK AS (
+SELECT EMPLOYEE_ID
+     , FIRST_NAME || ' ' || LAST_NAME
+     , SALARY
+     , DENSE_RANK() OVER (ORDER BY SALARY DESC) AS 순위
+  FROM EMPLOYEES
+)
+SELECT * FROM SALARY_RANK WHERE 순위 <= 3;
+
+
+-- 모든 사원의 부서명과 직무명이 코드가 아닌 이름(명칭)으로 조회되도록 한다.
+SELECT EMPLOYEE_ID
+     , FIRST_NAME
+     , LAST_NAME
+     , DEPARTMENT_ID
+     , (SELECT DEPARTMENT_NAME FROM DEPARTMENTS B WHERE B.DEPARTMENT_ID = A.DEPARTMENT_ID) AS 부서명
+     , (SELECT JOB_TITLE FROM JOBS C WHERE C.JOB_ID = A.JOB_ID) AS 직무명
+  FROM EMPLOYEES A;
+
+-- 모든 부서의 소재지를 조회하도록 한다.
+SELECT DEPARTMENT_NAME
+     , (SELECT STATE_PROVINCE || ' ' || CITY || ' ' || STREET_ADDRESS
+          FROM LOCATIONS B WHERE B.LOCATION_ID = A.LOCATION_ID) AS 소재지
+  FROM DEPARTMENTS A;
+
+-- 모든 사원의 급여가 직무에 정해진 범위에 맞게 받고 있는지 조회하도록 한다.
+SELECT A.EMPLOYEE_ID
+     , A.FIRST_NAME
+     , A.LAST_NAME
+     , A.SALARY
+     , DECODE((SELECT COUNT(*) FROM JOBS B
+         WHERE B.JOB_ID = A.JOB_ID
+           AND A.SALARY BETWEEN B.MIN_SALARY AND B.MAX_SALARY), 1, '적합', '비적합') AS "적합/비적합 급여"
+  FROM EMPLOYEES A;
+
+-- 부서의 매니저(관리자)로 지정된 사원이 누구인지 알 수 있도록 조회한다.
+SELECT DEPARTMENT_NAME
+     , (SELECT FIRST_NAME || ' ' || LAST_NAME FROM EMPLOYEES B WHERE A.MANAGER_ID = B.EMPLOYEE_ID)
+  FROM DEPARTMENTS A;
+
+SELECT DEPARTMENT_ID
+     , FIRST_NAME || ' ' || LAST_NAME
+  FROM EMPLOYEES
+ WHERE EMPLOYEE_ID IN (SELECT MANAGER_ID FROM DEPARTMENTS WHERE MANAGER_ID IS NOT NULL);
+
+-- 개별 사원의 담당 매니저가 누구인지 알 수 있도록 조회한다.
+SELECT EMPLOYEE_ID
+     , FIRST_NAME || ' ' || LAST_NAME
+     , MANAGER_ID
+     , (SELECT B.FIRST_NAME || ' ' || B.LAST_NAME FROM EMPLOYEES B WHERE B.EMPLOYEE_ID = A.MANAGER_ID)
+  FROM EMPLOYEES A;
+
+CREATE TABLE 대륙별인원현황 AS
+    SELECT D.COUNTRY_NAME
+         , COUNT(*) AS 인원수
+      FROM EMPLOYEES A JOIN DEPARTMENTS B
+        ON A.DEPARTMENT_ID = B.DEPARTMENT_ID
+      JOIN LOCATIONS C
+        ON B.LOCATION_ID = C.LOCATION_ID
+      JOIN COUNTRIES D
+        ON C.COUNTRY_ID = D.COUNTRY_ID
+     GROUP BY D.COUNTRY_NAME;
+
+DELETE FROM 대륙별인원현황;
+
+INSERT INTO 대륙별인원현황(
+    SELECT D.COUNTRY_NAME
+         , COUNT(*) AS 인원수
+      FROM EMPLOYEES A JOIN DEPARTMENTS B
+        ON A.DEPARTMENT_ID = B.DEPARTMENT_ID
+      JOIN LOCATIONS C
+        ON B.LOCATION_ID = C.LOCATION_ID
+      JOIN COUNTRIES D
+        ON C.COUNTRY_ID = D.COUNTRY_ID
+     GROUP BY D.COUNTRY_NAME
+);
+
+SELECT * FROM 대륙별인원현황;
+DESC 대륙별인원형황;
+
+SELECT * FROM EMPLOYEES WHERE COMMISSION_PCT IS NULL;
+SELECT * FROM EMPLOYEES WHERE COMMISSION_PCT IS NOT NULL;
+
+/*
+    커미션이 있는 사원용 테이블, 커미션이 없는 사원용 테이블을 만들어서 각각의 테이블에
+    사원번호, 이름, 급여, 커미션퍼센트 정보가 저장될 수 있게 한다.
+    단, 커미션이 없는 사원용 테이블에는 커미션퍼센트 컬럼을 만들지 않는다.
+*/
+CREATE TABLE 커미션이있는사원 AS (
+    SELECT EMPLOYEE_ID AS 사원번호
+         , FIRST_NAME || ' ' || LAST_NAME AS 이름
+         , SALARY AS 급여
+         , COMMISSION_PCT AS 커미션퍼센트
+      FROM EMPLOYEES
+     WHERE 1 = 0
+);
+
+CREATE TABLE 커미션이없는사원 AS (
+    SELECT EMPLOYEE_ID AS 사원번호
+         , FIRST_NAME || ' ' || LAST_NAME AS 이름
+         , SALARY AS 급여
+      FROM EMPLOYEES
+     WHERE 1 = 0
+);
+
+INSERT ALL
+  INTO 커미션이있는사원 VALUES(사원번호, 이름, 급여, 커미션퍼센트)
+  INTO 커미션이없는사원 VALUES(사원번호, 이름, 급여)
+SELECT EMPLOYEE_ID AS 사원번호
+     , FIRST_NAME || ' ' || LAST_NAME AS 이름
+     , SALARY AS 급여
+     , COMMISSION_PCT AS 커미션퍼센트
+  FROM EMPLOYEES;
+
+
+INSERT ALL
+  WHEN 커미션퍼센트 IS NOT NULL THEN
+      INTO 커미션이있는사원 VALUES(사원번호, 이름, 급여, 커미션퍼센트)
+  WHEN 커미션퍼센트 IS NULL THEN
+      INTO 커미션이없는사원 VALUES(사원번호, 이름, 급여)
+SELECT EMPLOYEE_ID AS 사원번호
+     , FIRST_NAME || ' ' || LAST_NAME AS 이름
+     , SALARY AS 급여
+     , COMMISSION_PCT AS 커미션퍼센트
+  FROM EMPLOYEES;
+
+SELECT * FROM 커미션이있는사원;
+SELECT * FROM 커미션이없는사원;
+DELETE FROM 커미션이있는사원;
+DELETE FROM 커미션이없는사원;
