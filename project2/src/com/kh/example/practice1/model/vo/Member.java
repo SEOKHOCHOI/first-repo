@@ -1,7 +1,6 @@
 package com.kh.example.practice1.model.vo;
 
 public class Member {
-
 	private String memberId;
 	private String memberPwd;
 	private String memberName;
@@ -11,7 +10,7 @@ public class Member {
 	private String email;
 	
 	public Member() {}
-
+	
 	public void changeName(String name) {
 		this.memberName = name;
 	}
@@ -20,3 +19,4 @@ public class Member {
 		System.out.println(this.memberName);
 	}
 }
+

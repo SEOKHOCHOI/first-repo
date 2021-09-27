@@ -6,7 +6,7 @@ public class Run {
 
 	public static void main(String[] args) {
 		Member m = new Member();
-		m.changeName("홍길동");//Member쪽 메서드에 전달됨 홍길동이.
+		m.changeName("박의수");
 		m.printName();
 	}
 
