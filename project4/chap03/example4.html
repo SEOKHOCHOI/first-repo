@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+    <link type="text/css" rel="stylesheet" href="/static/css/ch03_4.css">
+</head>
+<body>
+    <h1 class="pos-5">포지셔닝 관련 속성들</h1>
+    <h2>박스 모델 설정</h2>
+    <div>
+        <div class="box-1">
+            width, height 영역의 구성을 변경하는 속성<br>
+            기본 설정 : 너비와 높이는 컨텐츠 영역의 크기로 설정된다.
+        </div>
+        <div class="box-2">
+            width, height 영역의 구성을 변경하는 속성<br>
+            box-sizing : 너비와 높이의 설정 영역을 변경하는 속성
+        </div>
+    </div>
+    <h2>포지션 설정</h2>
+    <div>
+        요소의 배치를 설정하기 위해 사용하는 속성
+        <div class="pos-1">
+            static 속성값 : 기본값으로 요소를 문서의 기존 흐름에 맞추어 배치하는 속성값
+        </div>
+        <div class="pos-2">
+            relative 속성값 : static 처럼 문서의 기존 흐름에 맞추어 배치하면서 자신을 기준으로 요소의 배치를 구성할 수 있게 하는 속성값(top, left, right, bottom 속성 사용가능)
+        </div>
+        <div class="pos-3">
+            absolute 속성값 : 문서의 기존 흐름을 사용하지 않고 페이지 레이아웃에 대한 공간도 배정하지 않는다. 대신 가장 가까운 위치 지정 조상 요소에 대해 상대적으로 배치한다. 조상 중 위치 지정 요소가 없으면 초기 컨테이너 블록(body)를 기준으로 삼는다.
+            (top, left, right, bottom 속성 사용가능)
+        </div>
+        <div class="pos-4">
+            fixed 속성값 : 문서의 기존 흐름을 사용하지 않음, 페이지 레이아웃에 공간도 배정하지 않음, 뷰 포트(브라우저 화면)를 기준으로 삼음
+            (top, left, right, bottom 속성 사용가능)
+        </div>
+    </div>
+    <div>
+        <table border="1">
+            <colgroup>
+                <col>
+                <col class="cell-hidden">
+                <col>
+            </colgroup>
+            <tr>
+                <td>1111</td>
+                <td class="cell-hidden">2222</td>
+                <td>3333</td>
+            </tr>
+            <tr class="cell-hidden">
+                <td>1111</td>
+                <td>2222</td>
+                <td>3333</td>
+            </tr>
+            <tr>
+                <td>4444</td>
+                <td>5555</td>
+                <td>6666</td>
+            </tr>
+        </table>
+    </div>
+    <div class="pos-2">
+        요소를 배치할 때 3차원 좌표상에서 배치가 가능하도록
+        만들어 주는 설정
+        <div class="z-idx1"></div>
+        <div class="z-idx2"></div>
+        <div class="z-idx3"></div>
+    </div>
+    <div style="margin-top: 200px; width: 150px;">
+        <div class="flt-1"></div>
+        float 속성은 페이지 내 요소 배치의 기존 흐름을 빠져나와
+        요소의 위치를 왼쪽 또는 오른쪽으로 배치하기 위해 사용하는 속성
+    </div>
+    <div class="lay-1">
+        <div class="header"></div>
+        <div class="main">
+            <div class="flt-3"></div>
+            <div class="flt-4"></div>
+        </div>
+        <div class="footer"></div>
+    </div>
+    <h2>다단 스타일</h2>
+    <div class="column-1">
+        <h2 class="column-2">Lorem ipsum dolor</h2>
+        sit amet, consectetuer
+        adipiscing elit, sed diam nonummy nibh euismod
+        tincidunt ut laoreet dolore magna aliquam erat
+        volutpat. Ut wisi enim ad minim veniam, quis
+        nostrud exerci tation ullamcorper suscipit
+        lobortis nisl ut aliquip ex ea commodo consequat.
+        Duis autem vel eum iriure dolor in hendrerit in
+        vulputate velit esse molestie consequat, vel
+        illum dolore eu feugiat nulla facilisis at
+        vero eros et accumsan et iusto odio dignissim
+        qui blandit praesent luptatum zzril delenit
+        augue duis dolore te feugait nulla facilisi.
+        Nam liber tempor cum soluta nobis eleifend
+        option congue nihil imperdiet doming id quod
+        mazim placerat facer possim assum. Typi non
+        habent claritatem insitam; est usus legentis
+        in iis qui facit eorum claritatem.
+        Investigationes demonstraverunt lectores
+        legere me lius quod ii legunt saepius.
+    </div>
+    <h2>테이블 스타일</h2>
+    <table class="tbl-1">
+        <colgroup>
+            <col class="cell-100">
+            <col>
+            <col>
+        </colgroup>
+        <caption style="text-align: left;">표 제목</caption>
+        <tr>
+            <td>11111111111111</td>
+            <td></td>
+            <td>3333</td>
+        </tr>
+        <tr>
+            <td>1111</td>
+            <td>2222</td>
+            <td>3333</td>
+        </tr>
+        <tr>
+            <td>1111</td>
+            <td></td>
+            <td>3333</td>
+        </tr>
+    </table>
+</body>
+</html>

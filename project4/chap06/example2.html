@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>로또번호 생성</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0; padding: 0;
+        }
+        .lotto-area {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 16px auto;
+            padding: 32px 16px;
+            width: 580px;
+            background-color: gainsboro;
+            border-radius: 16px;
+        }
+
+        .lotto-num {
+            font-size: 36px;
+            font-weight: bold;
+            display: inline-block;
+            width: 80px;
+            padding: 16px;
+            background-color: gainsboro;
+            border-radius: 50%;
+            text-align: center;
+            color: gainsboro;
+        }
+
+        .lotto-input {
+            margin: 16px auto;
+            width: 580px;
+        }
+
+        .lotto-input input {
+            font-size: 24px;
+            font-weight: bold;
+            width: 100%;
+            padding: 16px;
+            border-radius: 16px;
+            border-style: none;
+            outline: 1px solid rgb(211, 211, 211);
+            background-color: white;
+        }
+
+        .lotto-input input:active {
+            box-shadow: 0 0 4px 1px rgb(211, 211, 211);
+        }
+
+        .lotto-input input:focus {
+            box-shadow: 0 0 4px 1px rgb(211, 211, 211);
+        }
+
+        .lotto-button {
+            margin: 16px auto;
+            width: 580px;
+        }
+
+        .lotto-button button {
+            font-size: 24px;
+            font-weight: bold;
+            width: 100%;
+            padding: 16px;
+            border-radius: 16px;
+            border-style: none;
+            background-color: limegreen;
+            color: white;
+        }
+
+        .lotto-button button:hover {
+            box-shadow: 0 0 6px 2px rgb(47, 194, 47);
+        }
+
+        .lotto-button button:active {
+            box-shadow: 2px 2px 6px 2px rgb(47, 194, 47);
+        }
+        .bg-1 {
+            background-color: goldenrod;
+            color: white;
+        }
+        .bg-2 {
+            background-color: dodgerblue;
+            color: white;
+        }
+        .bg-3 {
+            background-color: crimson;
+            color: white;
+        }
+        .bg-4 {
+            background-color: yellowgreen;
+            color: white;
+        }
+        .bg-5 {
+            background-color: lightsteelblue;
+            color: white;
+        }
+
+        .create-info {
+            margin: 16px auto;
+            width: 580px;
+        }
+
+        .info {
+            color: gray;
+            font-size: 20px;
+        }
+    </style>
+    <script type="text/javascript" src="/static/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/static/js/ch06_2.js"></script>
+</head>
+<body>
+    <div id="lotto_number" class="lotto-area"></div>
+    <div class="lotto-button">
+        <button id="create_btn" type="button" onclick="genLotto();">생 성</button>
+    </div>
+</body>
+</html>

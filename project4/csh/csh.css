@@ -1,0 +1,49 @@
+form{
+    background-color: rgb(237, 237, 237);
+}
+body{
+    background-color: rgb(222, 235, 247);
+    width: 480px;
+    margin: 36px auto;
+    padding-top: 48px;
+    padding: 16px;
+}
+input{
+    background-color: rgb(237, 237, 237);
+    border-style: none;
+    border-bottom: 2px dashed black;
+    width: 338px;
+}
+
+.warning{
+    width: 330px;
+    margin-left: 0;
+    color: gray;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.hidden{
+    display: none;
+}
+
+label{
+    margin: 8px;
+    display: inline-block;
+    width: 110px;
+    font-weight: bold;
+}
+
+.half-input{
+    width: 153px;
+}
+
+button{
+    border-style: none;
+    width: 100%;
+    margin-top: 32px;
+    padding: 14px;
+    font-weight: bold;
+    background-color: rgb(197, 224, 180);
+    color: rgb(65, 96, 45);
+}

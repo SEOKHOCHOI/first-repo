@@ -1,0 +1,185 @@
+div {
+    margin-top: 12px;
+}
+
+.box-1 {
+    background-color: beige;
+    width: 200px;
+    height: 200px;
+    padding: 24px;
+    box-sizing: content-box;
+}
+
+.box-2 {
+    background-color: bisque;
+    width: 200px;
+    height: 200px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.pos-1 {
+    width: 200px;
+    background-color: cadetblue;
+    padding: 12px;
+    position: static;
+}
+
+.pos-2 {
+    width: 200px;
+    background-color: chocolate;
+    padding: 12px;
+    position: relative;
+    top: 0;
+    left: 48px;
+}
+
+.pos-3 {
+    width: 200px;
+    background-color: coral;
+    padding: 12px;
+    position: absolute;
+    left: 48px;
+    visibility: none;
+}
+
+.pos-4 {
+    width: 200px;
+    background-color: cornflowerblue;
+    padding: 12px;
+    position: fixed;
+    top: 72px;
+    right: 12px;
+}
+
+.pos-5 {
+    position: sticky;
+    top: 0;
+}
+
+table {
+    width: 150px;
+    position: relative;
+    border-collapse: collapse;
+    z-index: 1;
+    background-color: cornsilk;
+}
+
+.cell-hidden {
+    visibility: collapse;
+}
+
+.z-idx1 {
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.z-idx2 {
+    z-index: 2;
+    width: 150px;
+    height: 150px;
+    background-color: lightcoral;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.z-idx3 {
+    z-index: 3;
+    width: 150px;
+    height: 150px;
+    background-color: lightgoldenrodyellow;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+.flt-1 {
+    width: 50px;
+    height: 50px;
+    background-color: lightsalmon;
+    float: left;
+}
+
+.lay-1 {
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    background-color: linen;
+}
+
+.header {
+    height: 100px;
+    margin: 0;
+    background-color: lightseagreen;
+}
+
+.main {
+    background-color: azure;
+    margin: 0;
+    height: 250px;
+}
+
+.flt-3 {
+    width: 150px;
+    height: inherit;
+    margin: 0;
+    background-color:lightsteelblue;
+    float: left;
+}
+.flt-4 {
+    width: calc(100% - 150px);
+    height: inherit;
+    margin: 0;
+    float: right;
+    background-color:limegreen;
+}
+
+.footer {
+    height: 50px;
+    margin: 0;
+    background-color: lightskyblue;
+}
+
+.column-1 {
+    /* 한 단의 너비 */
+    /* column-width: 150px; */
+    column-count: 3;
+    column-gap: 12px;
+    /* column-rule-color: red;
+    column-rule-style: solid;
+    column-rule-width: 1px; */
+    column-rule: 1px solid red;
+    text-align: justify;
+}
+
+.column-2 {
+    column-span: all;
+}
+
+.tbl-1 {
+    caption-side: bottom;
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: separate;
+    border-spacing: 10px;
+    empty-cells: hide;
+    table-layout: fixed;
+}
+
+.tbl-1 td {
+    padding: 8px;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: center;
+    word-break: break-all;
+}
+
+.cell-100 {
+    width: 100px;
+}

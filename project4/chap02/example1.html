@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>사용자 입력 폼</title>
+</head>
+<body>
+    <h1>GET 방식을 사용하여 서버에 전송하는 폼</h1>
+    <p>URL 주소에서 ? 기호 이후에 나오는 정보가 서버에 전송하는 데이터이다.
+        여러 데이터를 보낼 때에는 & 기호를 사용하여 구분을 한다.</p>
+    <form action="" method="GET">
+        <input type="text" name="v1">
+        <input type="text" name="v2">
+        <button type="submit">GET 전송</button>
+    </form>
+
+    <h1>POST 방식을 사용하여 서버에 전송하는 폼</h1>
+    <form action="" method="POST">
+        <input type="text" name="v3">
+        <button type="submit">POST 전송</button>
+    </form>
+
+    <hr>
+
+    <h1>fieldset, legend 태그</h1>
+    <form action="" method="GET">
+        <fieldset>
+            <legend>서버에 전송할 데이터</legend>
+            <input type="text" name="v4">
+            <input type="text" name="v5">
+            <button type="submit">전송</button>
+        </fieldset>
+    </form>
+
+    <fieldset disabled>
+        <legend>서버에 전송할 데이터</legend>
+        <input form="f1" type="text" name="v6">
+        <input form="f1" type="text" name="v7">
+    </fieldset>
+
+    <form id="f1" action="" method="GET">
+        <button type="submit">전송</button>
+    </form>
+
+    <h1>input 태그</h1>
+    <form action="" method="GET">
+        <div>
+            <h2>type="text"</h2>
+            <input type="text"
+                name="태그식별용이름/(중복가능),서버에전송하는데이터를식별하기위한변수명"
+                id="태그식별ID(유일해야함)1"
+                placeholder="입력힌트제공"
+                value="초기입력값"
+                size="40"
+                maxlength="10"
+                minlength="2"
+                required>
+        </div>
+        <div>
+            <h2>type="password"</h2>
+            <input type="password"
+                name="태그식별용이름/(중복가능),서버에전송하는데이터를식별하기위한변수명"
+                id="태그식별ID(유일해야함)2"
+                placeholder="입력힌트제공"
+                value="초기입력값"
+                size="10"
+                maxlength="10"
+                minlength="2"
+                required disabled>
+        </div>
+        <div>
+            <h2>type="hidden"</h2>
+            <input type="hidden"
+                name="태그식별용이름/(중복가능),서버에전송하는데이터를식별하기위한변수명"
+                id="태그식별ID(유일해야함)3"
+                placeholder="입력힌트제공"
+                value="초기입력값"
+                size="10"
+                maxlength="10"
+                minlength="2"
+                required readonly>
+        </div>
+        <div>
+            <h2>type="number"</h2>
+            <input type="number"
+                name="num1" id="id_num1" placeholder="숫자입력" value="1"
+                max="10" min="0" step="1.0">
+        </div>
+        <div>
+            <h2>type="checkbox"</h2>
+            <input type="checkbox" id="id_check1" name="chk1" value="c1"><label for="id_check1">선택1-1</label>
+            <input type="checkbox" id="id_check2" name="chk1" value="c2" checked><label for="id_check2">선택1-2</label>
+            <input type="checkbox" id="id_check3" name="chk1" value="c3"><label for="id_check3">선택1-3</label>
+            <br>
+            <input type="checkbox" id="id_check4" name="chk2" value="c4"><label for="id_check4">선택2-1</label>
+            <input type="checkbox" id="id_check5" name="chk2" value="c5"><label for="id_check5">선택2-2</label>
+            <input type="checkbox" id="id_check6" name="chk2" value="c6"><label for="id_check6">선택2-3</label>
+        </div>
+        <div>
+            <h2>type="radio"</h2>
+            <input type="radio" id="id_radio1" name="rdo1" value="r1"><label for="id_radio1">선택1-1</label>
+            <input type="radio" id="id_radio2" name="rdo1" value="r2"><label for="id_radio2">선택1-2</label>
+            <input type="radio" id="id_radio3" name="rdo1" value="r3" checked><label for="id_radio3">선택1-3</label>
+            <br>
+            <input type="radio" id="id_radio4" name="rdo2" value="r4"><label for="id_radio4">선택2-1</label>
+            <input type="radio" id="id_radio5" name="rdo2" value="r5"><label for="id_radio5">선택2-2</label>
+            <input type="radio" id="id_radio6" name="rdo2" value="r6"><label for="id_radio6">선택2-3</label>
+        </div>
+        <div>
+            <h2>type="file"</h2>
+            <!-- capture 속성은 안드로이드, IOS 앱에서만 동작 -->
+            <input type="file" name="f1" id="id_file1" accept="image/*" capture multiple>
+        </div>
+        <div>
+            <h2>type="image"</h2>
+            <input type="image" src="/static/img/googlelogo.png" alt="구글로고" width="100">
+        </div>
+        <div>
+            <h2>type="button", type="submit", type="reset"</h2>
+            <input type="button" value="버튼">
+            <input type="submit" value="전송">
+            <input type="reset" value="초기화">
+        </div>
+        <div>
+            <h2>type="date", type="datetime-local", type="time", type="month", type="week"</h2>
+            <input type="date" value="2021-10-15" min="2021-01-01" max="2021-12-31" step="1">
+            <input type="datetime-local" value="2021-10-15T19:50:30">
+            <input type="time" value="19:50:30">
+            <input type="month" value="2021-10">
+            <input type="week" value="2021-W42">
+        </div>
+        <div>
+            <h2>type="range"</h2>
+            <input type="range" min="0" max="100" step="5" oninput="res1.value = this.value;">
+            <input type="range" min="0" max="50" step="10" list="id_datalist1" oninput="res1.value = this.value;">
+            <input type="text" id="res1" readonly>
+            <datalist id="id_datalist1">
+                <option value="0"></option>
+                <option value="10"></option>
+                <option value="20"></option>
+                <option value="30"></option>
+                <option value="40"></option>
+                <option value="50"></option>
+            </datalist>
+        </div>
+        <div>
+            <h2>type="search", type="url", type="email", type="tel"</h2>
+            <input type="search">
+            <input type="url" pattern="https://.*">
+            <input type="email" pattern=".*@.*(com|co.kr|net)">
+            <input type="tel" pattern="010-[0-9]{4}-[0-9]{4}">
+        </div>
+        <div>
+            <h2>type="color"</h2>
+            <input type="color" oninput="res2.value = this.value;res2.style='color:'+this.value">
+            <input type="text" id="res2" readonly>
+        </div>
+        <div>
+            <h2>datalist 태그</h2>
+            <input type="text" list="id_datalist2">
+            <datalist id="id_datalist2">
+                <option value="추천 값1"></option>
+                <option value="추천 값2"></option>
+                <option value="추천 값3"></option>
+            </datalist>
+            <br>
+            <input type="color" list="id_datalist3">
+            <datalist id="id_datalist3">
+                <option value="#ff0000"></option>
+                <option value="#00ff00"></option>
+                <option value="#0000ff"></option>
+            </datalist>
+            <br>
+            <input type="number" list="id_datalist4">
+            <datalist id="id_datalist4">
+                <option value="0"></option>
+                <option value="-1"></option>
+                <option value="1"></option>
+            </datalist>
+        </div>
+        <div>
+            <h2>progress 태그</h2>
+            <progress value="50" max="100" id="id_progtress"></progress>
+            <input type="range" oninput="id_progtress.value = this.value;">
+        </div>
+        <div>
+            <h2>meter 태그</h2>
+            <meter value="50" min="0" low="25" high="75" max="100" optimum="10" id="id_meter"></meter>
+            <input type="range" oninput="id_meter.value = this.value; id_mv.value = this.value">
+            <input type="text" id="id_mv">
+            <br>
+            <meter value="50" min="0" low="25" high="75" max="100" optimum="90" id="id_meter2"></meter>
+            <input type="range" oninput="id_meter2.value = this.value; id_mv2.value = this.value">
+            <input type="text" id="id_mv2">
+        </div>
+        <div>
+            <h2>select 태그</h2>
+            <select>
+                <option value="전송값1">출력값1</option>
+                <option value="전송값2">출력값2</option>
+                <option value="전송값3">출력값3</option>
+                <option value="전송값4">출력값4</option>
+            </select>
+
+            <select size="2">
+                <option value="전송값1">출력값1</option>
+                <option value="전송값2">출력값2</option>
+                <option value="전송값3" selected>출력값3</option>
+                <option value="전송값4">출력값4</option>
+            </select>
+
+            <select size="3" multiple>
+                <option value="전송값1">출력값1</option>
+                <option value="전송값2">출력값2</option>
+                <option value="전송값3">출력값3</option>
+                <option value="전송값4">출력값4</option>
+            </select>
+
+            <select>
+                <optgroup label="그룹1">
+                    <option value="전송값1">출력값1</option>
+                    <option value="전송값2" selected>출력값2</option>
+                </optgroup>
+                <optgroup label="그룹2">
+                    <option value="전송값3">출력값3</option>
+                    <option value="전송값4">출력값4</option>
+                </optgroup>
+            </select>
+        </div>
+        <div>
+            <h2>textarea 태그</h2>
+            <textarea id="" cols="60" rows="5" style="resize:none;"
+                maxlength="50" placeholder="댓글작성..." oninput="id_textarea.value = this.value.length + '/50'"></textarea>
+            <input type="text" id="id_textarea">
+        </div>
+        <div>
+            <button type="submit">전송</button>
+        </div>
+    </form>
+</body>
+</html>

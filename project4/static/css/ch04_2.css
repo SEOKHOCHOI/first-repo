@@ -1,0 +1,116 @@
+body {
+    background-color: rgb(250, 250, 250);
+}
+
+form {
+    width: 480px;
+    margin: 0 auto;
+}
+
+.single-input {
+    margin-bottom: 1em;
+}
+
+.single-input label {
+    display: inline-block;
+    padding: 0.5em 0;
+    font-weight: bold;
+}
+
+label small {
+    color: rgb(190, 190, 190);
+}
+
+.single-input .input-form {
+    border: 1px solid black;
+    padding: 1em;
+    background-color: white;
+}
+
+.single-input .input-form input[type=text] {
+    border-style: none;
+}
+
+input[type=text]:focus {
+    outline-style: none;
+}
+
+.single-input .input-form input[type=password] {
+    border-style: none;
+}
+
+input[type=password]:focus {
+    outline-style: none;
+}
+
+.single-input .input-form select {
+    border-style: none;
+    width: 100%;
+}
+
+.single-input .input-form .placeholder {
+    float: right;
+    color: rgb(177, 177, 177);
+}
+
+.multi-input {
+    margin-bottom: 1em;
+}
+
+.multi-input label {
+    display: inline-block;
+    padding: 0.5em 0;
+    font-weight: bold;
+}
+
+.multi-input .input-form input {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 1em;
+    width: 32%;
+}
+
+.multi-input .input-form select {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 1em;
+    width: 32%;
+}
+
+.multi-input .input-block-form input {
+    display: block;
+    box-sizing: border-box;
+    padding: 1em;
+    width: 100%;
+}
+
+.multi-input .input-block-form select {
+    display: block;
+    box-sizing: border-box;
+    padding: 1em;
+    width: 100%;
+}
+
+.multi-input .input-inline input {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 69%;
+}
+
+.multi-input .input-inline button {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 1em;
+    width: 29%;
+}
+
+button {
+    background-color: rgb(62, 199, 62);
+    border-style: none;
+    color: white;
+}
+
+.btn-block {
+    width: 100%;
+    padding: 1em;
+}

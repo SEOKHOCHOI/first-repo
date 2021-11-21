@@ -1,0 +1,221 @@
+* {
+    color: gray;
+}
+
+h1,h2,h3,h4 {
+    text-decoration: underline;
+}
+
+.color-red {
+    color: red;
+}
+
+.color-blue {
+    color: blue;
+}
+
+.color-green {
+    color: green;
+}
+
+#double-line {
+    /* 
+        아이디 선택자는 동일한 ID가 있어도 스타일 적용에는 문제 없지만.
+        id 속성 자체가 HTML 문서에서 유일한 값을 가지는 속성으로 기대를 하기 때문에
+        다른 곳에서는 문제가 발생할 수 있다.
+    */
+    text-decoration-style: double;
+}
+
+[type] {
+    background-color: gray;
+}
+
+[type=text] {
+    color: white;
+}
+
+[type=password] {
+    color: #8affff;
+}
+
+[type=number] {
+    color: #ffaed9;
+}
+
+[type=date] {
+    color: #d0ff9a;
+}
+
+[class~=bold] {
+    font-weight: bold;
+}
+
+[class|=bold] {
+    font-weight: bold;
+}
+
+[class*=red] {
+    color: red;
+}
+
+[class*=blue] {
+    color: blue;
+}
+
+[class^=underline] {
+    text-decoration: underline;
+}
+
+[class$=s24] {
+    font-size: 24px;
+}
+
+div#content {
+    background-color: cornsilk;
+}
+
+div.title {
+    font-size: 36px;
+}
+
+div.title[class~=under] {
+    text-decoration: underline;
+}
+
+ol ol {
+    list-style-type: upper-alpha;
+}
+
+li > ol > li {
+    color: #222222;
+}
+
+dt+dd {
+    background-color: antiquewhite;
+}
+dt~dd {
+    color: red;
+}
+
+/* 마우스를 요소에 올렸을 때 */
+body :hover {
+    background-color: black;
+    color: white;
+}
+
+/* 마우스를 클릭하고 있는 상태 */
+body :active {
+    background-color: black;
+    color: white;
+}
+
+:checked {
+    box-shadow: 2px 2px 2px black;
+}
+
+/* 입력 양식이 활성화 된 상태 */
+:enabled {
+    background-color: white;
+    color: black;
+}
+
+/* 입력 양식이 비활성화 된 상태 */
+:disabled {
+    background-color: gray;
+}
+
+/* 입력 양식에 커서가 이동하여 활성화 된 상태 */
+:focus {
+    background-color: azure;
+    color: #00005f;
+}
+
+/* 필수 입력 양식인 경우 */
+:required {
+    border-style: solid;
+    border-color: crimson;
+}
+
+/* 옵션 입력 양식인 경우 */
+:optional {
+    border-style: solid;
+    border-color: forestgreen;
+}
+
+/* 첫번째 자식에 해당하는 요소의 경우 */
+ul.parent1 :first-child {
+    color: red;
+}
+
+/* 마지막 자식에 해당하는 요소의 경우 */
+ul.parent1 :last-child {
+    color: blue;
+}
+
+/* 2n: 짝수번째에 해당하는 요소 */
+ul.parent2 :nth-child(2n) {
+    color: green;
+}
+
+/* 2n-1: 홀수번째에 해당하는 요소 */
+ul.parent2 :nth-child(2n-1) {
+    color: gold;
+}
+
+/* 2n: 짝수번째에 해당하는 요소 */
+ul.parent2 :nth-last-child(2n) {
+    background-color: green;
+}
+
+/* 2n-1: 홀수번째에 해당하는 요소 */
+ul.parent2 :nth-last-child(2n-1) {
+    background-color: gold;
+}
+/* 첫번째 자식에 해당하는 요소의 경우(타입별,태그별) */
+div.parent3 :first-of-type {
+    color: red;
+}
+
+/* 마지막 자식에 해당하는 요소의 경우(타입별,태그별) */
+div.parent3 :last-of-type {
+    background-color: lightyellow;
+}
+
+div.parent3 :nth-of-type(2n) {
+    background-color: navajowhite;
+}
+
+/* div.parent3 :nth-last-of-type(2n-1) {
+    background-color: plum;
+} */
+
+/* pseudo elements : 의사 요소 */
+.af::after {
+    content: " :";
+    color: red;
+    font-weight: bold;
+}
+
+.bf::before {
+    content: ": ";
+    color: red;
+    font-weight: bold;
+}
+
+::first-letter {
+    color: black;
+}
+
+::first-line {
+    text-decoration: underline;
+}
+
+::selection {
+    background-color: #d1f4ff;
+}
+
+
+.not-selector :not(span) {
+    color: red;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <base href="/static/">
+    <meta charset="utf-8">
+    <meta name="author" content="작성자명">
+    <meta name="description" content="문서 설명">
+    <title>문서 제목</title>
+    <link type="text/css" rel="stylesheet" href="css/ch01_1.css">
+    <link type="image/jpeg" rel="icon" href="img/main-icon.png">
+    <!--style>
+        body {
+            font-size: 32px;
+            color: crimson;
+        }
+    </style-->
+</head>
+<body>
+    <section>
+        <article>
+            <h1>HTML 페이지의 기본 구조</h1>
+            <h3>&lt;!DOCTYPE html&gt;</h3>
+            <p>HTML5 문서임을 나타낸다.</p>
+            <hr>
+            <h3>&lt;html lang="ko"&gt; ... &lt;/html&gt;</h3>
+            <p>HTML 문서의 영역을 나타낸다. 이 영역에는 하위 태그로 head, body 태그가 사용된다.</p>
+            <dl>
+                <dt>lang</dt>
+                <dd>해당 문서가 작성된 언어를 설정한다.
+                    구글과 같은 검색 사이트에서 언어별 검색을 위한 조건에 활용된다.</dd>
+            </dl>
+            <hr>
+            <h3>&lt;head&gt; ... &lt;/head&gt;</h3>
+            <p>html 태그안에 작성하며, HTML 문서의 정보를 담는 영역이다.
+                head 태그 영역에는 다음의 태그가 작성될 수 있다.</p>
+            <ul>
+                <li>meta 태그</li>
+                <li>title 태그</li>
+                <li>link 태그</li>
+                <li>script 태그</li>
+                <li>base 태그</li>
+            </ul>
+            <hr>
+            <h3>&lt;body&gt; ... &lt;/body&gt;</h3>
+            <p>html 태그안에 작성하며, HTML 문서의 내용(컨텐츠)를 담는 영역이다.
+                body 태그 영역에는 대부분의 태그가 작성될 수 있다.</p>
+            <hr>
+            <h4>예제 코드</h4>
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+        문서의 정보 및 외부 스타일, 스크립트, 아이콘 정보를 작성
+    &lt;/head&gt;
+    &lt;body&gt;
+        문서의 내용을 작성
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+        </article>
+
+        <hr>
+
+        <article>
+            <h1>head 태그 영역</h1>
+            <h3>meta 태그</h3>
+            <p>meta 태그는 문서의 메타데이터 정보를 담기 위해 사용하는 태그로 charset,
+                작성자, 문서 설명, 키워드 등의 정보를 담을 수 있다.</p>
+            <h4>syntax</h4>
+            <pre><code>&lt;meta name="속성명" content="속성값"&gt;</code></pre>
+            <pre><code>&lt;meta charset="문자셋"&gt;</code></pre>
+            <p>meta 태그에 사용할 수 있는 표준 속성명과 속성값은 다음과 같다.</p>
+            <dl>
+                <dt>author</dt>
+                <dd>문서 작성자 정보를 기입하기 위한 속성명이다.</dd>
+                <dt>keywords</dt>
+                <dd>해당 문서의 콘텐츠와 관련된 키워드 목록을 쉼표로 구분하여 작성하기 위한 속성명이다.</dd>
+                <dt>descripton</dt>
+                <dd>해당 페이지의 짧은 요약 설명을 작성하기 위한 속성명이다.</dd>
+            </dl>
+        </article>
+    </section>
+    <a href="css/ch01_1.css" target="_self">현재 화면에서 CSS 파일 열기</a><br>
+    <a href="css/ch01_1.css" target="_blank">새로운 탭 화면에서 CSS 파일 열기</a>
+</body>
+</html>

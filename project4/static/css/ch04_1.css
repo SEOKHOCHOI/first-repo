@@ -1,0 +1,164 @@
+* {
+    margin: 0; padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,th {
+    border-bottom: 1px solid #bbbbbb;
+    text-align: left;
+    padding: 0.5em;
+}
+
+/* table tr:first-child td {
+    border-bottom: 2px solid black;
+}
+
+table tr:first-child th {
+    border-bottom: 2px solid black;
+} */
+
+thead td {
+    border-bottom: 2px solid black;
+}
+
+thead th {
+    border-bottom: 2px solid black;
+}
+
+/* table tr:hover {
+    background-color: #e6e6e6;
+} */
+
+/* table tr:not(tr:first-child):hover {
+    background-color: #e6e6e6;
+} */
+
+tbody tr:hover {
+    background-color: #e6e6e6;
+}
+
+.list {
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+.list .item {
+    border: 1px solid #e6e6e6;
+    border-top-style: none;
+    padding: 0.5em;
+}
+
+.list .item:first-child {
+    border: 1px solid #e6e6e6;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.list .item:last-child {
+    border: 1px solid #e6e6e6;
+    border-top-style: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.list .item:hover {
+    background-color: #e6e6e6;
+}
+
+.w-250 {
+    width: 250px;
+}
+
+.card {
+    border: 1px solid rgb(223, 223, 223);
+    margin: 24px;
+    border-radius: 4px;
+}
+
+.card .card-title {
+    border-bottom: 1px solid rgb(223, 223, 223);
+    padding: 0.5em 1em;
+    background-color: rgb(247, 247, 247);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.card-title .card-head {
+    font-weight: 500;
+}
+
+.card .card-content {
+    padding: 0.5em 1em;
+}
+
+.card-content .card-sub-head {
+    font-weight: 500;
+    margin: 0.5em 0;
+}
+
+.card-content .card-text {
+    margin: 0 0 1em 0;
+    color: rgb(70, 70, 70);
+}
+
+.card-content .card-button {
+    margin: 0.5em 0;
+    padding: 12px;
+    font-size: 16px;
+    background-color: rgb(13, 110, 253);
+    color: white;
+    border-style: none;
+    border-radius: 4px;
+}
+
+.card-content .card-button:hover {
+    cursor: pointer;
+    background-color: rgb(37, 124, 253);
+}
+
+.top-nav {
+    width: 100%;
+    background-color:rgb(247, 247, 247);
+}
+
+.top-nav .nav-logo {
+    display: inline-block;
+    margin: 0 1.5em;
+}
+
+.top-nav .nav-list {
+    display: inline-block;
+}
+
+.top-nav .nav-item {
+    display: inline-block;
+}
+
+.top-nav .nav-link {
+    display: inline-block;
+    color: rgb(128, 128, 128);
+    text-decoration: none;
+    padding: 1em 0.5em;
+}
+
+.top-nav .nav-item:not([class~=disable]) .nav-link:hover {
+    background-color:rgb(223, 223, 223);
+    cursor: pointer;
+}
+
+.top-nav .active .nav-link {
+    color: rgb(32, 32, 32);
+}
+
+.top-nav [class~=disable] .nav-link {
+    color: rgb(190, 190, 190);
+}
+
+.top-nav [class~=disable] .nav-link:hover {
+    color: rgb(190, 190, 190);
+    cursor: default;
+}

@@ -11,7 +11,7 @@ SELECT '연결확인' FROM DUAL;
 CREATE USER user1 IDENTIFIED BY user1;
 
 --계정암호변경
-ALTER USER user1 IDENTIFIED BY user11
+--ALTER USER user1 IDENTIFIED BY user11
 --시스템 계정으로 접근해서 해야함 유저계정안됨.
 
 -- 권한 부여

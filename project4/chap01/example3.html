@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2>목록 태그</h2>
+    <h3>순서 없는 목록</h3>
+    <ul> <!-- unorder list -->
+        <li>목록 1</li>
+        <li>목록 2</li>
+        <li>목록 3</li>
+    </ul>
+    <ul type="circle">
+        <li>목록 1</li>
+        <li>목록 2</li>
+        <li>목록 3</li>
+    </ul>
+    <ul type="square">
+        <li>목록 1</li>
+        <li>목록 2</li>
+        <li>목록 3</li>
+    </ul>
+
+    <hr>
+
+    <h3>순서 있는 목록</h3>
+    <ol> <!-- order list -->
+        <li>목록 1</li>
+        <li>목록 2</li>
+        <li>목록 3</li>
+    </ol>
+    <ol type="A" start="2">
+        <li>목록 1</li>
+        <li>목록 2</li>
+        <li>목록 3</li>
+    </ol>
+    <ol type="a">
+        <li value="3">목록 1</li>
+        <li>목록 2</li>
+        <li>목록 3</li>
+    </ol>
+    <ol type="I">
+        <li>목록 1</li>
+        <li value="4">목록 2</li>
+        <li>목록 3</li>
+    </ol>
+    <ol type="i">
+        <li>목록 1</li>
+        <li>목록 2</li>
+        <li>목록 3</li>
+    </ol>
+
+    <hr>
+
+    <h3>목록 중첩</h3>
+    <ul>
+        <li>목록 1</li>
+        <li>목록 2
+            <ul>
+                <li>목록 2-1</li>
+                <li>목록 2-2</li>
+                <li>목록 2-3</li>
+            </ul>
+        </li>
+        <li>목록 3</li>
+    </ul>
+    <ol>
+        <li>목록 1</li>
+        <li>목록 2
+            <ol>
+                <li>목록 2-1</li>
+                <li>목록 2-2</li>
+                <li>목록 2-3</li>
+            </ol>
+        </li>
+        <li>목록 3</li>
+    </ol>
+    <ul>
+        <li>목록 1</li>
+        <li>목록 2
+            <ol>
+                <li>목록 2-1</li>
+                <li>목록 2-2</li>
+                <li>목록 2-3</li>
+            </ol>
+        </li>
+        <li>목록 3</li>
+    </ul>
+
+    <hr>
+
+    <h3>정의(설명) 목록</h3>
+    <dl>
+        <dt>ol</dt>
+        <dd>order list 의 약자로 순서 있는 목록을 나타내기 위해 사용하는 태그이다.</dd>
+        <dt>ul</dt>
+        <dd>unorder list 의 약자로 순서 없는 목록을 나타내기 위해 사용하는 태그이다.</dd>
+        <dt>dl</dt>
+        <dd>description list의 약자로 정의(설명) 목록을 나타내기 위해 사용하는 태그이다.</dd>
+    </dl>
+</body>
+</html>

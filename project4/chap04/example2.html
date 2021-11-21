@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/static/css/ch04_2.css">
+</head>
+<body>
+    <div>
+        <form>
+            <div class="single-input">
+                <label for="id_username">아이디</label>
+                <div class="input-form">
+                    <input type="text" id="id_username">
+                    <span class="placeholder">@naver.com</span>
+                </div>
+            </div>
+            <div class="single-input">
+                <label for="id_password">비밀번호</label>
+                <div class="input-form">
+                    <input type="password" id="id_password">
+                    <span class="placeholder material-icons">lock</span>
+                </div>
+            </div>
+            <div class="single-input">
+                <label for="id_password2">비밀번호 확인</label>
+                <div class="input-form">
+                    <input type="password" id="id_password2">
+                    <span class="placeholder material-icons">lock</span>
+                </div>
+            </div>
+            <div class="single-input">
+                <label for="id_name">이름</label>
+                <div class="input-form">
+                    <input type="text" id="id_name">
+                </div>
+            </div>
+            <div class="multi-input">
+                <label for="id_name">생년월일</label>
+                <div class="input-form">
+                    <input type="text" id="id_year" placeholder="년(4자)">
+                    <select>
+                        <option>월</option>
+                        <option>1</option><option>2</option><option>3</option>
+                        <option>4</option><option>5</option><option>6</option>
+                        <option>7</option><option>8</option><option>9</option>
+                        <option>10</option><option>11</option><option>12</option>
+                    </select>
+                    <input type="text" id="id_day" placeholder="일">
+                </div>
+            </div>
+            <div class="single-input">
+                <label for="id_gender">성별</label>
+                <div class="input-form">
+                    <select>
+                        <option>성별</option>
+                        <option>남자</option>
+                        <option>여자</option>
+                        <option>선택안함</option>
+                    </select>
+                </div>
+            </div>
+            <div class="single-input">
+                <label for="id_email">본인 확인 이메일<small>(선택)</small></label>
+                <div class="input-form">
+                    <input type="text" id="id_email" placeholder="선택입력">
+                </div>
+            </div>
+            <div class="multi-input">
+                <label for="id_phone">휴대전화</label>
+                <div class="input-block-form">
+                    <select>
+                        <option>대한민국 +82</option>
+                    </select>
+                    <div class="input-inline">
+                        <input type="text" id="id_phone" placeholder="전화번호 입력">
+                        <button type="button">인증번호 받기</button>
+                    </div>
+                    <input type="text" id="id_phone">
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="btn-block">가입하기</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

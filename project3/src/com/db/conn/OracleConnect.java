@@ -14,9 +14,9 @@ public class OracleConnect {
 	//로컬인 경우
 	private final String LOCAL_URL = "jdbc:oracle:thin:@localhost:1521/XEPDB1";
 	//계정명은?
-	private final String USERNAME = "user1";
+	//private final String USERNAME = "user1";
 	//암호는?
-	private final String PASSWORD = "user1";
+	//private final String PASSWORD = "user1";
 	
 	private Properties info = new Properties();
 	private OracleDataSource ods = null;
@@ -26,6 +26,12 @@ public class OracleConnect {
 	private Connection conn2 = null;
 	private Statement stat2 = null;
 	private String query;
+	
+	//초기화 블럭
+	{
+		String userHome = System.getProperty("user.home");
+		this.info.load(new FileReader(userHome + "/oracle_connection.prop"));
+	}
 	
 	public OracleConnect() throws Exception {
 		/*
@@ -40,7 +46,7 @@ public class OracleConnect {
 		
 		
 		  //2. 연결 구성 정보로 데이터베이스 연결(OracleCloud에 접속하기 위한 코드) 
-		  //월렛사용했냐 안했냐의 차이임 사실.
+		  //월렛사용했냐 안했냐의 차이임 사실. 여긴 월렛 이용한 경우임.
 		  //this.info.put(OracleConnection.CONNECTION_PROPERTY_USER_NAME, this.USERNAME);
 		  //this.info.put(OracleConnection.CONNECTION_PROPERTY_PASSWORD, this.PASSWORD);
 		 // this.ods = new OracleDataSource();
@@ -51,7 +57,8 @@ public class OracleConnect {
 		
 		// 2. 연결 구성 정보로 데이터베이스 연결(로컬에 설치한 Oracle에 접속하기 위한 코드)
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		this.conn2 = DriverManager.getConnection(LOCAL_URL, USERNAME, PASSWORD);
+		this.conn2 = DriverManager.getConnection(LOCAL_URL,
+				this.info.getProperty("user"), this.info.getProperty("password"));
 		
 		// 3. 생성된 연결정보로 Statement 생성
 		//this.stat1 = this.conn1.createStatement();

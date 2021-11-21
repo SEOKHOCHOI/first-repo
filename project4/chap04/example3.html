@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+            margin: 0; padding: 0;
+        }
+
+        body {
+            padding: 4px;
+        }
+
+        hr {
+            margin: 1em 0;
+        }
+
+        .table {
+            display: table;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .table .row {
+            display: table-row;
+        }
+
+        .row .column {
+            display: table-cell;
+            padding: 0.5em;
+            border: 1px solid black;
+        }
+
+        .flex-main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex-main .flex-item {
+            padding: 1em;
+            background-color: coral;
+            border: 1px solid black;
+        }
+
+        .flex-1 {
+            flex: 1 calc(100%/12);
+        }
+
+        .flex-2 {
+            flex: 2 calc(100%/12);
+        }
+
+        .flex-3 {
+            flex: 3 calc(100%/12);
+        }
+
+        .grid-main {
+            display: grid;
+            grid: auto / auto 100px auto auto auto;
+        }
+
+        .grid-main .grid-item {
+            background-color: cornflowerblue;
+            border: 1px solid black;
+            padding: 1em;
+        }
+
+        .grid-layout2 {
+            display: grid;
+            grid-template-areas:
+                "h h h h h h"
+                "l l l l r r"
+                "f f f f f f";
+        }
+
+        .grid-layout3 {
+            display: grid;
+            grid-template-areas:
+                "h h h h h h"
+                "l c c c c r"
+                "f f f f f f";
+        }
+
+        .grid-head {
+            grid-area: h;
+            background-color: lightsalmon;
+        }
+
+        .grid-left {
+            grid-area: l;
+            background-color: lightseagreen;
+        }
+
+        .grid-right {
+            grid-area: c;
+            background-color: lightgoldenrodyellow;
+        }
+
+        .grid-right {
+            grid-area: r;
+            background-color: lightskyblue;
+        }
+        
+        .grid-foot {
+            grid-area: f;
+            background-color: lightcoral;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="table">
+        <div class="row">
+            <div class="column">11111</div>
+            <div class="column">22222</div>
+            <div class="column">33333</div>
+        </div>
+        <div class="row">
+            <div class="column">44444</div>
+            <div class="column">55555</div>
+            <div class="column">66666</div>
+        </div>
+        <div class="row">
+            <div class="column">77777</div>
+            <div class="column">88888</div>
+            <div class="column">99999</div>
+        </div>
+    </div>
+    <hr>
+    <div class="flex-main">
+        <div class="flex-item flex-1">11111</div>
+        <div class="flex-item flex-1">22222</div>
+        <div class="flex-item flex-1">33333</div>
+        <div class="flex-item flex-1">44444</div>
+        <div class="flex-item flex-1">55555</div>
+        <div class="flex-item flex-1">66666</div>
+    </div>
+    <div class="flex-main">
+        <div class="flex-item flex-2">77777</div>
+        <div class="flex-item flex-2">88888</div>
+        <div class="flex-item flex-2">99999</div>
+    </div>
+    <hr>
+    <div class="grid-main">
+        <div class="grid-item">11111</div>
+        <div class="grid-item">22222</div>
+        <div class="grid-item">33333</div>
+        <div class="grid-item">44444</div>
+        <div class="grid-item">55555</div>
+        <div class="grid-item">66666</div>
+        <div class="grid-item">77777</div>
+        <div class="grid-item">88888</div>
+        <div class="grid-item">99999</div>
+    </div>
+    <hr>
+    <div class="grid-layout3">
+        <div class="grid-head">header</div>
+        <div class="grid-left">left</div>
+        <div class="grid-center">center</div>
+        <div class="grid-right">right</div>
+        <div class="grid-foot">footer</div>
+    </div>
+</body>
+</html>
