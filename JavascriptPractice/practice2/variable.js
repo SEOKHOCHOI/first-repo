@@ -3,7 +3,10 @@
 // use this for Valina Javascript.
 'use strict';
 
-// 2. Variable(변수)
+// 2. Variable(변수)  rw(read/write)
+//variable은 메모리의 값을 읽고 쓰는게 가능함.
+//let name을 ellie라고 값을 할당 후 hello로 변경 가능한게
+//이러한 이유다.
 // 변수를 만들땐 let 이라는 키워드 이용.
 // let은 ES 6에 추가되어진 언어이다.
 
@@ -56,6 +59,11 @@ let globalName = 'global name';
 const daysInwwek = 7;
 const maxNumber = 5;
 //Constants는 한번 할당하면 값이 절대 바뀌지 않는다.
+//r(read only) 오직 읽기만 가능
+//그래서 선언함과 값을 할당뒤로 읽기만 가능하고
+//다시 다른값으로 변경이 불가능한것.
+//앞에서 variable을 단수로 적었으니 얘도
+//Constant 단수로 적는게 더 좋을것같다.
 /*
    변수를 이용하면 변수가 메모리 어딘가의 할당된 박스를
    가리키고 있어서 포인터를 이용해 값을 계속 바꿔갈수있었지만,
@@ -67,6 +75,7 @@ const maxNumber = 5;
    이게 let키워드를 이용한 변수야.
 
    컨스턴스는 Immutable 데이터 타입이라 불려. 
+   Immutable은 데이터 자체 절대 변경 불가!
    1. 보안상의 이유
       한번 작성한 값을 다른 해커들이 이상한 코드를 삽입하여
       값을 계속 변경해 나가는게 가능한데 이 데이터 타입은
@@ -85,16 +94,29 @@ const maxNumber = 5;
 */
 
   // Variable types
-
+/*
+자바스크립트에서 기본적으로 모든 오브젝트는 변경 가능!
+js에서 배열은 뮤터블 데이터 타입임.
+*/
 /*
    어떤 프로그래밍 언어든
    primitive 타입과 object타입 두가지로 나눠져 있어.
 
    primitive 타입은 
+   value 즉, 값 자체가 메모리에 저장돼.
    더이상 작은 단위로 나눠질수 없는 한가지 아이템을 말해.
    여기에는 숫자 number, string, boolean,null, undefiedn, symbol 등이 있어.
 
    object 타입은 
+   너무커서 메모리에 한번에 올라갈수 없고
+   ellie라 선언하고 오브젝트를 할당하게 되면 엘리가
+   가리키고 있는곳엔 레퍼런스가 있다.
+   이 레퍼런스는 실제로 오브젝트를 가리키고 있는곳이고
+   엘리가 가리키고있는 포인트가 잠겨서 다른 오브젝트로
+   엘리는 변경이 불가능하지만 엘리의 이름과 나이는
+   계속 변경이 가능.
+   즉, 오브젝트는 오브젝트를 가리키는 레퍼런스가
+   메모리에 저장된다.
    싱글 아이템들을 여러개 묶어서 한 단위로 한 박스로
    관리할수 있게 해준다. 즉, box container!
 
