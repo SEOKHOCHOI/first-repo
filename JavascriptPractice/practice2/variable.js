@@ -161,7 +161,6 @@ const bigInt = 1234553542432432515411324n; //아직 크롬과 파이어폭스에
    많이 쓰는건 template literals또는 template string이라
    불리는 것인데 ''과 $와 {}를 이용하면 
    변수의 값이 자동적으로 붙어져 나와.
-
 */
 const char = 'c';
 const brendan = 'brendan';
