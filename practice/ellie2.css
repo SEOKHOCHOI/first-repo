@@ -1,0 +1,50 @@
+/*selector {
+    property: value;
+}*/
+
+* {
+    color: green;
+}
+
+/*태그와 가까운게 우선순위 높아*/
+li {
+    color: blue;
+}
+
+/*ID*/
+#special {
+    color: pink;
+}
+
+/*li에 해당하는 애들만 바꾸는것.*/
+li#special {
+    color: pink;
+}
+
+/*클래스*/
+.red {
+    width: 100px;
+    height: 100px;
+    background: yellow;
+}
+
+/*버튼위에 마우스 올린경우*/
+button:hover {
+    color: red;
+    background: beige;
+}
+
+/*속성값에 따라서*/
+a[href="naver.com"] {
+    color: purple;
+}
+
+/*naver로 시작하는 애들만*/
+a[href^="naver"] {
+    color: purple;
+}
+
+/*.com으로 끝나는 애들만 색변경*/
+a[href$=".com"] {
+    color: purple;
+}
