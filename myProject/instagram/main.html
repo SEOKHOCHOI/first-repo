@@ -22,30 +22,30 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; width: 100%;">
+    <div class="container-fluid" style="justify-content: space-between; flex-wrap: nowrap; min-width: 1000px; ">
             <a class="navbar-brand" href="#"><img style="width: 100px" 
                 src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"></a>
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <span class="material-icons">
-                        home
-                    </span>
-                    <span class="material-icons-outlined">
-                        send
-                    </span>
-                    <span class="material-icons-outlined">
-                        add_box
-                    </span>
-                    <span class="material-icons-outlined">
-                        explore
-                    </span>
-                    <span class="material-icons-outlined">
-                        favorite_border
-                    </span>      
+                    <input class="form-control me-2" style="width: 400px" type="search" placeholder="Search" aria-label="Search">
+                    <div>
+                        <span class="material-icons"> home </span>
+                        <span class="material-icons-outlined"> send </span>
+                        <span class="material-icons-outlined"> add_box </span>
+                        <span class="material-icons-outlined"> explore </span>
+                        <span class="material-icons-outlined"> favorite_border </span>    
+                    </div>
             </div>
         </div>
     </nav>
 
+    <div style="display: flex; flex-direction: row; text-align: center; justify-content: center; padding-top: 60px;">
+        <div style="width: 600px; height: 1000px; background-color: blueviolet; margin-right: 250px;">
+            왼쪽
+        </div>
+        <div style="width: 400px; height: 1000px; background-color: greenyellow; position: fixed; left: 62%;">
+            오른쪽
+        </div>
+    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

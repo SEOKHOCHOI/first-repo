@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>끝말잇기</title>
+</head>
+
+<body>
+    <div><span id="order">1</span>번째 참가자</div>
+    <div>제시어: <span id="word"></span></div>
+    <input type="text">
+    <button>입력</button> 
+    <script>
+const number = Number(prompt('몇 명이 참가하나요?'));
+        const $button = document.querySelector('button');
+        const $input = document.querySelector('input');
+        const $word = document.querySelector('#word');
+        const $order = document.querySelector('#order');
+        const $score = document.querySelector('#score');
+        let score = 0;
+        let word; // 제시어 (단어를 입력할 때마다 바뀜 -> const 대신 let)
+        let newWord; // 현재 단어
+
+        const onClickButton = () => {
+            if(!word || word[word.length -1] === newWord[0]) { //제시어가 비어 있거나 입력한 단어가 올바른가?
+                word = newWord // 입력한 단어가 제시어가 됨.
+                $word.textContent = word; //화면에 제시어 표시
+                //textContent : 태그 내부의 값을 얻거나 수정할 때 사용 (무조건 문자열 -> 빈 값일 때 ''임)
+                const order = Number($order.textContent);
+                if(order + 1 > number) { // 3명 참가할 때 3번째 참가자면 4가 되어서
+                    $order.textContent = 1; //다시 첫번째로 돌아감
+                } else {
+                    $order.textContent = order + 1;
+                }
+                //$input는 input 태그를 선택하는 변수임
+                // $input.value = ''; // 입력창의 값을 ''로 넣음
+                // $input.focus(); //  입력창을 하이라이트
+
+                score++;
+                $score.textContent = score;
+            } else { //올바르지 않다.
+                alert('올바르지 않은 단어입니다.')
+            }
+            $input.value = '';
+            $input.focus();
+            // else {
+            //     //비어있지 않다.
+            //     if(word[word.length - 1] === newWord[0]) { // 입력한 단어가 올바른가?
+            //         //올바르다
+            //         word = newWord; // 현재 단어를 제시어에 저장
+            //         $word.textContent = word; // 화면에 제시어 표시
+            //         const order = Number($order.textContent);
+            //         if(order + 1 > number) {
+            //             $order.textContent = 1;
+            //         } else {
+            //             $order.textContent = order + 1;
+            //         }
+            //         $input.value = '';
+            //         $input.focus();
+
+            //         score++;
+            //         $score.textContent = score;
+
+            //     } else {
+            //         //올바르지 않다
+            //         alert('올바르지 않은 단어입니다.');
+            //         $input.value = '';
+            //         $input.focus();
+            //     }
+            // }
+        };
+
+        const onInput = (event) => {
+            newWord = event.target.value; // 입력하는 단어를 현재 단어로
+        };
+
+        $button.addEventListener('click', onClickButton);
+        $input.addEventListener('input', onInput);
+
+
+    </script>
+</body> 
+
+</html>
+
+<!-- prompt(): 사용자로부터 입력 받음 
+    alert(): 경고창
+    confirm():사용자로부터 예 아니요를 받아.
+-->
+
+
+<!-- doc + tab = html기본꼴 만들어짐 -->
+<!-- shift + alt + 방향키 아래  = 줄 복사,  ctrl + z = 취소 -->
+<!-- shift + tab = 뒤로 들여쓰기 -->
+<!-- F5 + chrome = 파일창 뜸. -->
+<!-- < 이런 꺽쇄부터 하지말고 예를들어 style + tab하면 자동완성 해줘. -->
