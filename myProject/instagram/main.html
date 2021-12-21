@@ -18,7 +18,9 @@
         href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
         rel="stylesheet">
 
-    <title>Hello, world!</title>
+    <link rel = "shortcut icon" href = "images/instagram.png">
+    <title>Instagram</title>
+    
 
     <style>
         .box { 
@@ -34,39 +36,110 @@
     }
         
         .feed_box { 
-            border-top: solid 1px gray;
+            border-top: solid 1px gainsboro;
             background-color: white;
+            margin: 10px 0 10px 0;
         }
+
+        
+        .background01{
+            
+            
+            width: 28px;
+            height: 28px; 
+            border-radius: 70%;
+            overflow: hidden;
+        }
+        
+        .btn{
+            margin: 1px 15px; 
+            text-align: left; 
+            font-size: 15px; 
+            color: gray;
+            display: flex; 
+            flex-direction: left;
+            
+        }
+
+        .popup {
+            position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+            width: 1100px; height: 650px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 0 4px 4px 0;
+            background: #fff;
+            opacity: 0;
+            z-index: 5;
+            transition: all 0.2s;
+        }
+        .popup a { color: grey; text-decoration: none; }
+        .popup:target { opacity: 1; }
+        .popup:target + div { opacity: 1; z-index: 2;}
+        .dim { 
+            position: fixed; left: 0; top: 0; z-index: -1; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.6); opacity: 0; transition: all 0.2s;
+         }
+
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; width: 100%;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; width: 100%; border:1px gainsboro; border-style: none none solid none;">
     <div class="container-fluid" style="justify-content: space-between; flex-wrap: nowrap; min-width: 1000px; ">
         <a class="navbar-brand" href="#"><img style="width: 100px" 
                 src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"></a>
                     <input class="form-control me-2" style="width: 400px" type="search" placeholder="Search" aria-label="Search">
-                    <div>
+                    <div style="margin: 10px 15px; display: flex; flex-direction: row; align-items: center;">
                         <span class="material-icons"> home </span>
                         <span class="material-icons-outlined"> send </span>
                         <span class="material-icons-outlined"> add_box </span>
                         <span class="material-icons-outlined"> explore </span>
                         <span class="material-icons-outlined"> favorite_border </span>    
+                        <span class="background01"><img class="profile" src="/myProject/instagram/images/present.jpg"></span>
                     </div>
-                    <div style="overflow: hidden; border-radius: 70%; width: 30px; height: 30px;">
-                        <img class="profile" 
-                        src="images/myDog.jpg">
-                    </div>
-                    
-                    
-                    
             </div>
         </div>
     </nav>
 
-    <div style="display: flex; flex-direction: row; text-align: center; justify-content: center; padding-top: 60px; background-color: #FAFAFA;">
-        <div style="width: 500px; min-width: 500px; height: 1000px; margin-right: 250px;">
-            <div style="border: solid 1px gray; background-color: white; margin-bottom: 20px;">   
+
+    <div style="display: flex; flex-direction: row; text-align: center; justify-content: center; padding-top: 60px; background-color: #FAFAFA;">   
+        <div style="width: 550px; min-width: 500px; height: 1000px; margin: 30px 230px 25px 0;">
+
+
+            <div style="border: solid 1px gainsboro; background-color: white; margin: 10px 0 20px 0;">
+                <div style="display: flex; flex-direction: row;">
+                    <div class="box" style="width: 50px; height: 50px; margin: 20px 0 0 20px;">
+                        <img class="profile" 
+                        src="images/Friends6.jpg">
+                    </div>
+                    <div class="box" style="width: 50px; height: 50px; margin: 20px 0 0 20px;">
+                        <img class="profile" 
+                        src="images/Friends7.jpg">
+                    </div>
+                    <div class="box" style="width: 50px; height: 50px; margin: 20px 0 0 20px;">
+                        <img class="profile" 
+                        src="images/Friends8.jpg">
+                    </div>
+                    <div class="box" style="width: 50px; height: 50px; margin: 20px 0 0 20px;">
+                        <img class="profile" 
+                        src="images/Friends9.jpg">
+                    </div>
+                    <div class="box" style="width: 50px; height: 50px; margin: 20px 0 0 20px;">
+                        <img class="profile" 
+                        src="images/Friends10.jpg">
+                    </div>
+                </div>
+                <div style="font-size: 5px; text-align: left; margin: 7px 5px 12px 5px">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jy.1212 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uwepp 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4353kmg
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;love_luv 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strong00
+                </div>
+            </div>
+
+
+
+            <div style="border: solid 1px gainsboro; background-color: white; margin-bottom: 20px;">   
                 <div style="display: flex; flex-direction: row; align-items: center; margin: 5px 15px;">
                     <div class="box" style="width: 30px; height: 30px;">
                         <img class="profile" 
@@ -97,38 +170,276 @@
                     <div style="text-align: left; font-size: 14px;"> &nbsp;ppgppg_0 <b>외 245명이</b> 좋아합니다.</div> 
                 </div>
                 <div style="margin: 1px 15px; text-align: left; font-size: 15px;"> <b>kbh_oO</b>눈으로 만든 우리 최뽀글! </div>
-                <div style="margin: 1px 15px; text-align: left; font-size: 15px; color: gray"> 댓글 94개 모두 보기 </div>
+                
+                <a href="#pop1" class="btn">댓글 3개 모두 보기</a>
+                <div class="popup" id="pop1" style="display: flex; flex-direction: row;">
+                    <div style="width: 650px; height: 650px;">
+                        <img style="width: 100%; height: 100%;" src="images/myPuppyThatIMade1.jpg"> 
+                    </div>
+                    <div style="width: 450px; height: 650px; left: 62%;">
+                        <div style="display: flex; flex-direction: row; border:1px gainsboro; border-style: none none solid none;">
+                            <div class="box" style="width: 30px; height: 30px; margin: 15px 0 0 15px;">
+                                <img class="profile" 
+                                src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
+                            </div>
+                            <div style="text-align: left; font-size: 12px; margin: 20px 0 20px 0;">
+                                &nbsp;&nbsp;&nbsp;<b>kbh_oO · 팔로잉</b><br><div style="font-size: 11px;">&nbsp;&nbsp;&nbsp;서울</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: row;">
+                            <div class="box" style="width: 30px; height: 30px; margin: 15px 0 0 15px;">
+                                <img class="profile" 
+                                src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
+                            </div>
+                            <div style="text-align: left; font-size: 12px; margin: 20px 0 20px 0;">
+                                <p>&nbsp;&nbsp;&nbsp;<b>kbh_oO</b> 눈으로 만든 우리 최뽀글!</p>
+                                <div style="color: gray;">&nbsp;&nbsp;&nbsp;3주</div>
+                            </div>
+                        </div>
+                        <div style="border:1px gainsboro; border-style: none none solid none;">
+                            <div style="display: flex; flex-direction: row; justify-content: space-between; ">
+                                <div style="display: flex; flex-direction: row;  margin: 40px 0 0 0;">
+                                    <div class="box" style="width: 30px; height: 30px; margin: 15px 0 0 15px;">
+                                        <img class="profile" 
+                                        src="images/Waterpuppy.jpg">
+                                    </div>
+                                    <div style="margin: 14px 0 0 13px; text-align: left; font-size: 12px;">
+                                        <b>ta_mida</b> 나도 만들어줘ㅠㅠ <br>
+                                        <div style="color: gray; margin: 15px 0 0 0;"> 3주 &nbsp;&nbsp;<b>답글달기</b> </div>
+                                    </div>
+                                </div>
+                                <div style="margin: 50px 6px 0 0; color: red;">
+                                    ❤︎
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display: flex; flex-direction:row;">
+                                    <div class="box" style="width: 30px; height: 30px; margin: 15px 0 0 15px;">
+                                        <img class="profile" 
+                                        src="images/Friends8.jpg">
+                                    </div>
+                                    <div style="margin: 14px 0 0 13px; text-align: left; font-size: 12px;">
+                                        <b>4353kmg</b> ㅋㅋㅋ귀엽네 <br>
+                                        <div style="color: gray; margin: 15px 0 0 0;"> 3주 &nbsp;&nbsp;<b>답글달기</b> </div>
+                                    </div>
+                                    <div style="margin: 10px 0 0 235px; color: red;">
+                                        ❤︎
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display: flex; flex-direction:row;">
+                                    <div class="box" style="width: 30px; height: 30px; margin: 15px 0 0 15px;">
+                                        <img class="profile" 
+                                        src="images/k1.jpg">
+                                    </div>
+                                    <div style="margin: 14px 0 0 13px; text-align: left; font-size: 12px;">
+                                        <b>inchi5252</b> inchi22오늘 날씨 완전 좋습니다🤣👍 <br>
+                                        <div style="color: gray; margin: 15px 0 0 0;"> 3주 &nbsp;&nbsp;<b>답글달기</b> </div>
+                                    </div>
+                                    <div style="margin: 10px 0 0 103px; color: red;">
+                                        ❤︎
+                                    </div>
+                                </div>
+                            </div><br><br><br><br>
+                        </div>
+                        <div>
+                            <div style="margin: 10px 15px; margin-top: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+                                <div>
+                                    <span class="material-icons-outlined"> favorite_border </span>
+                                    <span class="material-icons-outlined"> mode_comment </span>
+                                    <span class="material-icons-outlined"> send </span>
+                                </div>
+                                <div>
+                                    <span class="material-icons-outlined"> bookmark_border  </span>      
+                                </div>
+                            </div>
+                            <div style="text-align: left; font-size: 12px;">
+                                &nbsp;&nbsp;&nbsp;<b> 좋아요 212개 </b>
+                                <div style="font-size: 8px; color: gray;">&nbsp;&nbsp;&nbsp;&nbsp&nbsp12월 8일</div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="feed_box" style="margin-top: 15px;"><input type="text" class="form-control" style="box-shadow: none; border: none; outline: none;" placeholder="🙂 &nbsp;댓글 달기..."></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dim"></div>
+                
                 <div style="margin: 1px 14px; text-align: left; font-size: 14px;"> <b>ta_mida</b> 나도 만들어줘ㅠㅠ</div>
-                <div style="margin: 1px 14px; text-align: left; font-size: 14px;"> <b>bulkbulk</b> ㅋㅋㅋ귀엽네 </div>
+                <div style="margin: 1px 14px; text-align: left; font-size: 14px;"> <b>4353kmg</b> ㅋㅋㅋ귀엽네 </div>
                 <div style="margin: 7px 15px; text-align: left; font-size: 5px; color: gray"> 4시간 전 </div>
-                <div class="feed_box"><input type="text" class="form-control" style="box-shadow: none; border: none; outline: none;" placeholder="댓글 달기..."></div>
+                <div class="feed_box" style="margin-top: 18px;"><input type="text" class="form-control" style="box-shadow: none; border: none; outline: none;" placeholder="🙂 &nbsp;댓글 달기..."></div>
             </div>
         </div>
-        </div>
-        <div style="width: 400px; height: 1000px; position: fixed; left: 62%;">
+        <div style="border: solid 1px gainsboro; background-color: white; margin-bottom: 20px;">   
+            <div style="display: flex; flex-direction: row; align-items: center; margin: 5px 15px;">
+                <div class="box" style="width: 30px; height: 30px;">
+                    <img class="profile" 
+                    src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
+                </div>
+                <div style="text-align: left; font-size: 14px;">
+                    &nbsp;&nbsp;&nbsp;<b>kbh_oO</b>
+                    <br>&nbsp;&nbsp;&nbsp;서울
+                </div>
+            </div>
+
         <div>
-            <div  style="display: flex; flex-direction: row; align-items: center; margin: 5px 15px;">
+            <img style="width: 100%;" src="images/myPuppyThatIMade1.jpg"> 
+            <div style="margin: 10px 15px; margin-top: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+                <div>
+                    <span class="material-icons-outlined"> favorite_border </span>
+                    <span class="material-icons-outlined"> mode_comment </span>
+                    <span class="material-icons-outlined"> send </span>
+                </div>
+                <div>
+                    <span class="material-icons-outlined"> bookmark_border  </span>      
+                </div>
+            </div>
+            <div style="margin: 10px 15px; display: flex; flex-direction: row; align-items: center;">
+                <div class="box" style="width: 29px; height: 29px;"> 
+                <img class="profile" src="/myProject/instagram/images/present.jpg">
+                </div>
+                <div style="text-align: left; font-size: 14px;"> &nbsp;ppgppg_0 <b>외 245명이</b> 좋아합니다.</div> 
+            </div>
+            <div style="margin: 1px 15px; text-align: left; font-size: 15px;"> <b>kbh_oO</b>눈으로 만든 우리 최뽀글! </div>
+            <div style="margin: 1px 15px; text-align: left; font-size: 15px; color: gray"> 댓글 94개 모두 보기 </div>
+            <div style="margin: 1px 14px; text-align: left; font-size: 14px;"> <b>ta_mida</b> 나도 만들어줘ㅠㅠ</div>
+            <div style="margin: 1px 14px; text-align: left; font-size: 14px;"> <b>4353kmg</b> ㅋㅋㅋ귀엽네 </div>
+            <div style="margin: 7px 15px; text-align: left; font-size: 5px; color: gray"> 4시간 전 </div>
+            <div class="feed_box" style="margin-top: 18px;"><input type="text" class="form-control" style="box-shadow: none; border: none; outline: none;" placeholder="🙂 &nbsp;댓글 달기..."></div>
+        </div>
+    </div>
+    <div style="border: solid 1px gainsboro; background-color: white; margin-bottom: 20px;">   
+        <div style="display: flex; flex-direction: row; align-items: center; margin: 5px 15px;">
+            <div class="box" style="width: 30px; height: 30px;">
+                <img class="profile" 
+                src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
+            </div>
+            <div style="text-align: left; font-size: 14px;">
+                &nbsp;&nbsp;&nbsp;<b>kbh_oO</b>
+                <br>&nbsp;&nbsp;&nbsp;서울
+            </div>
+        </div>
+
+    <div>
+        <img style="width: 100%;" src="images/myPuppyThatIMade1.jpg"> 
+        <div style="margin: 10px 15px; margin-top: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+            <div>
+                <span class="material-icons-outlined"> favorite_border </span>
+                <span class="material-icons-outlined"> mode_comment </span>
+                <span class="material-icons-outlined"> send </span>
+            </div>
+            <div>
+                <span class="material-icons-outlined"> bookmark_border  </span>      
+            </div>
+        </div>
+        <div style="margin: 10px 15px; display: flex; flex-direction: row; align-items: center;">
+            <div class="box" style="width: 29px; height: 29px;"> 
+            <img class="profile" src="/myProject/instagram/images/present.jpg">
+            </div>
+            <div style="text-align: left; font-size: 14px;"> &nbsp;ppgppg_0 <b>외 245명이</b> 좋아합니다.</div> 
+        </div>
+        <div style="margin: 1px 15px; text-align: left; font-size: 15px;"> <b>kbh_oO</b>눈으로 만든 우리 최뽀글! </div>
+        <div style="margin: 1px 15px; text-align: left; font-size: 15px; color: gray"> 댓글 94개 모두 보기 </div>
+        <div style="margin: 1px 14px; text-align: left; font-size: 14px;"> <b>ta_mida</b> 나도 만들어줘ㅠㅠ</div>
+        <div style="margin: 1px 14px; text-align: left; font-size: 14px;"> <b>bulkbulk</b> ㅋㅋㅋ귀엽네 </div>
+        <div style="margin: 7px 15px; text-align: left; font-size: 5px; color: gray"> 4시간 전 </div>
+        <div class="feed_box" style="margin-top: 18px;"><input type="text" class="form-control" style="box-shadow: none; border: none; outline: none;" placeholder="🙂 &nbsp;댓글 달기..."></div>
+    </div>
+</div>
+        </div>
+        <div style="width: 320px; height: 1000px; position: fixed; left: 62%; margin-top: 50px;">
+        <div>
+            <div  style="display: flex; flex-direction: row; align-items: center; margin: 5px 15px 20px 15px;"><div>
+                </div>
                 <div class="box" style="width: 50px; height: 50px;">
                     <img class="profile" 
                     src="images/myDog.jpg">
                 </div>
-                <div style="text-align: left; font-size: 14px;">
-                    &nbsp;&nbsp;&nbsp;<b>c__ppg</b>
-                    <br>&nbsp;&nbsp;&nbsp;서울
+                <div style="text-align: left; font-size: 12px;">
+                    <div>&nbsp;&nbsp;&nbsp;&nbsp;<b>c__ppg</b></div>
+                    <div style="color: gray;">&nbsp;&nbsp;&nbsp;&nbsp;서울</div>
                 </div>
             </div>
-                <div> 회원님을 위한 추천 모두보기 </div>
-                <div> 추천인 프로필 </div>
-                <div> 추천인 프로필 </div>
-                <div> 추천인 프로필 </div>
-                <div> 추천인 프로필 </div>
-                <div> 추천인 프로필 </div>
-                <div> 소개 도움말 홍보센터 API </div>
-                <div> 2021 인스타그램 프롬 페이스북 </div>
+            <div style="display: flex; flex-direction: row; justify-content: space-between;">    
+                <div style="font-weight: bold; color: gray; font-size: 13px;"> &nbsp;&nbsp;&nbsp;회원님을 위한 추천</div>
+                <div style="font-size: 12px;"> <a href="#" style="font-weight: bold; color: black; text-decoration: none;">모두보기</a> </div>
+            </div>    
+            <div  style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin: 5px 15px;">
+                <div style="display: flex; flex-direction: row;">
+                    <div class="box" style="width: 30px; height: 30px;">
+                        <img class="profile" src="images/Friends1.jpg">
+                    </div>
+                    <div style="text-align: left; font-size: 12px;">
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<b>pwh1112</b></div>
+                        <div style="color: gray;">&nbsp;&nbsp;&nbsp;&nbsp;인기</div>
+                    </div>
+                </div>
+
+                <div><a href="#" style="font-weight: bold; font-size: 12px; text-decoration: none;">팔로우</a></div>
+            </div>
+            <div  style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin: 5px 15px;">
+                <div style="display: flex; flex-direction: row;">
+                    <div class="box" style="width: 30px; height: 30px;">
+                        <img class="profile" src="images/Friends2.jpg">
+                    </div>
+                    <div style="text-align: left; font-size: 12px;">
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<b>songsuh</b></div>
+                        <div style="color: gray;">&nbsp;&nbsp;&nbsp;&nbsp;인기</div>
+                    </div>
+                </div>
+
+                <div><a href="#" style="font-weight: bold; font-size: 12px; text-decoration: none;">팔로우</a></div>
+            </div>
+            <div  style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin: 5px 15px;">
+                <div style="display: flex; flex-direction: row;">
+                    <div class="box" style="width: 30px; height: 30px;">
+                        <img class="profile" src="images/Friends3.jpg">
+                    </div>
+                    <div style="text-align: left; font-size: 12px;">
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<b>cch_009</b></div>
+                        <div style="color: gray;">&nbsp;&nbsp;&nbsp;&nbsp;__mwa2님 외 31명이 팔로우 합니다</div>
+                    </div>
+                </div>
+
+                <div><a href="#" style="font-weight: bold; font-size: 12px; text-decoration: none;">팔로우</a></div>
+            </div>
+            <div  style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin: 5px 15px;">
+                <div style="display: flex; flex-direction: row;">
+                    <div class="box" style="width: 30px; height: 30px;">
+                        <img class="profile" src="images/Friends4.jpg">
+                    </div>
+                    <div style="text-align: left; font-size: 12px;">
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<b>lhsurur</b></div>
+                        <div style="color: gray;">&nbsp;&nbsp;&nbsp;&nbsp;qwe223님 외 19명이 팔로우 합니다</div>
+                    </div>
+                </div>
+
+                <div><a href="#" style="font-weight: bold; font-size: 12px; text-decoration: none;">팔로우</a></div>
+            </div>
+            <div  style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin: 5px 15px;">
+                <div style="display: flex; flex-direction: row;">
+                    <div class="box" style="width: 30px; height: 30px;">
+                        <img class="profile" src="images/Friends5.jpg">
+                    </div>
+                    <div style="text-align: left; font-size: 12px;">
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<b>jmwmt0602</b></div>
+                        <div style="color: gray;">&nbsp;&nbsp;&nbsp;&nbsp;회원님을 팔로우 합니다</div>
+                    </div>
+                </div>
+
+                <div><a href="#" style="font-weight: bold; font-size: 12px; text-decoration: none;">팔로우</a></div>
+            </div>
+            <div style="text-align: left;">
+                <div style="margin-top: 30px; font-size: 10px; color: gray; opacity: 0.5;"> &nbsp;&nbsp;&nbsp;소개·도움말·홍보 센터·API채용 정보·<br>
+                    &nbsp;&nbsp;&nbsp개인정보처리방침·약관·위치·인기 계정·해시태그·언어</div>
+                <div style="margin-top: 20px; font-size: 10px; color: gray; opacity: 1;"> &nbsp;&nbsp;&nbsp;© 2021 INSTAGRAM FROM META </div>
+            </div>    
+            </div>
         </div>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
-
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
