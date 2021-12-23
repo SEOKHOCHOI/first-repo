@@ -18,9 +18,6 @@
 
         <link rel = "shortcut icon" href = "images/instagram.png">
         <title>Instagram</title>
-        
-        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script> <!-- 실제 배포시 development를 production으로 -->
-        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 
         <style>
 
@@ -38,6 +35,12 @@
                 z-index: 10;
                 transition: .1s;
             }
+
+            .dp{
+                display: flex;
+                flex-direction: row;
+            }
+
             .box {  
                 width: 50px; 
                 height: 50px; 
@@ -75,6 +78,18 @@
                 color: gray;
                 display: flex; 
             }
+            
+            .feedback{
+                font-weight: bold; 
+                color: gray; 
+                text-decoration: none;
+            }
+
+            .feedback02{
+                font-weight: bold; 
+                color: black;
+                text-decoration: none;
+            }
 
             .popup {
                 position: absolute; 
@@ -104,17 +119,31 @@
                 transition: all 0.2s;
             }
             .chucheon{
-                display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin: 5px 15px;   
+                display: flex; 
+                flex-direction: row; 
+                justify-content: space-between; 
+                align-items: center; 
+                margin: 5px 15px;   
             }
 
-            .follow{
-                color: gray;
-                padding-left:20px;
+            .follow {
+                text-align: left; 
+                font-size: 12px; 
+                padding: 0 0 0 16px;
             }
+
+            .follow2{
+                font-weight: bold; 
+                font-size: 12px; 
+                text-decoration: none;
+            }
+
             span[class^=material-icons]{
                 margin-right:10px;
                 cursor:pointer;
             }
+
+            
         </style>
         <script>
             window.onload=()=>{
@@ -188,12 +217,12 @@
                             src="images/Friends10.jpg">
                         </div>
                     </div>
-                    <div style="font-size: 5px; text-align: left; margin: 7px 5px 12px 5px">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jy.1212 
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uwepp 
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4353kmg
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;love_luv 
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;strong00
+                    <div style="font-size: 5px; text-align: left; margin: 10px 0 10px 0;">
+                        <span style="padding: 0 0 0 30px;"> jy.1212 </span> 
+                        <span style="padding: 0 0 0 35px;"> uwepp </span> 
+                        <sapn style="padding: 0 0 0 30px;"> 4353kmg </sapn>
+                        <span style="padding: 0 0 0 28px;"> love_luv </sapn> 
+                        <span style="padding: 0 0 0 29px;"> strong00 </sapn>
                     </div>
                 </div>
 
@@ -205,12 +234,11 @@
                             <img class="profile" 
                             src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
                         </div>
-                        <div style="text-align: left; font-size: 14px;">
-                            &nbsp;&nbsp;&nbsp;<b>kbh_oO</b>
-                            <br>&nbsp;&nbsp;&nbsp;서울
+                        <div style="text-align: left; font-size: 14px; padding: 15px;">
+                            <b>kbh_oO</b>
+                            <br>서울
                         </div>
                     </div>
-
                 <div>
                     <img style="width: 100%;" src="images/myPuppyThatIMade1.jpg"> 
                     <div style="margin: 10px 15px; margin-top: 14px; display: flex; flex-direction: row; justify-content: space-between;">
@@ -227,33 +255,44 @@
                         <div class="box" style="width: 29px; height: 29px;"> 
                         <img class="profile" src="/myProject/instagram/images/present.jpg">
                         </div>
-                        <div style="text-align: left; font-size: 14px;"> &nbsp;ppgppg_0 <b>외 245명이</b> 좋아합니다.</div> 
+                        <div style="text-align: left; font-size: 14px;"> 
+                            <a href="#" style="font-weight: bold; color: black; text-decoration: none;"> &nbsp;ppgppg_0</a>님 
+                            <a href="#" style="font-weight: bold; color: black; text-decoration: none;"> 외 245명이 </a> 좋아합니다. 
+                        </div> 
                     </div>
-                    <div style="margin: 1px 15px; text-align: left; font-size: 15px;"> <b>kbh_oO</b>눈으로 만든 우리 최뽀글! </div>
+                    <div style="margin: 1px 15px; text-align: left; font-size: 15px;"> 
+                        <a href="#" style="text-decoration: none; color: black; font-weight: bold;">kbh_oO</a>
+                        &nbsp;눈으로 만든 우리 최뽀글! 
+                    </div>
                     
                     <a href="#pop1" class="btn">댓글 3개 모두 보기</a>
                     <div class="popup" id="pop1" style="display: flex; flex-direction: row;">
                         <div style="width: 650px; height: 650px;">
                             <img style="width: 100%; height: 100%;" src="images/myPuppyThatIMade1.jpg"> 
                         </div>
-                        <div style="width: 450px; height: 650px; left: 62%;">
-                            <div style="display: flex; flex-direction: row; border:1px gainsboro; border-style: none none solid none;">
+                        <div style="width: 450px; height: 650px; left: 62%; padding: 5px 0 0 0;">
+                            <div class="dp" style="border:1px gainsboro; border-style: none none solid none;">
                                 <div class="box" style="width: 30px; height: 30px; margin: 15px 0 0 15px;">
                                     <img class="profile" 
                                     src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
                                 </div>
-                                <div style="text-align: left; font-size: 12px; margin: 20px 0 20px 0;">
-                                    &nbsp;&nbsp;&nbsp;<b>kbh_oO · 팔로잉</b><br><div style="font-size: 11px;">&nbsp;&nbsp;&nbsp;서울</div>
+                                <div style="display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; padding: 13px 0 10px 0;">
+                                    <div style="padding:  0 0 0 10px;">
+                                        <div><a href="#" style="font-weight: bold; color: black;"> kbh_oO · 팔로잉 </a></div>
+                                        <a href="#" style="font-style: 11px; padding: 0 70px 0 0;"> 서울 </a>
+                                    </div>
+                                    <span class="material-icons-outlined" style="padding: 0 0 0 260px;"> more_horiz </span>
                                 </div>
                             </div>
-                            <div style="display: flex; flex-direction: row;">
-                                <div class="box" style="width: 30px; height: 30px; margin: 15px 0 0 15px;">
+                            <div class="dp">
+                                <div class="box" style="width: 30px; height: 30px; margin: 20px 0 0 15px;">
                                     <img class="profile" 
                                     src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
                                 </div>
-                                <div style="text-align: left; font-size: 12px; margin: 20px 0 20px 0;">
-                                    <p>&nbsp;&nbsp;&nbsp;<b>kbh_oO</b> 눈으로 만든 우리 최뽀글!</p>
-                                    <div style="color: gray;">&nbsp;&nbsp;&nbsp;3주</div>
+                                <div style="text-align: left; font-size: 12px; margin: 20px 0 20px 10px;">
+                                    <a href="#" style="font-weight: bold; color: black;"> kbh_oO </a> 
+                                    눈으로 만든 우리 최뽀글!<br>
+                                    <a href="#" style="color: gray;"> 3주 </a>
                                 </div>
                             </div>
                             <div style="border:1px gainsboro; border-style: none none solid none;">
@@ -264,8 +303,12 @@
                                             src="images/Waterpuppy.jpg">
                                         </div>
                                         <div style="margin: 14px 0 0 13px; text-align: left; font-size: 12px;">
-                                            <b>ta_mida</b> 나도 만들어줘ㅠㅠ <br>
-                                            <div style="color: gray; margin: 15px 0 0 0;"> 3주 &nbsp;&nbsp;<b>답글달기</b> </div>
+                                            <a href="#" style="font-weight: bold; color: black;"> ta_mida </a> 
+                                            나도 만들어줘ㅠㅠ <br>
+                                            <div style="color: gray; margin: 10px 0 0 0"> 
+                                                <a href="#"> 3주 </a> 
+                                                <a href="#" class="feedback"> 답글 달기 </a> 
+                                            </div>
                                         </div>
                                     </div>
                                     <div style="margin: 50px 6px 0 0; color: red;">
@@ -273,51 +316,37 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <div style="display: flex; flex-direction:row;">
+                                    <div class="dp">
                                         <div class="box" style="width: 30px; height: 30px; margin: 15px 0 0 15px;">
                                             <img class="profile" 
                                             src="images/Friends8.jpg">
                                         </div>
                                         <div style="margin: 14px 0 0 13px; text-align: left; font-size: 12px;">
-                                            <b>4353kmg</b> ㅋㅋㅋ귀엽네 <br>
-                                            <div style="color: gray; margin: 15px 0 0 0;"> 3주 &nbsp;&nbsp;<b>답글달기</b> </div>
+                                            <a href="#" style="font-weight: bold; color: black;"> 4353kmg </a> 
+                                            ㅋㅋㅋ귀엽네 <br>
+                                            <div style="color: gray; margin: 15px 0 0 0;"> 
+                                                <a href="#"> 3주 </a> 
+                                                <a href="#" class="feedback">답글 달기</a> 
+                                            </div>
                                         </div>
                                         <div style="margin: 10px 0 0 235px; color: red;">
-                                            <div id="root"></div> <!-- <div id = "root"><button>Like</button></div> 라는 결과나와. -->
-                                            <script>
-                                                const e = React.createElement;
-
-                                                class LikeButton extends React.Component {
-                                                    constructor(props) {
-                                                        super(props);
-                                                        this.state = {
-                                                            like: false,
-                                                        };
-                                                    }
-                                    
-                                                    render() {
-                                                        return e('heart',{ onClick: () => { this.setState({ liked: true }) }, type: 'submit' }, 
-                                                        this.state.liked === true ? '♥' : '♡',
-                                                        ); // <button onclick= "() => { console.log('clicked') }" type= "submit">Like</button>만들겠다 라는 뜻. 만든다X
-                                                        // $('button').text('Liked');  기존엔 이렇게 직접 바꿔줬어야함.
-                                                    }
-                                                }
-                                            </script>
-                                            <script>
-                                                ReactDOM.render(e(LikeButton), document.querySelector('#root'));// 대소문자 주의
-                                            </script>
+                                            ♥
                                         </div>
                                     </div>
                                 </div>
                                 <div>
-                                    <div style="display: flex; flex-direction:row;">
+                                    <div class="dp">
                                         <div class="box" style="width: 30px; height: 30px; margin: 15px 0 0 15px;">
                                             <img class="profile" 
                                             src="images/k1.jpg">
                                         </div>
                                         <div style="margin: 14px 0 0 13px; text-align: left; font-size: 12px;">
-                                            <b>inchi5252</b> inchi22오늘 날씨 완전 좋습니다🤣👍 <br>
-                                            <div style="color: gray; margin: 15px 0 0 0;"> 3주 &nbsp;&nbsp;<b>답글달기</b> </div>
+                                            <a href="#" style="color: black; font-weight: bold;"> inchi5252 </a> 
+                                            오늘 날씨 완전 좋습니다🤣👍 <br>
+                                            <div style="color: gray; margin: 15px 0 0 0;"> 
+                                                <a href="#"> 3주 </a> 
+                                                <a href="#" class="feedback"> 답글 달기 </a> 
+                                            </div>
                                         </div>
                                         <div style="margin: 10px 0 0 103px; color: red;">
                                             ❤
@@ -336,187 +365,129 @@
                                         <span class="material-icons-outlined"> bookmark_border  </span>      
                                     </div>
                                 </div>
-                                <div style="text-align: left; font-size: 12px;">
-                                    &nbsp;&nbsp;&nbsp;<b> 좋아요 212개 </b>
-                                    <div style="font-size: 8px; color: gray;">&nbsp;&nbsp;&nbsp;&nbsp&nbsp12월 8일</div>
+                                <div style="text-align: left; font-size: 12px; padding: 0 0 15px 16px;">
+                                    <a href="#" style="font-weight: bold; color: black; text-decoration: none;"> 좋아요 246개 </a>
+                                    <div style="font-size: 8px; color: gray;"><a href="#"> 12월 8일 </a></div>
                                 </div>
                             </div>
-                            <div>
-                                <div class="feed_box" style="margin-top: 15px;"><input type="text" class="form-control" style="box-shadow: none; border: none; outline: none;" placeholder="🙂 &nbsp;댓글 달기..."></div>
+                            
+                            <div class="feed_box" style="margin-top: 15px;">
+                                <input type="text" class="form-control" style="box-shadow: none; border: none; outline: none;" 
+                                placeholder="🙂 &nbsp;댓글 달기...">
                             </div>
+                            
                         </div>
                     </div>
                     <div class="dim"></div>
-                    
-                    <div style="margin: 1px 14px; text-align: left; font-size: 14px;"> <b>ta_mida</b> 나도 만들어줘ㅠㅠ</div>
-                    <div style="margin: 1px 14px; text-align: left; font-size: 14px;"> <b>4353kmg</b> ㅋㅋㅋ귀엽네 </div>
+                    <div style="margin: 1px 14px; text-align: left; font-size: 14px;"> 
+                        <a href="#" style="text-decoration: none; color: black; font-weight: bold;"> ta_mida </a> 
+                        나도 만들어줘ㅠㅠ
+                    </div>
+                    <div style="margin: 1px 14px; text-align: left; font-size: 14px;"> 
+                        <a href="#" style="text-decoration: none; color: black; font-weight: bold;"> 4353kmg </a> 
+                        ㅋㅋㅋ귀엽네 
+                    </div>
                     <div style="margin: 7px 15px; text-align: left; font-size: 5px; color: gray"> 4시간 전 </div>
-                    <div class="feed_box" style="margin-top: 18px;"><input type="text" class="form-control" style="box-shadow: none; border: none; outline: none;" placeholder="🙂 &nbsp;댓글 달기..."></div>
+                    <div class="feed_box" style="margin-top: 18px;">
+                        <input type="text" class="form-control" 
+                        style="box-shadow: none; border: none; outline: none;" 
+                        placeholder="🙂 &nbsp;댓글 달기...">
+                    </div>
                 </div>
             </div>
-            <div style="border: solid 1px gainsboro; background-color: white; margin-bottom: 20px;">   
-                <div style="display: flex; flex-direction: row; align-items: center; margin: 5px 15px;">
-                    <div class="box" style="width: 30px; height: 30px;">
-                        <img class="profile" 
-                        src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
-                    </div>
-                    <div style="text-align: left; font-size: 14px;">
-                        &nbsp;&nbsp;&nbsp;<b>kbh_oO</b>
-                        <br>&nbsp;&nbsp;&nbsp;서울
-                    </div>
-                </div>
-
-            <div>
-                <img style="width: 100%;" src="images/myPuppyThatIMade1.jpg"> 
-                <div style="margin: 10px 15px; margin-top: 14px; display: flex; flex-direction: row; justify-content: space-between;">
-                    <div>
-                        <span class="material-icons-outlined"> favorite_border </span>
-                        <span class="material-icons-outlined"> mode_comment </span>
-                        <span class="material-icons-outlined"> send </span>
-                    </div>
-                    <div>
-                        <span class="material-icons-outlined"> bookmark_border  </span>      
-                    </div>
-                </div>
-                <div style="margin: 10px 15px; display: flex; flex-direction: row; align-items: center;">
-                    <div class="box" style="width: 29px; height: 29px;"> 
-                    <img class="profile" src="/myProject/instagram/images/present.jpg">
-                    </div>
-                    <div style="text-align: left; font-size: 14px;"> &nbsp;ppgppg_0 <b>외 245명이</b> 좋아합니다.</div> 
-                </div>
-                <div style="margin: 1px 15px; text-align: left; font-size: 15px;"> <b>kbh_oO</b>눈으로 만든 우리 최뽀글! </div>
-                <div style="margin: 1px 15px; text-align: left; font-size: 15px; color: gray"> 댓글 94개 모두 보기 </div>
-                <div style="margin: 1px 14px; text-align: left; font-size: 14px;"> <b>ta_mida</b> 나도 만들어줘ㅠㅠ</div>
-                <div style="margin: 1px 14px; text-align: left; font-size: 14px;"> <b>4353kmg</b> ㅋㅋㅋ귀엽네 </div>
-                <div style="margin: 7px 15px; text-align: left; font-size: 5px; color: gray"> 4시간 전 </div>
-                <div class="feed_box" style="margin-top: 18px;"><input type="text" class="form-control" style="box-shadow: none; border: none; outline: none;" placeholder="🙂 &nbsp;댓글 달기..."></div>
-            </div>
+            <div style="border: solid 1px gainsboro; background-color: white; margin-bottom: 20px;"></div>
         </div>
-        <div style="border: solid 1px gainsboro; background-color: white; margin-bottom: 20px;">   
-            <div style="display: flex; flex-direction: row; align-items: center; margin: 5px 15px;">
-                <div class="box" style="width: 30px; height: 30px;">
-                    <img class="profile" 
-                    src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
-                </div>
-                <div style="text-align: left; font-size: 14px;">
-                    &nbsp;&nbsp;&nbsp;<b>kbh_oO</b>
-                    <br>&nbsp;&nbsp;&nbsp;서울
-                </div>
-            </div>
-
-        <div>
-            <img style="width: 100%;" src="images/myPuppyThatIMade1.jpg"> 
-            <div style="margin: 10px 15px; margin-top: 14px; display: flex; flex-direction: row; justify-content: space-between;">
-                <div>
-                    <span class="material-icons-outlined"> favorite_border </span>
-                    <span class="material-icons-outlined"> mode_comment </span>
-                    <span class="material-icons-outlined"> send </span>
-                </div>
-                <div>
-                    <span class="material-icons-outlined"> bookmark_border  </span>      
-                </div>
-            </div>
-            <div style="margin: 10px 15px; display: flex; flex-direction: row; align-items: center;">
-                <div class="box" style="width: 29px; height: 29px;"> 
-                <img class="profile" src="/myProject/instagram/images/present.jpg">
-                </div>
-                <div style="text-align: left; font-size: 14px;"> &nbsp;ppgppg_0 <b>외 245명이</b> 좋아합니다.</div> 
-            </div>
-            <div style="margin: 1px 15px; text-align: left; font-size: 15px;"> <b>kbh_oO</b>눈으로 만든 우리 최뽀글! </div>
-            <div style="margin: 1px 15px; text-align: left; font-size: 15px; color: gray"> 댓글 94개 모두 보기 </div>
-            <div style="margin: 1px 14px; text-align: left; font-size: 14px;"> <b>ta_mida</b> 나도 만들어줘ㅠㅠ</div>
-            <div style="margin: 1px 14px; text-align: left; font-size: 14px;"> <b>bulkbulk</b> ㅋㅋㅋ귀엽네 </div>
-            <div style="margin: 7px 15px; text-align: left; font-size: 5px; color: gray"> 4시간 전 </div>
-            <div class="feed_box" style="margin-top: 18px;"><input type="text" class="form-control" style="box-shadow: none; border: none; outline: none;" placeholder="🙂 &nbsp;댓글 달기..."></div>
-        </div>
-    </div>
-            </div>
-            <div style="width: 320px; height: 1000px; position: fixed; left: 62%; margin-top: 50px;">
+            <div style="width: 320px; height: 1000px; position: fixed; left: 62%; margin-top: 50px;"> <!-- 오른쪽 화면(고정된) -->
             <div>
-                <div  style="display: flex; flex-direction: row; align-items: center; margin: 5px 15px 20px 15px;"><div>
+                <div class="dp" style="align-items: center; margin: 5px 15px 20px 15px;"><div>
                     </div>
-                    <div class="box" style="">
+                    <div class="box">
                         <img class="profile" 
                         src="images/myDog.jpg">
                     </div>
-                    <div style="text-align: left; font-size: 12px;">
-                        <div>&nbsp;&nbsp;&nbsp;&nbsp;<b>c__ppg</b></div>
-                        <div style="color: gray;">&nbsp;&nbsp;&nbsp;&nbsp;서울</div>
+                    <div class="follow">
+                        <a href="#" style="font-weight: bold; color: black; text-decoration: none;"> c__ppg </a>
+                        <a href="#" style="color: gray; font-weight: bold; text-decoration: none;"> <br>서울 </a>
                     </div>
                 </div>
-                <div style="display: flex; flex-direction: row; justify-content: space-between;">    
-                    <div style="font-weight: bold; color: gray; font-size: 13px;"> &nbsp;&nbsp;&nbsp;회원님을 위한 추천</div>
-                    <div style="font-size: 12px; margin: 0 15px 0 0;"> <a href="#" style="font-weight: bold; color: black; text-decoration: none;">모두보기</a> </div>
+                <div class="dp" style="justify-content: space-between;">    
+                    <div style="font-weight: bold; color: gray; font-size: 13px; padding: 9px;"> 회원님을 위한 추천 </div>
+                    <div style="font-size: 12px; margin: 12px 15px 0 0;"> 
+                        <a href="#" style="font-weight: bold; color: black; text-decoration: none;"> 모두보기 </a> 
+                    </div>
                 </div>    
                 <div class="chucheon">
-                    <div style="display: flex; flex-direction: row;">
+                    <div class="dp">
                         <div class="box" style="width: 30px; height: 30px;">
                             <img class="profile" src="images/Friends1.jpg">
                         </div>
-                        <div style="text-align: left; font-size: 12px;">
-                            <div>&nbsp;&nbsp;&nbsp;&nbsp;<b>pwh1112</b></div>
-                            <div style="color: gray;">&nbsp;&nbsp;&nbsp;&nbsp;인기</div>
+                        <div class="follow">
+                            <a href='#' style="text-decoration: none; color: black; font-weight: bold;"> pwh1112 </a> 
+                            <div style="color: gray;"> 인기 </div>
                         </div>
                     </div>
-
-                    <div><a href="#" style="font-weight: bold; font-size: 12px; text-decoration: none;">팔로우</a></div>
+                        <a href="#" style="font-weight: bold; font-size: 12px; text-decoration: none;"> 팔로우 </a>
                 </div>
                 <div class="chucheon">
-                    <div style="display: flex; flex-direction: row;">
+                    <div class="dp">
                         <div class="box" style="width: 30px; height: 30px;">
                             <img class="profile" src="images/Friends2.jpg">
                         </div>
-                        <div style="text-align: left; font-size: 12px;">
-                            <div>&nbsp;&nbsp;&nbsp;&nbsp;<b>songsuh</b></div>
-                            <div style="color: gray;">&nbsp;&nbsp;&nbsp;&nbsp;인기</div>
+                        <div class="follow">
+                            <a href='#' style="text-decoration: none; color: black; font-weight: bold;"> songsuh </a>
+                            <div style="color: gray;"> 인기 </div>
                         </div>
                     </div>
-
-                    <div><a href="#" style="font-weight: bold; font-size: 12px; text-decoration: none;">팔로우</a></div>
+                    <a href="#" style="font-weight: bold; font-size: 12px; text-decoration: none;">팔로우</a>
                 </div>
                 <div class="chucheon">
-                    <div style="display: flex; flex-direction: row;">
+                    <div class="dp">
                         <div class="box" style="width: 30px; height: 30px;">
                             <img class="profile" src="images/Friends3.jpg">
                         </div>
-                        <div style="text-align: left; font-size: 12px;">
-                            <div>&nbsp;&nbsp;&nbsp;&nbsp;<b>cch_009</b></div>
-                            <div class="follow" >__mwa2님 외 31명이 팔로우 합니다</div>
+                        <div class="follow">
+                            <a href='#' style="text-decoration: none; color: black; font-weight: bold;"> cch_009 </a>
+                            <div style="color: gray;">__mwa2님 외 31명이 팔로우 합니다</div>
                         </div>
                     </div>
-
-                    <div><a href="#" style="font-weight: bold; font-size: 12px; text-decoration: none;">팔로우</a></div>
+                    <a href="#" style="font-weight: bold; font-size: 12px; text-decoration: none;">팔로우</a>
                 </div>
                 <div class="chucheon">
-                    <div style="display: flex; flex-direction: row;">
+                    <div class="dp">
                         <div class="box" style="width: 30px; height: 30px;">
                             <img class="profile" src="images/Friends4.jpg">
                         </div>
-                        <div style="text-align: left; font-size: 12px;">
-                            <div>&nbsp;&nbsp;&nbsp;&nbsp;<b>lhsurur</b></div>
-                            <div class="follow" >qwe223님 외 19명이 팔로우 합니다</div>
+                        <div class="follow">
+                            <a href='#' style="text-decoration: none; color: black; font-weight: bold;"> lhsurur </a> 
+                            <div style="color: gray;"> qwe223님 외 19명이 팔로우 합니다 </div>
                         </div>
                     </div>
 
-                    <div><a href="#" style="font-weight: bold; font-size: 12px; text-decoration: none;">팔로우</a></div>
+                    <a href="#" style="font-weight: bold; font-size: 12px; text-decoration: none;">팔로우</a>
                 </div>
                 <div class="chucheon">
-                    <div style="display: flex; flex-direction: row;">
+                    <div class="dp">
                         <div class="box" style="width: 30px; height: 30px;">
                             <img class="profile" src="images/Friends5.jpg">
                         </div>
-                        <div style="text-align: left; font-size: 12px;">
-                            <div>&nbsp;&nbsp;&nbsp;&nbsp;<b>jmwmt0602</b></div>
-                            <div class="follow" >회원님을 팔로우 합니다</div>
+                        <div class="follow">
+                            <a href=# style="text-decoration: none; color: black; font-weight: bold;"> jmwmt0602 </a>
+                            <div style="color: gray;"> 회원님을 팔로우 합니다 </div>
                         </div>
                     </div>
 
-                    <div><a href="#" style="font-weight: bold; font-size: 12px; text-decoration: none;">팔로우</a></div>
+                    <div>
+                        <a href="#" style="font-weight: bold; font-size: 12px; text-decoration: none;">팔로우</a>
+                    </div>
                 </div>
-                <div style="text-align: left;">
-                    <div style="margin-top: 30px; font-size: 10px; color: gray; opacity: 0.5;"> &nbsp;&nbsp;&nbsp;소개·도움말·홍보 센터·API채용 정보·<br>
-                        &nbsp;&nbsp;&nbsp개인정보처리방침·약관·위치·인기 계정·해시태그·언어</div>
-                    <div style="margin-top: 20px; font-size: 10px; color: gray; opacity: 1;"> &nbsp;&nbsp;&nbsp;© 2021 INSTAGRAM FROM META </div>
+                <div style="text-align: left; font-size: 10px; color: gray; padding: 0 0 0 9px; opacity: 0.5;">
+                    <div style="margin-top: 30px;"> 
+                        소개·도움말·홍보 센터·API채용 정보·<br>
+                        개인정보처리방침·약관·위치·인기 계정·해시태그·언어
+                    </div>
+                    <div style="margin-top: 20px;"> 
+                        © 2021 INSTAGRAM FROM META 
+                    </div>
                 </div>    
                 </div>
             </div>
