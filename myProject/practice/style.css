@@ -1,0 +1,145 @@
+/*
+  우리가 마음이 바껴 텍스트 색을 하얀색에서 다른색으로 바꾸고 싶다면?
+  디자인책에서 너무 극단적인 하얀색과 검은색은 사용자에게 좋지 않기에
+  어느정도 톤 다운된 하얀색을 쓰라고 나와있어.
+  
+  색을 바꾸고 싶다면 정의된 아이들을 하나하나 바꿔야하는 불편함이 있어.
+  css관련된 프레임워크나 라이브러리를 이용하면 손쉽게 할 수 있지만 
+  순수 css에선 변수를 할당해서 밑처럼 사용할수있어.
+
+  --text-color: 사용할색; 이런식으로 가능해.
+  그리고 이렇게 한번만 정의해 놓은 후에 쓰고싶은 곳에서 
+  반복되게 작업하기 보다는 css에서 제공하는 var를 통해서
+  color: 원하는색; 이게 아니라 
+  color: var(--text-color);  이렇게 정의돼 있는걸 쓸 수 있어.
+
+  이렇게 하게되면 마음이 바껴 색을 바꾸고 싶을때 간단하게 바꿔줄수있어.
+*/
+:root {
+  --text-color: #f0f4f5;
+  --background-color: black;
+  --accent-color: black;
+}
+
+/*
+    스타일링을 할때는 최상위에 있는 박스부터 레이아웃 배치 후
+    그 안의 내용들을 세부적으로 꾸며주자.
+    그래서 나는 navbar의 아이템을 먼저 꾸며주었다.
+*/
+
+/* 원하지 않는 스페이싱이 들어간 것은 body태그에 margin이 있기 때문 */
+body {
+  margin: 0;
+  font-family: "Source Sans Pro";
+}
+
+a {
+  /* 모든 a태그에 밑줄제거, 색 변경 */
+  text-decoration: none;
+  color: white;
+}
+
+.navbar {
+  display: flex; /* 아이템들 한줄에 나란히 */
+  justify-content: space-between; /* 같은 중심축, 중간중간 스페이스 */
+  align-items: center; /* 아이템 수직적으로 중간으로 배치, 반대 축이기에 align-items  */
+  background-color: rgb(179, 197, 245);
+  padding: 8px 12px;
+}
+
+.navbar__logo {
+  font-size: 24px;
+  color: white;
+}
+
+.navbar__logo i {
+  color: rgb(0, 81, 255);
+}
+
+.navbar__menu {
+  display: flex; /* 이러면 한 줄에 하나씩 나와 */
+  list-style: none; /* 메뉴아이템 자체가 list 이기에 닷 들이 들어가있음. 이걸 제거.  */
+  padding-left: 0; /* 아이템이 중간이 아님. 메뉴에 패딩이 들어있는걸 없애줌.  */
+}
+
+.navbar__menu li {
+  /* 메뉴안에 있는 리스트 아이템에서 */
+  padding: 8px 12px; /* 아이템이 너무 따닥따닥붙어있어 스페이싱으로 간격맞춤 */
+  /* !!!! padding을 쓴 이유는 나중에 저 위로 마우스를 올렸을 때  
+  백그라운드를 조금 더 넓게.. 영역을 넓게 만들고 싶기 때문! 
+  margin을 넣으면 클릭할수있는 범위가 작아지고 padding을 넣으면
+  박스 안에 넣기 때문에 마우스를 클릭할수 있는 영역도 넓어지고 좀 더 크게
+  하이라이트를 할 수 있기 때문이다.
+*/
+}
+
+.navbar__toogleBtn {
+  display: none; /* 화면이 작아졌을때만 나오게 */
+  position: absolute; /* 이러면 그냥 흐름에서 나와서 제일 위로 올라감 */
+  right: 32px; /* 흐름에서 나온걸 오른쪽으로 붙임 */
+  font-size: 24px;
+  color: rgb(0, 81, 255);
+}
+
+.navbar__menu li:hover {
+  /* navber__menu의 li에 마우스가 올라갔을때 라는 의미. */
+  background-color: rgb(0, 140, 255); /* 올라갔을때 생기는 박스 색 */
+  border-radius: 4px; /* 올리면 생기는 박스가 너무 직각 네모라 모양 변경위함. */
+}
+
+.navbar__icons {
+  list-style: none;
+  color: white;
+  display: flex;
+  padding-left: 0; /* 이러면 중간으로 와! */
+}
+
+.navbar__icons li {
+  padding: 8px 12px; /* 글자가 너무 붙어있으니 떼어줌. */
+}
+
+/* 레이아웃을 반응형으로 만들때는 media 쿼리 사용 */
+@media screen and (max-width: 768px) {
+  /* 스크린 타입이고 최대 너비가 768일때의 원하는 레이아웃 */
+  /*창이 작으면 메뉴와 원하는 아이템 밑으로 내리는걸로 만들자.*/
+  /* 너비가 작을땐 아이템 방향 아래로 바꿔야함.그걸 위해 제일 상위의 navbar건듬 */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start; /* 중심축을 수직! 나는 수평에서 왼쪽으로 두고 싶음 */
+    padding: 8px 24px; /* 화면에 너무 꽉차니 여유공간 주기 위함 */
+  }
+
+  .navbar__menu {
+    display: none; /* 햄버거 버튼 클릭시에만 메뉴애들 보이게 하기위해 숨기는용도 */
+    flex-direction: column; /* 한 줄에 하나씩 나오게 하기 위함 */
+    align-items: center; /* 메뉴나 아이콘은 중간으로 정렬위함. 똑같이 반대축 정렬위한걸 사용 */
+    width: 100%; /* 위처럼 center해도 변화X 그건 메뉴의 너비가 작기때문이니 키워 */
+  }
+
+  .navbar__menu li {
+    width: 100%; /* 하이라이트 너비에 맞게 전체적으로 하기 위함 */
+    /* 근데 또 텍스트가 전부 왼쪽으로 가지? 그건 너비가 넓어졌을때
+      이 텍스트는 자동으로 왼쪽으로 정렬되기 때문임 그러니 다시 센터로바꿔.
+    */
+    text-align: center;
+  }
+
+  .navbar__icons {
+    display: none; /* 햄버거 버튼 클릭시에만 메뉴애들 보이게 하기위해 숨기는용도 */
+    /* 아이콘은 플렉스의 방향을 바꾸지 않고 중간으로 나와야함 */
+    /* navbar의 flex 방향은 row 이기때문에 중간정렬위해선 justify-content사용 */
+    justify-content: center; /* 근데도 안오는건 너비가 100%가 아니기 때문임 */
+    width: 100%; /* 해결? 아니 리스트에 기본으로 적용된 패딩때문에 안됨 */
+    /* 아이콘 가서 패딩0으로 바꿔. */
+  }
+
+  .navbar__toogleBtn {
+    display: block; /* 최대 너비가 768px일때만 토글버튼 나오게 */
+  }
+
+  .navbar__menu.active,
+  .navbar__icons.active {
+    /* 원래 안보이게 해놓은걸 이 둘일땐 보이게 해줘 */
+    display: flex;
+  }
+}

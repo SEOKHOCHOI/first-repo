@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 이 부분은 구글 폰트 사용하기 위한 링크. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    
+    <title>Nav bar</title>
+
+    <script src="https://kit.fontawesome.com/e37b811ba4.js" 
+    crossorigin="anonymous">
+    </script>
+    <script src="main.js" defer></script>
+
+</head>
+<body>
+    <!-- 
+        1. 먼저 커다란 상자 만들자. 
+            그냥 div라는 태그를 사용하지 말고 의미있는 시멘틱 태그사용.
+            그러니 제일 가까운 nav태그 사용!
+    -->
+    <nav class="navbar">
+        <div class="navbar__logo">  <!-- 첫 번째 박스(아이콘 하나, 글자 하나) -->
+            <i class="fas fa-bone"></i>
+            <a href="">Ppogeul</a>
+        </div>
+
+        <ul class="navbar__menu"> <!-- 두 번째 박스 -->
+            <li><a href="">Home</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Snack</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Bookings</a></li>
+        </ul>
+
+        <ul class="navbar__icons"> <!-- 세 번째 박스 -->
+            <li><i class="fab fa-twitter"></i></li>
+            <li><i class="fab fa-facebook-f"></i></li>
+        </ul>
+
+        <!-- 햄버거버튼 눌렀을때 메뉴 아이템 나올 수 있게.. -->
+        <!-- 얘는 flex 안에 포함되어 있기보다 수동적으로 제일 오른쪽위로 배열하자. -->
+        <!-- 그러려면 원래 문서의 흐름에서 나와서 오른쪽 위에 붙여야돼
+            문서 흐름에서 나와서 포지션을 할 수 있는건 
+            position: absolute; 해줘야해. CSS 에서!! 
+        -->
+        <a href="#" class="navbar__toogleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+
+    </nav>
+
+</body>
+</html>
