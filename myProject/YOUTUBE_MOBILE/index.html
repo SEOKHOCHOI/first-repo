@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+  href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" 
+  rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>CSH YouTube</title>
+
+  <script src="https://kit.fontawesome.com/e37b811ba4.js" 
+  crossorigin="anonymous">
+  </script>
+  <script src="main.js" defer></script>
+
+</head>
+  <body>
+    <!-- 
+        헤더 옆에 비디오 플레이어있고 이걸 section안에 넣어준다
+        그리고 player밑에는 비디오에 관련된 정보가 있다.그래서
+        다른 section안에는 info가 있어있고 그 옆에는 upNext라는 다른 section이 있다.
+        header+section.player+section.info+section.upNext 후 tab키
+    -->
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <i class="fab fa-youtube"></i>
+        <span class="title">Youtube</span>
+      </div>
+      <div class="icons">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-ellipsis-v"></i>
+      </div>
+    </header>
+
+    <!-- Video Player -->
+    <section class="player">
+      <video controls src="video/snow.mp4"
+      ></video> <!-- html5가 무료로 제공하는 기능 -->
+    </section>
+
+    <div class="infoAndUpNext">
+          <!-- Video Info -->
+    <section class="info">
+      <!-- Metadata -->
+      <div class="metadata">
+        <ul class="hashtags">
+          <li>#WhiteSchnauzer</li>
+          <li>#Schnauzer</li>
+          <li>#Dog</li>
+        </ul>
+        <div class="titleAndButton">
+          <span class="title clamp">
+            PpogeulPpogeul: Youtube Mobile Website 만들어 보자!
+            프론트엔드 개발자! HTML, CSS, Javascript!
+            동영상은 우리 뽀글이다!
+          </span>
+          <button class="moreBtn">
+            <i class="fas fa-caret-down"></i>
+          </button>
+        </div>
+        <!-- 사람들이 얼마나 많이 봤나 정보 들어가.text니깐 span이용 -->
+        <span class="views">1M views 1 month ago</span>
+      </div>
+      <!-- Actions -->
+      <ul class="actions">
+        <li>
+          <button><i class="active fas fa-thumbs-up"></i>
+            <span>1K</span>
+          </button>
+        </li>
+        <li>
+          <button><i class="fas fa-thumbs-down"></i>
+            <span>0</span>
+          </button>
+        </li>
+        <li>
+          <button><i class="fas fa-share"></i>
+            <span>Share</span>
+          </button>
+        </li>
+        <li>
+          <button><i class="fas fa-plus"></i>
+            <span>Save</span>
+          </button>
+        </li>
+        <li>
+          <button>
+            <i class="fab fa-font-awesome-flag"></i>
+            <span>Report</span>
+          </button>
+        </li>
+      </ul>
+      <!-- Channel Description -->
+      <div class="channel">
+        <div class="metadata">
+          <img src="/myProject/instagram/images/myDog.jpg" alt="">
+          <div class="info">
+            <span class="name">뽀글이주인 by 석호</span>
+            <button class="subscribers">1M subscribers</button>
+        </div>
+        </div>
+        <div class="subscribe">subscribe</div>
+      </div>
+    </section>
+
+    <!-- up Next -->
+    <section class="upNext">
+      <span class="title">up Next</span>
+      <ul>
+        <li class="item">
+          <div class="img"><img src="/myProject/instagram/images/myPuppyThatIMade2.jpg" alt=""></div>
+          <div class="info">
+            <span class="title">
+              강아지를 보며 만드는 프론트엔드 (HTML, CSS, Javascript)
+              화이나 슈나우져, 슈나우져, 뽀글이, 뽀구리
+              
+            </span>
+            <span class="name">뽀글이주인 by 석호</span>
+            <span class="views">82k views</span>
+          </div>
+          <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+        </li>
+        <li class="item">
+          <div class="img"><img src="/myProject/instagram/images/k1.jpg" alt=""></div>
+          <div class="info">
+            <span class="title">
+              건담 만들기🕹🥊🥋
+              HG(High Grade), RG(Real Grade), RG(Real Grade)
+              PG(Perfect Grade) 등 다양한 사이즈!!!
+            </span>
+            <span class="name">뽀글이주인 by 석호</span>
+            <span class="views">4k views</span>
+          </div>
+          <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+        </li>
+        <li class="item">
+          <div class="img"><img src="/myProject/instagram/images/present.jpg" alt=""></div>
+          <div class="info">
+            <span class="title">
+              선물 받은 날💌🎁
+              옷이 많이 생겼다!! 간식도 있다!!! 
+            </span>
+            <span class="name">뽀글이주인 by 석호</span>
+            <span class="views">125k views</span>
+          </div>
+          <button class="moreBtn"><i class="fas fa-ellipsis-v"></i></button>
+        </li>
+      </ul>
+    </section>
+    </div>
+  </body>
+</html>
