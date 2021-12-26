@@ -57,8 +57,8 @@ header {
   display: flex;
   justify-content: space-between;
   padding: var(--padding);
-  background-color: var(--white-color);
-  color: var(--black-color);
+  background-color: rgba(0, 0, 0, 0.815);
+  color: var(--white-color);
   max-width: 1510px;
 }
 
