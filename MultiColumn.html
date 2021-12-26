@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .column {
+      text-align: justify;
+      column-count: 4;
+      /* column-width: 200px; 이런 방법도 있어. */
+      column-gap: 30px; /* 컬럼 여백 */
+      column-rule-style: dashed;
+      column-rule-width: 5px;
+      column-rule-color: red;
+    }
+
+    h1 {
+      column-span: all;
+    }
+  </style>
+</head>
+<body>
+  <div class="column">
+    멀티컬럼은 신문과 같이 화면의 크기가 큰 
+    매체에서 사용하는 전통적인 레이아웃 기법이다.
+    한줄로 쭉 늘여쓰면 엄청 불편함. 컬럼의 나눠 조각조각
+    만들어서 좀 더 읽기 편하게 만드는걸 멀티컬럼이라 한다.
+    화면의 크기가 커지면 컬럼이 줄어들며 적당한 크기 유지하는
+    기능등.. 
+    <h1>column-span:all;은 컬럼에 구애받지 않아.</h1>
+    한줄로 늘여쓰면 사용자가 읽다가 다음줄로 갈때
+    줄타기하기 정말 힘들거임. 이런걸 편하게 도와줌.
+    column-count:;와 column-width:;는 독릭접으로 사용 가능
+    컬럼의 폭을 중시하고 싶다면 그럼 count를 사용하지 않고
+    width만 사용하면 되고 count를 중요하게 사용하고 싶다면
+    width를 사용하지 않으면 된다. 물론 동시 사용도 가능하다
+  </div>
+</body>
+</html>
