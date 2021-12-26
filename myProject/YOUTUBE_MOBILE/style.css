@@ -30,7 +30,7 @@
 
 * {
   /* 모든 태그에 */
-  padding: 0;
+  padding: 2px;
   margin: 0;
   box-sizing: border-box; /* padding이나 margin을 줬을때 그것이 포함돼 사이즈가 결정되도록.. */
 }
@@ -262,7 +262,7 @@ body > .info {
 }
 
 .upNext .item .img {
-  flex: 1 1 35%;
+  flex: 1 1 30%;
   margin-right: var(--padding);
 }
 
@@ -271,7 +271,7 @@ body > .info {
 }
 
 .upNext .item .info {
-  flex: 1 1 60%;
+  flex: 1 1 65%;
 }
 
 .upNext .item .moreBtn {
