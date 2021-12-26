@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      border-bottom: 1px solid grey;
+      padding-left: 20px;
+    }
+
+    footer {
+      border-top: 1px solid grey;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content {
+      display: flex;
+    }
+
+    .content nav {
+      border-right: 1px solid grey;
+    }
+
+    .content aside {
+      border-left: 1px solid grey;
+    }
+
+    nav, aside {
+      flex-basis: 150px;
+      flex-shrink: 0;
+    }
+
+    main {
+      padding: 10px;
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>생활코딩</h1>
+    </header>
+    <section class="content">
+      <nav>
+        <ul>
+          <li>html</li>
+          <li>css</li>
+          <li>javascript</li>
+        </ul>
+      </nav>
+      <main>
+        열심히 공부하자.
+      </main>
+      <aside><!-- 광고 부분,덜 중요한 부가적 부분 -->
+        AD
+      </aside>
+    </section>
+    <footer>
+      <a href="https://opentutorials.org/course/1">홈페이지</a>
+    </footer>
+  </div>
+</body>
+</html>
