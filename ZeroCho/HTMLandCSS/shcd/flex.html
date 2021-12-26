@@ -1,0 +1,57 @@
+<!--
+  CONTAINER
+  display, flex-direction, flex-wrap, flex-flow
+  justify-content, align-items, align-content
+
+  ITEM
+  order, flex-grow, flex-shrink
+  flex-basis, flex, align-self
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    .container {
+      background-color: powderblue;
+      display: flex;
+    }
+    
+    .item {
+      background-color: tomato;
+      color: white;
+      border: 1px solid white;
+    }
+
+    .item:nth-child(2) {
+      flex-basis: 200px; /* 1,2...직접 적어준거와 상관없이 순서 2번째꺼 고른거. */
+    }
+
+  </style>
+</head>
+<body>
+  <!-- flex효과를 주기위해 div태그를 쓸 이유도 없고,
+      class 이름을 container와 item으로 할 필요도 없지만,
+      반드시 부모와 자식이 있어야 한다.
+
+      1. 그 후 바깥쪽 부모에게 display: flex;를 주는것이 시작이다.
+      2. 기본값은 flex-direction:row 이며
+          row-reverse; 로 하게 되면 반대로 정렬된다.
+      3. 기본적으로 플렉스는 각각의 태그가 그 방향의 화면전체를 차지한다.
+
+      참고로 div태그는 화면 전체를 쓴다.(ex)1이 한 줄을 꽉 채움)
+  -->
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+  </div>
+</body>
+</html>
