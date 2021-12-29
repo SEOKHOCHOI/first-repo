@@ -23,6 +23,8 @@ function solution(s) {
   return +s;
 }
 
+solution('432one')
+
 
 // function solution(s) {
 //   let numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
