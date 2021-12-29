@@ -92,16 +92,16 @@
             }
 
             .popup {
-                position: absolute; 
+                position: fixed; 
                 left: 50%; 
                 top: 50%; 
                 transform: translate(-50%, -50%);
-                width: 1100px; height: 650px; 
+                width: 100%;
+                height: 100%; 
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
                 border-radius: 0 4px 4px 0;
-                background: #fff;
-                opacity: 0;
-                z-index: 5;
+                background-color: rgba(0, 0, 0, 0.438);
+                z-index:1;
                 transition: all 0.2s;
             }
             .popup a { color: grey; text-decoration: none; }
@@ -143,7 +143,20 @@
                 cursor:pointer;
             }
 
-            
+            .reply{
+              display: flex; 
+              flex-direction: row; 
+              justify-content: space-between; 
+            }
+            .reply>div:nth-of-type(1){
+              display: flex; 
+              flex-direction: row;
+            }
+            .reply>.hart{
+              display:flex;
+              align-items:center;
+              padding-right:5px;
+            }
         </style>
         
         <script>
@@ -159,6 +172,15 @@
                         introLayer.remove();
                     }
                 },10);              
+            }
+
+            function popup(){
+              let pop = document.getElementById('pop1');
+              pop.style.display='flex';
+            }
+
+            function closePopup(){
+              document.getElementById('pop1').style.display='none';
             }
         </script>
     </head>
@@ -263,118 +285,127 @@
                         &nbsp;눈으로 만든 우리 최뽀글! 
                     </div>
                     
-                    <a href="#pop1" class="btn">댓글 3개 모두 보기</a>
-                    <div class="popup" id="pop1" style="display: flex; flex-direction: row;">
+                    <a href="javascript:popup()" class="btn">댓글 3개 모두 보기</a>
+                    <div class="popup" id="pop1" style="display: none; justify-content: center; align-items: center;">
+                      <div onclick="closePopup()" style="color:white; cursor:pointer;position:absolute; top:0; right:0;font-size:2em; color:black; font-weight:bold;">
+                        X
+                      </div>
+                      <div class="wrap" style="display:flex;background-color:white;">
                         <div style="width: 650px; height: 650px;">
-                            <img style="width: 100%; height: 100%;" src="images/myPuppyThatIMade1.jpg"> 
+                          <img style="width: 100%; height: 100%;" src="images/myPuppyThatIMade1.jpg"> 
                         </div>
-                        <div style="width: 450px; height: 650px; left: 62%; padding: 5px 0 0 0;">
-                            <div class="dp" style="border:1px gainsboro; border-style: none none solid none;">
-                                <div class="box" style="width: 30px; height: 30px; margin: 15px 0 0 15px;">
-                                    <img class="profile" 
-                                    src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
-                                </div>
-                                <div style="display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; padding: 13px 0 10px 0;">
-                                    <div style="padding:  0 0 0 10px;">
-                                        <div><a href="#" style="font-weight: bold; color: black;"> kbh_oO · 팔로잉 </a></div>
-                                        <a href="#" style="font-style: 11px; padding: 0 70px 0 0;"> 서울 </a>
-                                    </div>
-                                    <span class="material-icons-outlined" style="padding: 0 0 0 260px;"> more_horiz </span>
-                                </div>
-                            </div>
-                            <div class="dp">
-                                <div class="box" style="width: 30px; height: 30px; margin: 20px 0 0 15px;">
-                                    <img class="profile" 
-                                    src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
-                                </div>
-                                <div style="text-align: left; font-size: 12px; margin: 20px 0 20px 10px;">
-                                    <a href="#" style="font-weight: bold; color: black;"> kbh_oO </a> 
-                                    눈으로 만든 우리 최뽀글!<br>
-                                    <a href="#" style="color: gray;"> 3주 </a>
-                                </div>
-                            </div>
-                            <div style="border:1px gainsboro; border-style: none none solid none;">
-                                <div style="display: flex; flex-direction: row; justify-content: space-between; ">
-                                    <div style="display: flex; flex-direction: row;  margin: 40px 0 0 0;">
-                                        <div class="box" style="width: 30px; height: 30px; margin: 15px 0 0 15px;">
-                                            <img class="profile" 
-                                            src="images/Waterpuppy.jpg">
-                                        </div>
-                                        <div style="margin: 14px 0 0 13px; text-align: left; font-size: 12px;">
-                                            <a href="#" style="font-weight: bold; color: black;"> ta_mida </a> 
-                                            나도 만들어줘ㅠㅠ <br>
-                                            <div style="color: gray; margin: 10px 0 0 0"> 
-                                                <a href="#"> 3주 </a> 
-                                                <a href="#" class="feedback"> 답글 달기 </a> 
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div style="margin: 50px 6px 0 0; color: red;">
-                                        ❤︎
-                                    </div>
-                                </div>
+                      <div style="width: 450px; height: 650px; left: 62%; padding: 5px 0 0 0;">
+                          <div class="dp" style="border:1px gainsboro; border-style: none none solid none;">
+                              <div class="box" style="width: 30px; height: 30px; margin: 15px 0 0 15px;">
+                                  <img class="profile" 
+                                  src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
+                              </div>
+                              <div style="display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; padding: 13px 0 10px 0;">
+                                  <div style="padding:  0 0 0 10px;">
+                                      <div><a href="#" style="font-weight: bold; color: black;"> kbh_oO · 팔로잉 </a></div>
+                                      <a href="#" style="font-style: 11px; padding: 0 70px 0 0;"> 서울 </a>
+                                  </div>
+                                  <span class="material-icons-outlined" style="padding: 0 0 0 260px;"> more_horiz </span>
+                              </div>
+                          </div>
+                          <div class="dp">
+                              <div class="box" style="width: 30px; height: 30px; margin: 20px 0 0 15px;">
+                                  <img class="profile" 
+                                  src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
+                              </div>
+                              <div style="text-align: left; font-size: 12px; margin: 20px 0 20px 10px;">
+                                  <a href="#" style="font-weight: bold; color: black;"> kbh_oO </a> 
+                                  눈으로 만든 우리 최뽀글!<br>
+                                  <a href="#" style="color: gray;"> 3주 </a>
+                              </div>
+                          </div>
+                          <div style="border:1px gainsboro; border-style: none none solid none;">
+                              <div class="reply">
                                 <div>
-                                    <div class="dp">
-                                        <div class="box" style="width: 30px; height: 30px; margin: 15px 0 0 15px;">
-                                            <img class="profile" 
-                                            src="images/Friends8.jpg">
-                                        </div>
-                                        <div style="margin: 14px 0 0 13px; text-align: left; font-size: 12px;">
-                                            <a href="#" style="font-weight: bold; color: black;"> 4353kmg </a> 
-                                            ㅋㅋㅋ귀엽네 <br>
-                                            <div style="color: gray; margin: 15px 0 0 0;"> 
-                                                <a href="#"> 3주 </a> 
-                                                <a href="#" class="feedback">답글 달기</a> 
-                                            </div>
-                                        </div>
-                                        <div style="margin: 10px 0 0 235px; color: red;">
-                                            ♥
+                                    <div class="box" style="width: 30px; height: 30px; margin: 15px 0 0 15px;">
+                                        <img class="profile" 
+                                        src="images/Waterpuppy.jpg">
+                                    </div>
+                                    <div style="margin: 14px 0 0 13px; text-align: left; font-size: 12px;">
+                                        <a href="#" style="font-weight: bold; color: black;"> ta_mida </a> 
+                                        나도 만들어줘ㅠㅠ <br>
+                                        <div style="color: gray; margin: 10px 0 0 0"> 
+                                            <a href="#"> 3주 </a> 
+                                            <a href="#" class="feedback"> 답글 달기 </a> 
                                         </div>
                                     </div>
                                 </div>
+                                <div class="hart">
+                                  ❤︎
+                                </div>
+                              </div>
+                              <div class="reply">
                                 <div>
-                                    <div class="dp">
-                                        <div class="box" style="width: 30px; height: 30px; margin: 15px 0 0 15px;">
-                                            <img class="profile" 
-                                            src="images/k1.jpg">
-                                        </div>
-                                        <div style="margin: 14px 0 0 13px; text-align: left; font-size: 12px;">
-                                            <a href="#" style="color: black; font-weight: bold;"> inchi5252 </a> 
-                                            오늘 날씨 완전 좋습니다🤣👍 <br>
-                                            <div style="color: gray; margin: 15px 0 0 0;"> 
-                                                <a href="#"> 3주 </a> 
-                                                <a href="#" class="feedback"> 답글 달기 </a> 
-                                            </div>
-                                        </div>
-                                        <div style="margin: 10px 0 0 103px; color: red;">
-                                            ❤
-                                        </div>
-                                    </div>
-                                </div><br><br><br><br>
-                            </div>
-                            <div>
-                                <div style="margin: 10px 15px; margin-top: 14px; display: flex; flex-direction: row; justify-content: space-between;">
-                                    <div>
-                                        <span class="material-icons-outlined"> favorite_border </span>
-                                        <span class="material-icons-outlined"> mode_comment </span>
-                                        <span class="material-icons-outlined"> send </span>
-                                    </div>
-                                    <div>
-                                        <span class="material-icons-outlined"> bookmark_border  </span>      
-                                    </div>
+                                  <div class="box" style="width: 30px; height: 30px; margin: 15px 0 0 15px;">
+                                      <img class="profile" src="images/Friends8.jpg">
+                                  </div>
+                                  <div style="margin: 14px 0 0 13px; text-align: left; font-size: 12px;">
+                                      <a href="#" style="font-weight: bold; color: black;"> 4353kmg </a> 
+                                      ㅋㅋㅋ귀엽네 <br>
+                                      <div style="color: gray; margin: 15px 0 0 0;"> 
+                                          <a href="#"> 3주 </a> 
+                                          <a href="#" class="feedback">답글 달기</a> 
+                                      </div>
+                                  </div>
                                 </div>
-                                <div style="text-align: left; font-size: 12px; padding: 0 0 15px 16px;">
-                                    <a href="#" style="font-weight: bold; color: black; text-decoration: none;"> 좋아요 246개 </a>
-                                    <div style="font-size: 8px; color: gray;"><a href="#"> 12월 8일 </a></div>
+                                <div class="hart">
+                                  ❤︎
                                 </div>
-                            </div>
-                            
-                            <div class="feed_box" style="margin-top: 15px;">
-                                <input type="text" class="form-control" style="box-shadow: none; border: none; outline: none;" 
-                                placeholder="🙂 &nbsp;댓글 달기...">
-                            </div>
-                            
-                        </div>
+                              </div>
+                              <div class="reply">
+                                <div>
+                                    <div class="box" style="width: 30px; height: 30px; margin: 15px 0 0 15px;">
+                                        <img class="profile" 
+                                        src="images/k1.jpg">
+                                    </div>
+                                    <div style="margin: 14px 0 0 13px; text-align: left; font-size: 12px;">
+                                        <a href="#" style="color: black; font-weight: bold;"> inchi5252 </a> 
+                                        오늘 날씨 완전 좋습니다🤣👍 <br>
+                                        <div style="color: gray; margin: 15px 0 0 0;"> 
+                                            <a href="#"> 3주 </a> 
+                                            <a href="#" class="feedback"> 답글 달기 </a> 
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="hart">
+                                      ❤
+                                  </div>
+                                </div>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                          </div>
+                          <div>
+                              <div style="margin: 10px 15px; margin-top: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+                                  <div>
+                                      <span class="material-icons-outlined"> favorite_border </span>
+                                      <span class="material-icons-outlined"> mode_comment </span>
+                                      <span class="material-icons-outlined"> send </span>
+                                  </div>
+                                  <div>
+                                      <span class="material-icons-outlined"> bookmark_border  </span>      
+                                  </div>
+                              </div>
+                              <div style="text-align: left; font-size: 12px; padding: 0 0 15px 16px;">
+                                  <a href="#" style="font-weight: bold; color: black; text-decoration: none;"> 좋아요 246개 </a>
+                                  <div style="font-size: 8px; color: gray;"><a href="#"> 12월 8일 </a></div>
+                              </div>
+                          </div>
+                          
+                          <div class="feed_box" style="margin-top: 15px;">
+                              <input type="text" class="form-control" style="box-shadow: none; border: none; outline: none;" 
+                              placeholder="🙂 &nbsp;댓글 달기...">
+                          </div>
+                          
+                      </div>
+                      </div>  
+                        
                     </div>
                     <div class="dim"></div>
                     <div style="margin: 1px 14px; text-align: left; font-size: 14px;"> 
