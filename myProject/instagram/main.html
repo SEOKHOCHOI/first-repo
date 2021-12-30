@@ -163,10 +163,6 @@
               display: flex; 
               flex-direction: row;
             }
-            .heart{
-              color: red;
-              padding-right: 10px;
-            }
             
         </style>
         <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
@@ -206,7 +202,22 @@
               render() {
               return e('heart', 
               { onClick: () => { this.setState({ liked : true }) }, type: 'submit' }, 
-              this.state.liked === true ? '♥' : '♡',); // <button>Like</button>
+              this.state.liked === true ? '❤️' : '🤍',); // <button>Like</button>
+              }
+            }
+
+            const b = React.createElement;
+            class BookMark extends React.Component {
+              constructor(props){
+                super(props);
+                this.state = {
+                  like: false,
+                };
+              }
+              render() {
+              return b('bookmark', 
+              { onClick: () => { this.setState({ liked : true }) }, type: 'submit' }, 
+              this.state.liked === true ? 'bookmark' : 'bookmark_border',); // <button>Like</button>
               }
             }
         </script>
@@ -289,8 +300,9 @@
                     <img style="width: 100%;" src="images/myPuppyThatIMade1.jpg"> 
                     <div class="reply" style="margin: 10px 15px; margin-top: 14px;">
                         <div>
-                            <span class="material-icons-outlined"> favorite_border </span>
-                            <span class="material-icons-outlined" style="padding-top: 0.5px;">
+                            <span id="root7" style="font-size: large;" class="material-icons-outlined"> favorite_border </span>
+                            <script>ReactDOM.render(e(LikeButton), document.querySelector('#root7'));</script>
+                            <span class="material-icons-outlined" style="padding: 0.5px 4px 0 0;">
                               <a href="javascript:popup()" style="color: black; text-decoration: none;">
                                 mode_comment 
                               </a>
@@ -298,7 +310,8 @@
                             <span class="material-icons-outlined"> send </span>
                         </div>
                         <div>
-                            <span class="material-icons-outlined"> bookmark_border  </span>      
+                            <span id="root8" class="material-icons-outlined"> bookmark_border  </span>   
+                            <script>ReactDOM.render(b(BookMark), document.querySelector('#root8'));</script>   
                         </div>
                     </div>
                     <div class="dp" style="align-items: center; padding-left: 15px;">
@@ -366,7 +379,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="root1" class="heart">
+                                <div id="root1" style="padding-right: 10px;">
                                   <script>ReactDOM.render(e(LikeButton), document.querySelector('#root1'));</script>
                                 </div>
                               </div>
@@ -384,7 +397,7 @@
                                       </div>
                                   </div>
                                 </div>
-                                <div id="root2" class="heart">
+                                <div id="root2" style="padding-right: 10px;">
                                   <script>ReactDOM.render(e(LikeButton), document.querySelector('#root2'));</script>
                                 </div>
                               </div>
@@ -403,7 +416,7 @@
                                         </div>
                                     </div>
                                   </div>
-                                  <div id="root3" style="color: red; padding-right: 10px;">
+                                  <div id="root3" style="padding-right: 10px;">
                                     <script>ReactDOM.render(e(LikeButton), document.querySelector('#root3'));</script>
                                   </div>
                                 </div>
@@ -415,12 +428,15 @@
                           <div>
                               <div class="reply" style="padding: 12px 0 5px 13px;">
                                   <div>
-                                      <span class="material-icons-outlined"> favorite_border </span>
-                                      <span class="material-icons-outlined"> mode_comment </span>
+                                      <span id="root6" style="font-size: large;" class="material-icons-outlined"> favorite_border </span>
+                                      <script>ReactDOM.render(e(LikeButton), document.querySelector('#root6'));</script>
+                                    
+                                      <span style="padding-right: 4px;" class="material-icons-outlined"> mode_comment </span>
                                       <span class="material-icons-outlined"> send </span>
                                   </div>
                                   <div>
-                                      <span class="material-icons-outlined"> bookmark_border  </span>      
+                                    <span id="root9" class="material-icons-outlined"> bookmark_border  </span>   
+                                    <script>ReactDOM.render(b(BookMark), document.querySelector('#root9'));</script>      
                                   </div>
                               </div>
                               <div style="text-align: left; padding: 0 0 70px 15px;">
