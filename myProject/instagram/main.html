@@ -105,8 +105,22 @@
               color: black;
               text-decoration: none;
             }
-            .feedback04:hover {
+
+            body :hover {
               color: black;
+            }
+            .feedback05{
+              font-size: 5px;
+              padding: 4px 0 8px 20px;
+            }
+            .feedback06{
+              font-weight:bold;
+              text-decoration: none;
+              font-size: 12px;
+              color: black;
+              display: flex; 
+              flex-direction: column; 
+              text-align: left;
             }
 
             .popup {
@@ -268,33 +282,51 @@
 
                 <div style="border: solid 1px gainsboro; background-color: white; margin: 10px 0 20px 0;">
                     <div class="dp">
-                        <div class="box"style=" margin: 20px 0 0 20px;">
-                            <img class="profile" 
-                            src="images/Friends6.jpg">
+                        <div>
+                          <a href="#a" class="feedback04">
+                            <div class="box fav">
+                              <img class="profile" 
+                              src="images/Friends6.jpg">
+                            </div>
+                            <div class="feedback05"> jy.1212 </div>
+                          </a>
                         </div>
-                        <div class="box fav">
-                            <img class="profile" 
-                            src="images/Friends7.jpg">
+                        <div>
+                          <a href="#a" class="feedback04">
+                            <div class="box fav">
+                                <img class="profile" 
+                                src="images/Friends7.jpg">
+                            </div>
+                            <div class="feedback05"> uwepp </div>
+                          </a>
                         </div>
-                        <div class="box fav">
-                            <img class="profile" 
-                            src="images/Friends8.jpg">
+                        <div>
+                          <a href="#a" class="feedback04">
+                            <div class="box fav">
+                                <img class="profile" 
+                                src="images/Friends8.jpg">
+                            </div>
+                            <div class="feedback05"> 4353kmg </div>
+                          </a>
                         </div>
-                        <div class="box fav">
-                            <img class="profile" 
-                            src="images/Friends9.jpg">
+                        <div>
+                          <a href="#a" class="feedback04">
+                            <div class="box fav">
+                                <img class="profile" 
+                                src="images/Friends9.jpg">
+                            </div>
+                            <div class="feedback05"> love_luv </div>
+                          </a>
                         </div>
-                        <div class="box fav">
-                            <img class="profile" 
-                            src="images/Friends10.jpg">
+                        <div>
+                          <a href="#a" class="feedback04">
+                            <div class="box fav">
+                                <img class="profile" 
+                                src="images/Friends10.jpg">
+                            </div>
+                            <div class="feedback05"> strong00 </div>
+                          </a>
                         </div>
-                    </div>
-                    <div style="font-size: 5px; text-align: left; margin: 10px 0 10px 0;">
-                        <span style="padding: 0 0 0 30px;"> jy.1212 </span> 
-                        <span style="padding: 0 0 0 35px;"> uwepp </span> 
-                        <sapn style="padding: 0 0 0 30px;"> 4353kmg </sapn>
-                        <span style="padding: 0 0 0 28px;"> love_luv </sapn> 
-                        <span style="padding: 0 0 0 29px;"> strong00 </sapn>
                     </div>
                 </div>
 
@@ -302,13 +334,13 @@
 
                 <div style="border: solid 1px gainsboro; background-color: white; margin-bottom: 20px;">   
                     <div class="dp" style="align-items: center; margin: 5px 15px;">
-                        <div class="box" style="width: 30px; height: 30px;">
+                        <div class="box2">
                             <img class="profile" 
                             src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
                         </div>
-                        <div style="text-align: left; font-size: 14px; padding: 15px;">
-                            <b>kbh_oO</b>
-                            <br>서울
+                        <div class="feedback06" style="padding-left: 10px;">
+                            <div><a class="feedback02" href="#">kbh_oO</a></div>
+                            <div style="font-weight: lighter;"><a class="feedback04" href="#"> 서울 </a></div>
                         </div>
                     </div>
                 <div>
@@ -363,11 +395,13 @@
                                   <img class="profile" 
                                   src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
                               </div>
-                              <div class="feedback02" style="display: flex; flex-direction: column; text-align: left; padding: 0 265px 0 10px;">
-                                    <a href="#" style="color: black;"> kbh_oO · 팔로잉 </a>
-                                    <a href="#" style="font-weight: lighter; color: black;"> 서울 </a>
-                              </div>   
-                                    <span class="material-icons-outlined"> more_horiz </span>
+                              <div class="reply">
+                                <div class="feedback06" style="display: flex; flex-direction: column; padding: 0 267px 0 12px;">
+                                  <div><a href="#" style="color: black;"> kbh_oO · 팔로잉 </a></div>
+                                  <div><a href="#" style="color: black; font-weight: lighter;"> 서울 </a></div>
+                                </div>   
+                                <div class="material-icons-outlined"> more_horiz </div>
+                              </div>
                           </div>
                           <div class="dp" style="padding: 20px 0 30px 15px;">
                               <div class="box2">
@@ -506,13 +540,13 @@
                         <a href="#" class="feedback" style="font-weight: lighter;"> <br>서울 </a>
                     </div>
                 </div>
-                <div class="reply" style="font-size: 12px; padding-bottom: 10px;">    
-                    <div class="feedback" style="padding-left: 8px;"> 회원님을 위한 추천 </div>
-                    <div> 
-                        <a href="#" class="feedback02" style="padding-right: 15px;"> 모두보기 </a> 
-                    </div>
+                <div class="reply" style="padding:0 15px 0 9px;">  
+                  <div class="feedback03" style="color: gray;"> 회원님을 위한 추천 </div>
+                  <div> 
+                    <a class="feedback02" href="#"> 모두보기 </a> 
+                  </div>
                 </div>    
-                <div class="chucheon">
+                <div class="chucheon"> 
                     <div class="dp">
                         <div class="box2">
                             <img class="profile" src="images/Friends1.jpg">
