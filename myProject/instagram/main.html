@@ -163,13 +163,14 @@
               display: flex; 
               flex-direction: row;
             }
-            .reply>.heart{
-              display:flex;
-              align-items:center;
-              padding: 0 5px 45px 0;
+            .heart{
+              color: red;
+              padding-right: 10px;
             }
+            
         </style>
-        
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
         <script>
             window.onload=()=>{
                 let introLayer = document.getElementById('intro');
@@ -193,8 +194,22 @@
             function closePopup(){
               document.getElementById('pop1').style.display='none';
             }
-        </script>
 
+            const e = React.createElement;
+            class LikeButton extends React.Component {
+              constructor(props){
+                super(props);
+                this.state = {
+                  like: false,
+                };
+              }
+              render() {
+              return e('heart', 
+              { onClick: () => { this.setState({ liked : true }) }, type: 'submit' }, 
+              this.state.liked === true ? '♥' : '♡',); // <button>Like</button>
+              }
+            }
+        </script>
     </head>
 
     <body>
@@ -275,7 +290,11 @@
                     <div class="reply" style="margin: 10px 15px; margin-top: 14px;">
                         <div>
                             <span class="material-icons-outlined"> favorite_border </span>
-                            <span class="material-icons-outlined"> mode_comment </span>
+                            <span class="material-icons-outlined" style="padding-top: 0.5px;">
+                              <a href="javascript:popup()" style="color: black; text-decoration: none;">
+                                mode_comment 
+                              </a>
+                            </span>
                             <span class="material-icons-outlined"> send </span>
                         </div>
                         <div>
@@ -347,15 +366,16 @@
                                         </div>
                                     </div>
                                 </div>
-                              
-                                ssssssssssssss
+                                <div id="root1" class="heart">
+                                  <script>ReactDOM.render(e(LikeButton), document.querySelector('#root1'));</script>
+                                </div>
                               </div>
                               <div class="reply">
                                 <div style="padding: 0 0 20px 15px;">
                                   <div class="box2">
                                       <img class="profile" src="images/Friends8.jpg">
                                   </div>
-                                  <div class="feedback02" style="text-align: left; padding-left: 12px;">
+                                  <div class="feedback02" class="heart">
                                       <a href="#" style="color: black;"> 4353kmg </a> 
                                       <span style="font-weight: lighter;">ㅋㅋㅋ귀엽네 <br><br></span>
                                       <div> 
@@ -364,8 +384,8 @@
                                       </div>
                                   </div>
                                 </div>
-                                <div class="heart">
-                                  ❤︎
+                                <div id="root2" class="heart">
+                                  <script>ReactDOM.render(e(LikeButton), document.querySelector('#root2'));</script>
                                 </div>
                               </div>
                               <div class="reply">
@@ -383,8 +403,8 @@
                                         </div>
                                     </div>
                                   </div>
-                                  <div class="heart">
-                                      ❤
+                                  <div id="root3" style="color: red; padding-right: 10px;">
+                                    <script>ReactDOM.render(e(LikeButton), document.querySelector('#root3'));</script>
                                   </div>
                                 </div>
                                 <br>
@@ -420,11 +440,17 @@
                     <div class="dim"></div>
                     <div class="follow"> 
                         <a href="#" class="feedback02"> ta_mida </a> 
-                        나도 만들어줘ㅠㅠ
+                        <span style="padding-right: 354px;">나도 만들어줘ㅠㅠ</span>
+                        <span id="root4" class="heart">
+                          <script>ReactDOM.render(e(LikeButton), document.querySelector('#root4'));</script>
+                        </span>
                     </div>
                     <div class="follow"> 
                         <a href="#" class="feedback02"> 4353kmg </a> 
-                        ㅋㅋㅋ귀엽네 
+                        <span style="padding-right: 374px;">ㅋㅋㅋ귀엽네</span>
+                        <span id="root5" class="heart">
+                          <script>ReactDOM.render(e(LikeButton), document.querySelector('#root5'));</script>
+                        </span> 
                     </div>
                     <div class="follow" style="font-size: 5px; color: gray"> <br>4시간 전 </div>
                     <div class="feed_box">
