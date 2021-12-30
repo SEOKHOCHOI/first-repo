@@ -20,22 +20,6 @@
         <title>Instagram</title>
 
         <style>
-
-            #intro{
-                width: 100%;
-                height: 100%;
-                position: fixed;
-                left: 0;
-                top: 0;
-                background-image: url(images/instagram.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size:50px;
-                background-color: black;
-                z-index: 10;
-                transition: .1s;
-            }
-
             .dp{
                 display: flex;
                 flex-direction: row;
@@ -186,16 +170,13 @@
     </head>
 
     <body>
-        <div id="intro">
-            
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; width: 100%; border:1px gainsboro; border-style: none none solid none;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; width: 100%; border:1px gainsboro; border-style: none none solid none;">
         <div class="container-fluid" style="justify-content: space-between; flex-wrap: nowrap; min-width: 1000px; ">
             <div style="margin: 0 0 0 356px;">    
                 <a class="navbar-brand" href="#"><img style="width: 100px" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"></a>
             </div> 
                 <input class="form-control me-2" style="width: 248px; height: 30px;" type="search" placeholder="🔍︎ Search" aria-label="Search">
-                    <div style="margin: 10px 15px; display: flex; flex-direction: row; align-items: center; margin: 0 261px 0 0;">
+                    <div class="dp" style="margin: 10px 15px; align-items: center; margin: 0 261px 0 0;">
                         <span class="material-icons"> home </span>
                         <span class="material-icons-outlined"> send </span>
                         <span class="material-icons-outlined"> add_box </span>
@@ -205,17 +186,16 @@
                             <img class="profile" src="/myProject/instagram/images/present.jpg">
                         </span>
                     </div>
-                </div>
             </div>
         </nav>
 
 
-        <div style="display: flex; flex-direction: row; text-align: center; justify-content: center; padding-top: 60px; background-color: #FAFAFA;">   
+        <div class="dp" style="text-align: center; justify-content: center; padding-top: 60px; background-color: #FAFAFA;">   
             <div style="width: 550px; min-width: 500px; height: 1000px; margin: 30px 230px 25px 0;">
 
 
                 <div style="border: solid 1px gainsboro; background-color: white; margin: 10px 0 20px 0;">
-                    <div style="display: flex; flex-direction: row;">
+                    <div class="dp">
                         <div class="box"style=" margin: 20px 0 0 20px;">
                             <img class="profile" 
                             src="images/Friends6.jpg">
@@ -249,7 +229,7 @@
 
 
                 <div style="border: solid 1px gainsboro; background-color: white; margin-bottom: 20px;">   
-                    <div style="display: flex; flex-direction: row; align-items: center; margin: 5px 15px;">
+                    <div class="dp" style="align-items: center; margin: 5px 15px;">
                         <div class="box" style="width: 30px; height: 30px;">
                             <img class="profile" 
                             src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
@@ -261,7 +241,7 @@
                     </div>
                 <div>
                     <img style="width: 100%;" src="images/myPuppyThatIMade1.jpg"> 
-                    <div style="margin: 10px 15px; margin-top: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+                    <div class="reply" style="margin: 10px 15px; margin-top: 14px;">
                         <div>
                             <span class="material-icons-outlined"> favorite_border </span>
                             <span class="material-icons-outlined"> mode_comment </span>
@@ -271,7 +251,7 @@
                             <span class="material-icons-outlined"> bookmark_border  </span>      
                         </div>
                     </div>
-                    <div style="margin: 10px 15px; display: flex; flex-direction: row; align-items: center;">
+                    <div class="dp" style="margin: 10px 15px; align-items: center;">
                         <div class="box" style="width: 29px; height: 29px;"> 
                         <img class="profile" src="/myProject/instagram/images/present.jpg">
                         </div>
@@ -291,8 +271,8 @@
                         X
                       </div>
                       <div class="wrap" style="display:flex;background-color:white;">
-                        <div style="width: 650px; height: 650px;">
-                          <img style="width: 100%; height: 100%;" src="images/myPuppyThatIMade1.jpg"> 
+                        <div style="width: 488px; height: 650px;">
+                          <img style="width: 99.9%; height: auto;" src="images/myPuppyThatIMade1.jpg"> 
                         </div>
                       <div style="width: 450px; height: 650px; left: 62%; padding: 5px 0 0 0;">
                           <div class="dp" style="border:1px gainsboro; border-style: none none solid none;">
@@ -300,7 +280,7 @@
                                   <img class="profile" 
                                   src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
                               </div>
-                              <div style="display: flex; flex-direction: row; justify-content: space-between; font-size: 12px; padding: 13px 0 10px 0;">
+                              <div class="reply" style="font-size: 12px; padding: 13px 0 10px 0;">
                                   <div style="padding:  0 0 0 10px;">
                                       <div><a href="#" style="font-weight: bold; color: black;"> kbh_oO · 팔로잉 </a></div>
                                       <a href="#" style="font-style: 11px; padding: 0 70px 0 0;"> 서울 </a>
@@ -382,7 +362,7 @@
                                 <br>
                           </div>
                           <div>
-                              <div style="margin: 10px 15px; margin-top: 14px; display: flex; flex-direction: row; justify-content: space-between;">
+                              <div class="reply" style="margin: 10px 15px; margin-top: 14px;">
                                   <div>
                                       <span class="material-icons-outlined"> favorite_border </span>
                                       <span class="material-icons-outlined"> mode_comment </span>
@@ -439,7 +419,7 @@
                         <a href="#" style="color: gray; font-weight: bold; text-decoration: none;"> <br>서울 </a>
                     </div>
                 </div>
-                <div class="dp" style="justify-content: space-between;">    
+                <div class="reply">    
                     <div style="font-weight: bold; color: gray; font-size: 13px; padding: 9px;"> 회원님을 위한 추천 </div>
                     <div style="font-size: 12px; margin: 12px 15px 0 0;"> 
                         <a href="#" style="font-weight: bold; color: black; text-decoration: none;"> 모두보기 </a> 
