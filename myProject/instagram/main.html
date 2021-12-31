@@ -220,21 +220,6 @@
               document.getElementById('pop1').style.display='none';
             }
 
-            const e = React.createElement;
-            class LikeButton extends React.Component {
-              constructor(props){
-                super(props);
-                this.state = {
-                  like: false,
-                };
-              }
-              render() {
-              return e('heart', 
-              { onClick: () => { this.setState({ liked : true }) }, type: 'submit' }, 
-              this.state.liked === true ? '❤️' : '🤍',); // <button>Like</button>
-              }
-            }
-
             const b = React.createElement;
             class BookMark extends React.Component {
               constructor(props){
@@ -248,6 +233,18 @@
               { onClick: () => { this.setState({ liked : true }) }, type: 'submit' }, 
               this.state.liked === true ? 'bookmark' : 'bookmark_border',); // <button>Like</button>
               }
+            }
+
+            function like(elem){
+                let state = JSON.parse(elem.dataset.state);
+                elem.dataset.state=!state;
+                if(state===false){
+                    elem.innerText='favorite';
+                    elem.style.color='red'
+                }else{
+                    elem.innerText='favorite_border';
+                    elem.style.color='';
+                }
             }
         </script>
     </head>
@@ -278,15 +275,12 @@
 
         <div class="dp" style="text-align: center; justify-content: center; padding-top: 60px; background-color: #FAFAFA;">   
             <div style="width: 550px; min-width: 500px; height: 1000px; margin: 30px 230px 25px 0;">
-
-
                 <div style="border: solid 1px gainsboro; background-color: white; margin: 10px 0 20px 0;">
                     <div class="dp">
                         <div>
                           <a href="#a" class="feedback04">
                             <div class="box fav">
-                              <img class="profile" 
-                              src="images/Friends6.jpg">
+                              <img class="profile" src="images/Friends6.jpg">
                             </div>
                             <div class="feedback05"> jy.1212 </div>
                           </a>
@@ -294,8 +288,7 @@
                         <div>
                           <a href="#a" class="feedback04">
                             <div class="box fav">
-                                <img class="profile" 
-                                src="images/Friends7.jpg">
+                                <img class="profile" src="images/Friends7.jpg">
                             </div>
                             <div class="feedback05"> uwepp </div>
                           </a>
@@ -303,8 +296,7 @@
                         <div>
                           <a href="#a" class="feedback04">
                             <div class="box fav">
-                                <img class="profile" 
-                                src="images/Friends8.jpg">
+                                <img class="profile" src="images/Friends8.jpg">
                             </div>
                             <div class="feedback05"> 4353kmg </div>
                           </a>
@@ -312,8 +304,7 @@
                         <div>
                           <a href="#a" class="feedback04">
                             <div class="box fav">
-                                <img class="profile" 
-                                src="images/Friends9.jpg">
+                                <img class="profile" src="images/Friends9.jpg">
                             </div>
                             <div class="feedback05"> love_luv </div>
                           </a>
@@ -321,8 +312,7 @@
                         <div>
                           <a href="#a" class="feedback04">
                             <div class="box fav">
-                                <img class="profile" 
-                                src="images/Friends10.jpg">
+                                <img class="profile" src="images/Friends10.jpg">
                             </div>
                             <div class="feedback05"> strong00 </div>
                           </a>
@@ -335,8 +325,7 @@
                 <div style="border: solid 1px gainsboro; background-color: white; margin-bottom: 20px;">   
                     <div class="dp" style="align-items: center; margin: 5px 15px;">
                         <div class="box2">
-                            <img class="profile" 
-                            src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
+                            <img class="profile" src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
                         </div>
                         <div class="feedback06" style="padding-left: 10px;">
                             <div><a class="feedback02" href="#">kbh_oO</a></div>
@@ -347,8 +336,7 @@
                     <img style="width: 100%;" src="images/myPuppyThatIMade1.jpg"> 
                     <div class="reply" style="margin: 10px 15px; margin-top: 14px;">
                         <div>
-                            <span id="root7" style="font-size: large;" class="material-icons-outlined"> favorite_border </span>
-                            <script>ReactDOM.render(e(LikeButton), document.querySelector('#root7'));</script>
+                            <span id="root7" class="material-icons-outlined" data-state="false" onclick="like(this)"> favorite_border </span>
                             <span class="material-icons-outlined" style="padding: 0.5px 4px 0 0;">
                               <a href="javascript:popup()" class="feedback04">
                                 mode_comment 
@@ -431,7 +419,6 @@
                                     </div>
                                 </div>
                                 <div id="root1" style="padding-right: 10px;">
-                                  <script>ReactDOM.render(e(LikeButton), document.querySelector('#root1'));</script>
                                 </div>
                               </div>
                               <div class="reply">
@@ -449,7 +436,6 @@
                                   </div>
                                 </div>
                                 <div id="root2" style="padding-right: 10px;">
-                                  <script>ReactDOM.render(e(LikeButton), document.querySelector('#root2'));</script>
                                 </div>
                               </div>
                               <div class="reply">
@@ -468,7 +454,6 @@
                                     </div>
                                   </div>
                                   <div id="root3" style="padding-right: 10px;">
-                                    <script>ReactDOM.render(e(LikeButton), document.querySelector('#root3'));</script>
                                   </div>
                                 </div>
                                 <br>
@@ -480,7 +465,6 @@
                               <div class="reply" style="padding: 12px 0 5px 13px;">
                                   <div>
                                       <span id="root6" style="font-size: large;" class="material-icons-outlined"> favorite_border </span>
-                                      <script>ReactDOM.render(e(LikeButton), document.querySelector('#root6'));</script>
                                     
                                       <span style="padding-right: 4px;" class="material-icons-outlined"> mode_comment </span>
                                       <span class="material-icons-outlined"> send </span>
@@ -508,13 +492,11 @@
                     <div class="follow3"> 
                         <span><a href="#" class="feedback02"> ta_mida </a>나도 만들어줘ㅠㅠ</span> 
                         <span id="root4" class="heart2">
-                          <script>ReactDOM.render(e(LikeButton), document.querySelector('#root4'));</script>
                         </span>
                     </div>
                     <div class="follow3"> 
                         <span><a href="#" class="feedback02"> 4353kmg </a>ㅋㅋㅋ귀엽네</span>
                         <span id="root5" class="heart2">
-                          <script>ReactDOM.render(e(LikeButton), document.querySelector('#root5'));</script>
                         </span> 
                     </div>
                     <div class="follow" style="font-size: 5px; color: gray"> <br>3주 전 </div>
