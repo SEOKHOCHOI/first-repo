@@ -13,9 +13,49 @@
   transition: 0.1s;
 }
 
+#top_falower {
+  display: flex;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  border: 1px gainsboro;
+  border-style: none none solid none;
+}
+
+nav > div {
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  max-width: 900px;
+}
+
+nav > div > div:nth-of-type(1) {
+  width: 35%;
+}
+
+nav > div > div:nth-of-type(2) {
+  width: 35%;
+}
+
+ul.icons {
+  display: flex;
+  height: 30px;
+  margin: 0;
+}
+
+ul.icons > li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  float: left;
+  margin: 0 5px;
+}
+
 .dp {
   display: flex;
   flex-direction: row;
+  min-width: 870px;
 }
 
 .box {
@@ -143,12 +183,24 @@ body :hover {
   transition: all 0.2s;
 }
 
+#right_chucheon {
+  width: 320px;
+  height: 1000px;
+  position: sticky;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
 .chucheon {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 5px 15px;
+}
+
+.chucheon > div:nth-of-type(1) {
+  display: flex;
 }
 
 .follow {
@@ -197,8 +249,8 @@ span[class^="material-icons"] {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  min-width: 1518px;
-  padding-left: 368px;
+  min-width: 918px;
+  padding-right: 20px;
 }
 /* Search 창 */
 #Search {
@@ -222,7 +274,6 @@ span[class^="material-icons"] {
   width: 550px;
   min-width: 500px;
   height: 1000px;
-  margin-right: 230px;
 }
 /* 스토리 바 */
 .story {

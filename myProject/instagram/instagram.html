@@ -13,15 +13,14 @@
 
         <link href="instagram.css" rel="stylesheet">
         <link rel = "shortcut icon" href = "images/instagram.png">
-        <title>Instagram</title>
-
+        <title>Instagram</title> 
         <script src="instagram.js"></script>
     </head>
 
     <body>
       <div id="intro"></div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light nav-border">
-          <div class="container-fluid nav-t">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="nav-t container-fluid">
               <div>    
                   <a class="navbar-brand" href="#">
                     <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png">
@@ -30,16 +29,16 @@
               <div> 
                   <input class="form-control me-2" id="Search" type="search" placeholder="🔍︎ Search" aria-label="Search">
               </div>   
-                  <div class="dp nav-i">
-                          <span class="material-icons"> home </span>
-                          <span class="material-icons-outlined"> send </span>
-                          <span class="material-icons-outlined"> add_box </span>
-                          <span class="material-icons-outlined"> explore </span>
-                          <span class="material-icons-outlined"> favorite_border </span>
-                          <span class="background01">
-                              <img class="profile" src="/myProject/instagram/images/present.jpg">
-                          </span>
-                      </div>
+                  <ul class="icons">
+                      <li class="material-icons"> home </li>
+                      <li class="material-icons-outlined"> send </li>
+                      <li class="material-icons-outlined"> add_box </li>
+                      <li class="material-icons-outlined"> explore </li>
+                      <li class="material-icons-outlined"> favorite_border </li>
+                      <li class="background01">
+                          <img class="profile" src="/myProject/instagram/images/present.jpg">
+                      </li>
+                  </ul>
               </div>
           </nav>
 
@@ -47,11 +46,11 @@
         <div class="dp all">   
             <div class="left">
                 <div class="story">
-                    <div class="dp">
+                    <div id="top_falower">
                         <div>
                           <a href="#a" class="feedback04">
                             <div class="box fav">
-                              <img class="profile" src="images/Friends6.jpg">
+                              <img class="profile" src="./images/Friends6.jpg">
                             </div>
                             <div class="feedback05"> jy.1212 </div>
                           </a>
@@ -90,9 +89,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
                 <div style="border: solid 1px gainsboro; background-color: white; margin-bottom: 20px;">   
                     <div class="dp" style="align-items: center; margin: 5px 15px;">
                         <div class="box2">
@@ -104,7 +100,7 @@
                         </div>
                     </div>
                 <div>
-                    <img style="width: 100%;" src="images/myPuppyThatIMade1.jpg"> 
+                    <img style="width: 100%;" src="./images/myPuppyThatIMade1.jpg"> 
                     <div class="reply" style="margin: 10px 15px; margin-top: 14px;">
                         <div>
                             <span class="material-icons-outlined" data-state="false" onclick="like(this)"> favorite_border </span>
@@ -123,7 +119,7 @@
                     </div>
                     <div class="dp" style="align-items: center; padding-left: 15px;">
                         <div class="box2"> 
-                        <img class="profile" src="/myProject/instagram/images/present.jpg">
+                        <img class="profile" src="./images/present.jpg">
                         </div>
                         <div style="text-align: left; padding: 0 0 6px 7px;"> 
                             <a href="#" class="feedback02">ppgppg_0</a>
@@ -150,8 +146,7 @@
                       <div style="width: 450px; height: 650px; left: 62%; padding-top: 5px;">
                           <div class="dp" style="border:1px gainsboro; border-style: none none solid none; padding: 12px 5px 12px 15px;">
                               <div class="box2">
-                                  <img class="profile" 
-                                  src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
+                                  <img class="profile" src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
                               </div>
                               <div class="reply">
                                 <div class="feedback06" style="display: flex; flex-direction: column; padding: 0 267px 0 12px;">
@@ -163,8 +158,7 @@
                           </div>
                           <div class="dp" style="padding: 20px 0 30px 15px;">
                               <div class="box2">
-                                  <img class="profile" 
-                                  src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
+                                  <img class="profile" src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
                               </div>
                               <div class="feedback02" style="text-align: left; padding-left: 12px;">
                                   <a href="#" style="color: black;"> kbh_oO </a> 
@@ -176,8 +170,7 @@
                               <div class="reply">
                                 <div style="padding: 0 0 20px 15px">
                                     <div class="box2">
-                                        <img class="profile" 
-                                        src="images/Waterpuppy.jpg">
+                                        <img class="profile" src="./images/Waterpuppy.jpg">
                                     </div>
                                     <div class="feedback02" style="text-align: left; padding-left: 12px;">
                                         <a href="#" style="color: black;"> ta_mida </a> 
@@ -247,10 +240,8 @@
                           </div>
                           
                           <div class="feed_box">
-                              <input type="text" class="form-control" style="box-shadow: none; border: none; outline: none;" 
-                              placeholder="🙂 &nbsp;댓글 달기...">
+                              <input type="text" class="form-control" style="box-shadow: none; border: none; outline: none;" placeholder="🙂 &nbsp;댓글 달기...">
                           </div>
-                          
                       </div>
                       </div>  
                     </div>
@@ -267,21 +258,18 @@
                     </div>
                     <div class="follow" style="font-size: 5px; color: gray"> <br>3주 전 </div>
                     <div class="feed_box">
-                        <input type="text" class="form-control" 
-                        style="box-shadow: none; border: none; outline: none;" 
-                        placeholder="🙂 &nbsp;댓글 달기...">
+                        <input type="text" class="form-control" style="box-shadow: none; border: none; outline: none;" placeholder="🙂 &nbsp;댓글 달기...">
                     </div>
                 </div>
             </div>
             <div style="border: solid 1px gainsboro; background-color: white; margin-bottom: 20px;"></div>
         </div>
-            <div style="width: 320px; height: 1000px; position: fixed; left: 62%; margin-top: 50px;"> <!-- 오른쪽 화면(고정된) -->
+            <div id="right_chucheon"> <!-- 오른쪽 화면(고정된) -->
             <div>
-                <div class="dp" style="align-items: center; margin: 5px 15px 20px 15px;"><div>
+                <div style="align-items: center; margin: 5px 15px 20px 15px;"><div>
                     </div>
                     <div class="box">
-                        <img class="profile" 
-                        src="images/myDog.jpg">
+                        <img class="profile" src="images/myDog.jpg">
                     </div>
                     <div class="follow">
                         <a href="#" class="feedback02"> c__ppg </a>
@@ -295,80 +283,78 @@
                   </div>
                 </div>    
                 <div class="chucheon"> 
-                    <div class="dp">
-                        <div class="box2">
-                            <img class="profile" src="images/Friends1.jpg">
-                        </div>
-                        <div class="follow">
-                            <a href='#' class="feedback02"> pwh1112 </a> 
-                            <div style="color: gray;"> 인기 </div>
-                        </div>
+                  <div>
+                    <div class="box2">
+                        <img class="profile" src="./images/Friends1.jpg" />
                     </div>
+                    <div class="follow">
+                        <a href='#' class="feedback02"> pwh1112 </a> 
+                        <div style="color: gray;"> 인기 </div>
+                    </div>
+                  </div>
                         <a href="#" class="feedback03"> 팔로우 </a>
                 </div>
                 <div class="chucheon">
-                    <div class="dp">
-                        <div class="box2">
-                            <img class="profile" src="images/Friends2.jpg">
-                        </div>
-                        <div class="follow">
-                            <a href='#' class="feedback02"> songsuh </a>
-                            <div style="color: gray;"> 인기 </div>
-                        </div>
+                  <div>
+                    <div class="box2">
+                        <img class="profile" src="images/Friends2.jpg" />
                     </div>
+                    <div class="follow">
+                        <a href='#' class="feedback02"> songsuh </a>
+                        <div style="color: gray;"> 인기 </div>
+                    </div>
+                  </div>
+                  <a href="#" class="feedback03">팔로우</a>
+                </div>
+                <div class="chucheon">
+                  <div>
+                    <div class="box2">
+                        <img class="profile" src="images/Friends3.jpg">
+                    </div>
+                    <div class="follow">
+                      <a href='#' class="feedback02"> cch_009 </a>
+                      <div style="color: gray;">__mwa2님 외 31명이 팔로우 합니다</div>
+                    </div>
+                  </div>
+                  <a href="#" class="feedback03">팔로우</a>
+                </div>
+                <div class="chucheon">
+                  <div>
+                    <div class="box2">
+                      <img class="profile" src="images/Friends4.jpg">
+                    </div>
+                    <div class="follow">
+                      <a href='#' class="feedback02"> lhsurur </a>                            <div style="color: gray;"> qwe223님 외 19명이 팔로우 합니다 </div>
+                    </div>
+                  </div>
                     <a href="#" class="feedback03">팔로우</a>
                 </div>
                 <div class="chucheon">
-                    <div class="dp">
-                        <div class="box2">
-                            <img class="profile" src="images/Friends3.jpg">
-                        </div>
-                        <div class="follow">
-                            <a href='#' class="feedback02"> cch_009 </a>
-                            <div style="color: gray;">__mwa2님 외 31명이 팔로우 합니다</div>
-                        </div>
-                    </div>
-                    <a href="#" class="feedback03">팔로우</a>
-                </div>
-                <div class="chucheon">
-                    <div class="dp">
-                        <div class="box2">
-                            <img class="profile" src="images/Friends4.jpg">
-                        </div>
-                        <div class="follow">
-                            <a href='#' class="feedback02"> lhsurur </a> 
-                            <div style="color: gray;"> qwe223님 외 19명이 팔로우 합니다 </div>
-                        </div>
-                    </div>
+                  <div>
+                      <div class="box2">
+                          <img class="profile" src="images/Friends5.jpg">
+                      </div>
+                      <div class="follow">
+                          <a href=# class="feedback02"> jmwmt0602 </a>
+                          <div style="color: gray;"> 회원님을 팔로우 합니다 </div>
+                      </div>
+                  </div>
 
-                    <a href="#" class="feedback03">팔로우</a>
-                </div>
-                <div class="chucheon">
-                    <div class="dp">
-                        <div class="box2">
-                            <img class="profile" src="images/Friends5.jpg">
-                        </div>
-                        <div class="follow">
-                            <a href=# class="feedback02"> jmwmt0602 </a>
-                            <div style="color: gray;"> 회원님을 팔로우 합니다 </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <a href="#" class="feedback03">팔로우</a>
-                    </div>
+                  <div>
+                      <a href="#" class="feedback03">팔로우</a>
+                  </div>
                 </div>
                 <div style="text-align: left; font-size: 10px; color: gray;  opacity: 0.5; padding: 20px 0 0 9px;" >
-                    <div> 
-                        소개·도움말·홍보 센터·API채용 정보·<br>
-                        개인정보처리방침·약관·위치·인기 계정·해시태그·언어
-                        <br>
-                        <br>
-                        © 2021 INSTAGRAM FROM META 
-                    </div> 
+                  <div> 
+                    소개·도움말·홍보 센터·API채용 정보·<br>
+                    개인정보처리방침·약관·위치·인기 계정·해시태그·언어
+                    <br>
+                    <br>
+                    © 2021 INSTAGRAM FROM META 
+                  </div> 
                 </div>    
-                </div>
             </div>
+          </div>
         </div>
         <!-- Optional JavaScript; choose one of the two! -->
         <!-- Option 1: Bootstrap Bundle with Popper -->
