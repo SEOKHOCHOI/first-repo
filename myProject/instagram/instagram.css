@@ -1,0 +1,232 @@
+#intro {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-image: url(images/instagram.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px;
+  background-color: black;
+  z-index: 10;
+  transition: 0.1s;
+}
+
+.dp {
+  display: flex;
+  flex-direction: row;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.box2 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.box.fav {
+  margin: 20px 0 0 20px;
+}
+
+.profile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* 무슨 박스 */
+.feed_box {
+  border-top: solid 1px gainsboro;
+  background-color: white;
+  margin: 10px 0 10px 0;
+}
+
+/* 어디어디 백그라운드 설정 */
+.background01 {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.btn {
+  margin: 1px 15px;
+  font-size: 15px;
+  color: gray;
+  display: flex;
+}
+
+.feedback {
+  font-weight: bold;
+  color: gray;
+  text-decoration: none;
+}
+
+.feedback02 {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 12px;
+  color: black;
+}
+.feedback03 {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 12px;
+}
+.feedback04 {
+  color: black;
+  text-decoration: none;
+}
+
+body :hover {
+  color: black;
+}
+.heart {
+  cursor: pointer;
+  font-size: 13px;
+  padding-right: 7px;
+}
+
+.feedback05 {
+  font-size: 5px;
+  padding: 4px 0 8px 20px;
+}
+.feedback06 {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 12px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.popup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  border-radius: 0 4px 4px 0;
+  background-color: rgba(0, 0, 0, 0.801);
+  z-index: 1;
+  transition: all 0.2s;
+}
+.popup a {
+  color: grey;
+  text-decoration: none;
+}
+.popup:target {
+  opacity: 1;
+}
+.popup:target + div {
+  opacity: 1;
+  z-index: 2;
+}
+.dim {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.chucheon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 15px;
+}
+
+.follow {
+  text-align: left;
+  font-size: 12px;
+  padding-left: 15px;
+}
+
+.follow2 {
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+}
+.follow3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 0 10px 0 15px;
+}
+
+span[class^="material-icons"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.reply {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.reply > div:nth-of-type(1) {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-border {
+  position: fixed;
+  min-width: 1000px;
+  border: 1px solid gainsboro;
+  border-style: none none solid none;
+}
+
+/* nav 정렬 */
+.nav-t {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  min-width: 1518px;
+  padding-left: 368px;
+}
+/* Search 창 */
+#Search {
+  width: 248px;
+  height: 30px;
+}
+/* nav안 아이템 */
+.nav-i {
+  align-items: center;
+  padding-right: 258px;
+}
+/* 전체 */
+.all {
+  text-align: center;
+  justify-content: center;
+  padding-top: 60px;
+  background-color: #fafafa;
+}
+/* 왼쪽 */
+.left {
+  width: 550px;
+  min-width: 500px;
+  height: 1000px;
+  margin-right: 230px;
+}
+/* 스토리 바 */
+.story {
+  border: solid 1px gainsboro;
+  background-color: white;
+  margin: 10px 0 20px 0;
+}

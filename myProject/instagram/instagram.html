@@ -2,7 +2,6 @@
 <html lang="ko">
 
     <head>    
-        <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,283 +9,49 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-        <!-- Google Icon -->
-        <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            rel="stylesheet"> 얘는 아이콘 하나에 대해서만-->
-
         <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 
+        <link href="instagram.css" rel="stylesheet">
         <link rel = "shortcut icon" href = "images/instagram.png">
         <title>Instagram</title>
-        <style>
-            #intro{
-                width: 100%;
-                height: 100%;
-                position: fixed;
-                left: 0;
-                top: 0;
-                background-image: url(images/instagram.png);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size:50px;
-                background-color: black;
-                z-index: 10;
-                transition: .1s;
-            }
 
-            .dp{
-                display: flex;
-                flex-direction: row;
-            }
-
-            .box {  
-                width: 50px; 
-                height: 50px; 
-                border-radius: 50%;
-                overflow: hidden ;
-            }
-            .box2 {
-              width: 30px;
-              height: 30px;
-              border-radius: 50%;
-              overflow: hidden;
-            }
-
-            .box.fav{
-                margin: 20px 0 0 20px;
-            }
-
-            .profile {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-                /* 무슨 박스 */
-            .feed_box { 
-                border-top: solid 1px gainsboro;
-                background-color: white;
-                margin: 10px 0 10px 0;
-            }
-
-                
-            /* 어디어디 백그라운드 설정 */
-            .background01{
-                width: 28px;
-                height: 28px; 
-                border-radius: 50%;
-                overflow: hidden;
-            }
-                
-            .btn{
-                margin: 1px 15px; 
-                font-size: 15px; 
-                color: gray;
-                display: flex; 
-            }
-            
-            .feedback{
-                font-weight: bold; 
-                color: gray; 
-                text-decoration: none;
-            }
-
-            .feedback02{
-                font-weight: bold; 
-                text-decoration: none;
-                font-size: 12px;
-                color: black;
-            }
-            .feedback03{
-              font-weight: bold;
-              text-decoration: none;
-              font-size: 12px;
-            }
-            .feedback04{
-              color: black;
-              text-decoration: none;
-            }
-
-            body :hover {
-              color: black;
-            }
-            .feedback05{
-              font-size: 5px;
-              padding: 4px 0 8px 20px;
-            }
-            .feedback06{
-              font-weight:bold;
-              text-decoration: none;
-              font-size: 12px;
-              color: black;
-              display: flex; 
-              flex-direction: column; 
-              text-align: left;
-            }
-
-            .popup {
-                position: fixed; 
-                left: 50%; 
-                top: 50%; 
-                transform: translate(-50%, -50%);
-                width: 100%;
-                height: 100%; 
-                box-shadow: 0 0 10px rgb(0, 0, 0);
-                border-radius: 0 4px 4px 0;
-                background-color: rgba(0, 0, 0, 0.801);
-                z-index:1;
-                transition: all 0.2s;
-            }
-            .popup a { color: grey; text-decoration: none; }
-            .popup:target { opacity: 1; }
-            .popup:target + div { opacity: 1; z-index: 2;}
-            .dim { 
-                position: fixed; 
-                left: 0; 
-                top: 0; 
-                z-index: -1; 
-                width: 100%; 
-                height: 100%;
-                background: rgba(0, 0, 0, 0.6); 
-                opacity: 0; 
-                transition: all 0.2s;
-            }
-
-            .chucheon{
-                display: flex; 
-                flex-direction: row; 
-                justify-content: space-between; 
-                align-items: center; 
-                margin: 5px 15px;   
-            }
-
-            .follow {
-                text-align: left; 
-                font-size: 12px; 
-                padding-left: 15px;
-            }
-
-            .follow2{
-                font-weight: bold; 
-                font-size: 12px; 
-                text-decoration: none;
-            }
-            .follow3{
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              font-size: 12px;
-              padding: 0 10px 0 15px;
-            }
-
-            span[class^=material-icons]{
-                margin-right:10px;
-                cursor:pointer;
-            }
-
-            .reply{
-              display: flex; 
-              flex-direction: row; 
-              justify-content: space-between; 
-            }
-            .reply>div:nth-of-type(1){
-              display: flex; 
-              flex-direction: row;
-            }
-            
-        </style>
-        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-        <script>
-            window.onload=()=>{
-                let introLayer = document.getElementById('intro');
-                let opacity = 100;
-                let interval = setInterval(()=>{
-                    introLayer.style.opacity=opacity/100;
-                    opacity--;
-
-                    if(opacity===0){
-                        clearInterval(interval);
-                        introLayer.remove();
-                    }
-                },10);              
-            }
-
-            function popup(){
-              let pop = document.getElementById('pop1');
-              pop.style.display='flex';
-            }
-
-            function closePopup(){
-              document.getElementById('pop1').style.display='none';
-            }
-
-            const e = React.createElement;
-            class LikeButton extends React.Component {
-              constructor(props){
-                super(props);
-                this.state = {
-                  like: false,
-                };
-              }
-              render() {
-              return e('heart', 
-              { onClick: () => { this.setState({ liked : true }) }, type: 'submit' }, 
-              this.state.liked === true ? '❤️' : '🤍',); // <button>Like</button>
-              }
-            }
-
-            const b = React.createElement;
-            class BookMark extends React.Component {
-              constructor(props){
-                super(props);
-                this.state = {
-                  like: false,
-                };
-              }
-              render() {
-              return b('bookmark', 
-              { onClick: () => { this.setState({ liked : true }) }, type: 'submit' }, 
-              this.state.liked === true ? 'bookmark' : 'bookmark_border',); // <button>Like</button>
-              }
-            }
-        </script>
+        <script src="instagram.js"></script>
     </head>
 
     <body>
-      <div id="intro">
-            
-      </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed; width: 100%; border:1px gainsboro; border-style: none none solid none;">
-        <div class="container-fluid" style="justify-content: space-between; flex-wrap: nowrap; min-width: 1000px; ">
-            <div style="margin: 0 0 0 356px;">    
-                <a class="navbar-brand" href="#"><img style="width: 100px" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"></a>
-            </div> 
-                <input class="form-control me-2" style="width: 248px; height: 30px;" type="search" placeholder="🔍︎ Search" aria-label="Search">
-                    <div class="dp" style="margin: 10px 15px; align-items: center; margin: 0 261px 0 0;">
-                        <span class="material-icons"> home </span>
-                        <span class="material-icons-outlined"> send </span>
-                        <span class="material-icons-outlined"> add_box </span>
-                        <span class="material-icons-outlined"> explore </span>
-                        <span class="material-icons-outlined"> favorite_border </span>
-                        <span class="background01">
-                            <img class="profile" src="/myProject/instagram/images/present.jpg">
-                        </span>
-                    </div>
-            </div>
-        </nav>
+      <div id="intro"></div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light nav-border">
+          <div class="container-fluid nav-t">
+              <div>    
+                  <a class="navbar-brand" href="#">
+                    <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png">
+                  </a>
+              </div>
+              <div> 
+                  <input class="form-control me-2" id="Search" type="search" placeholder="🔍︎ Search" aria-label="Search">
+              </div>   
+                  <div class="dp nav-i">
+                          <span class="material-icons"> home </span>
+                          <span class="material-icons-outlined"> send </span>
+                          <span class="material-icons-outlined"> add_box </span>
+                          <span class="material-icons-outlined"> explore </span>
+                          <span class="material-icons-outlined"> favorite_border </span>
+                          <span class="background01">
+                              <img class="profile" src="/myProject/instagram/images/present.jpg">
+                          </span>
+                      </div>
+              </div>
+          </nav>
 
 
-        <div class="dp" style="text-align: center; justify-content: center; padding-top: 60px; background-color: #FAFAFA;">   
-            <div style="width: 550px; min-width: 500px; height: 1000px; margin: 30px 230px 25px 0;">
-
-
-                <div style="border: solid 1px gainsboro; background-color: white; margin: 10px 0 20px 0;">
+        <div class="dp all">   
+            <div class="left">
+                <div class="story">
                     <div class="dp">
                         <div>
                           <a href="#a" class="feedback04">
                             <div class="box fav">
-                              <img class="profile" 
-                              src="images/Friends6.jpg">
+                              <img class="profile" src="images/Friends6.jpg">
                             </div>
                             <div class="feedback05"> jy.1212 </div>
                           </a>
@@ -294,8 +59,7 @@
                         <div>
                           <a href="#a" class="feedback04">
                             <div class="box fav">
-                                <img class="profile" 
-                                src="images/Friends7.jpg">
+                                <img class="profile" src="images/Friends7.jpg">
                             </div>
                             <div class="feedback05"> uwepp </div>
                           </a>
@@ -303,8 +67,7 @@
                         <div>
                           <a href="#a" class="feedback04">
                             <div class="box fav">
-                                <img class="profile" 
-                                src="images/Friends8.jpg">
+                                <img class="profile" src="images/Friends8.jpg">
                             </div>
                             <div class="feedback05"> 4353kmg </div>
                           </a>
@@ -312,8 +75,7 @@
                         <div>
                           <a href="#a" class="feedback04">
                             <div class="box fav">
-                                <img class="profile" 
-                                src="images/Friends9.jpg">
+                                <img class="profile" src="images/Friends9.jpg">
                             </div>
                             <div class="feedback05"> love_luv </div>
                           </a>
@@ -321,8 +83,7 @@
                         <div>
                           <a href="#a" class="feedback04">
                             <div class="box fav">
-                                <img class="profile" 
-                                src="images/Friends10.jpg">
+                                <img class="profile" src="images/Friends10.jpg">
                             </div>
                             <div class="feedback05"> strong00 </div>
                           </a>
@@ -335,8 +96,7 @@
                 <div style="border: solid 1px gainsboro; background-color: white; margin-bottom: 20px;">   
                     <div class="dp" style="align-items: center; margin: 5px 15px;">
                         <div class="box2">
-                            <img class="profile" 
-                            src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
+                            <img class="profile" src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
                         </div>
                         <div class="feedback06" style="padding-left: 10px;">
                             <div><a class="feedback02" href="#">kbh_oO</a></div>
@@ -347,7 +107,7 @@
                     <img style="width: 100%;" src="images/myPuppyThatIMade1.jpg"> 
                     <div class="reply" style="margin: 10px 15px; margin-top: 14px;">
                         <div>
-                            <span id="root7" style="font-size: large;" class="material-icons-outlined"> favorite_border </span>
+                            <span class="material-icons-outlined" data-state="false" onclick="like(this)"> favorite_border </span>
                             <span class="material-icons-outlined" style="padding: 0.5px 4px 0 0;">
                               <a href="javascript:popup()" class="feedback04">
                                 mode_comment 
@@ -358,8 +118,7 @@
                             </span>
                         </div>
                         <div>
-                            <span id="root8" class="material-icons-outlined"> bookmark_border  </span>   
-                            <script>ReactDOM.render(b(BookMark), document.querySelector('#root8'));</script>   
+                          <span class="material-icons-outlined" data-state="false" onclick="book(this)"> bookmark_border</span>  
                         </div>
                     </div>
                     <div class="dp" style="align-items: center; padding-left: 15px;">
@@ -429,9 +188,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="root1" style="padding-right: 10px;">
-                                  <script>ReactDOM.render(e(LikeButton), document.querySelector('#root1'));</script>
-                                </div>
+                                <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
                               </div>
                               <div class="reply">
                                 <div style="padding: 0 0 20px 15px;">
@@ -447,9 +204,7 @@
                                       </div>
                                   </div>
                                 </div>
-                                <div id="root2" style="padding-right: 10px;">
-                                  <script>ReactDOM.render(e(LikeButton), document.querySelector('#root2'));</script>
-                                </div>
+                                <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
                               </div>
                               <div class="reply">
                                 <div style="padding: 0 0 20px 15px;">
@@ -466,9 +221,7 @@
                                         </div>
                                     </div>
                                   </div>
-                                  <div id="root3" style="padding-right: 10px;">
-                                    <script>ReactDOM.render(e(LikeButton), document.querySelector('#root3'));</script>
-                                  </div>
+                                  <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
                                 </div>
                                 <br>
                                 <br>
@@ -478,15 +231,13 @@
                           <div>
                               <div class="reply" style="padding: 12px 0 5px 13px;">
                                   <div>
-                                      <span id="root6" style="font-size: large;" class="material-icons-outlined"> favorite_border </span>
-                                      <script>ReactDOM.render(e(LikeButton), document.querySelector('#root6'));</script>
+                                    <span class="material-icons-outlined" data-state="false" onclick="like(this)"> favorite_border </span>
                                     
                                       <span style="padding-right: 4px;" class="material-icons-outlined"> mode_comment </span>
                                       <span class="material-icons-outlined"> send </span>
                                   </div>
                                   <div>
-                                    <span id="root9" class="material-icons-outlined"> bookmark_border  </span>   
-                                    <script>ReactDOM.render(b(BookMark), document.querySelector('#root9'));</script>      
+                                    <span class="material-icons-outlined" data-state="false" onclick="book(this)"> bookmark_border </span>     
                                   </div>
                               </div>
                               <div style="text-align: left; padding: 0 0 70px 15px;">
@@ -506,14 +257,12 @@
                     <div class="dim"></div>
                     <div class="follow3"> 
                         <span><a href="#" class="feedback02"> ta_mida </a>나도 만들어줘ㅠㅠ</span> 
-                        <span id="root4" class="heart2">
-                          <script>ReactDOM.render(e(LikeButton), document.querySelector('#root4'));</script>
+                        <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
                         </span>
                     </div>
                     <div class="follow3"> 
                         <span><a href="#" class="feedback02"> 4353kmg </a>ㅋㅋㅋ귀엽네</span>
-                        <span id="root5" class="heart2">
-                          <script>ReactDOM.render(e(LikeButton), document.querySelector('#root5'));</script>
+                        <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
                         </span> 
                     </div>
                     <div class="follow" style="font-size: 5px; color: gray"> <br>3주 전 </div>
