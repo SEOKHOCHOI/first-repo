@@ -139,6 +139,7 @@ ul.icons > li {
   color: black;
   text-decoration: none;
   font-weight: lighter;
+  font-size: 12px;
 }
 
 body :hover {
@@ -187,6 +188,74 @@ body :hover {
   color: grey;
   text-decoration: none;
 }
+#pop1 {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#pop1 > div:nth-of-type(1) {
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2em;
+  color: white;
+  font-weight: bold;
+}
+#pop1 > div:nth-of-type(2) {
+  display: flex;
+  background-color: white;
+}
+#pop1 > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 540px;
+  height: 720px;
+}
+#pop1 > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(1) {
+  border-bottom: 1px solid gainsboro;
+  padding: 12px 5px 12px 15px;
+}
+#nic {
+  display: flex;
+  flex-direction: column;
+  padding: 0 267px 0 12px;
+}
+#nic > div > a {
+  color: black;
+}
+#nic > div:nth-of-type(2) {
+  font-weight: lighter;
+}
+#pr-name {
+  padding: 23px 0 30px 15px;
+}
+#pr-name > div:nth-of-type(2) {
+  text-align: left;
+  padding-left: 12px;
+  font-weight: lighter;
+}
+#pr-name > div:nth-of-type(2) > a:nth-of-type(1) {
+  color: black;
+  font-weight: bold;
+}
+#pr-name > div:nth-of-type(2) > a:nth-of-type(2) {
+  color: grey;
+}
+
+#comment {
+  border: 1px gainsboro;
+  border-style: none none solid none;
+}
+#comment > div:nth-of-type(1) > div:nth-of-type(1) {
+  padding: 0 0 20px 15px;
+}
+#comment > div:nth-of-type(1) .feedback02 {
+  text-align: left;
+  padding-left: 12px;
+}
+#comment > div:nth-of-type(1) > div:nth-of-type(1) {
+}
+
 .popup:target {
   opacity: 1;
 }

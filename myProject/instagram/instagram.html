@@ -104,7 +104,7 @@
                     <div class="reply reply02">
                         <div>
                             <span class="material-icons-outlined" data-state="false" onclick="like(this)"> favorite_border </span>
-                            <span class="material-icons-outlined" style="padding: 0.5px 4px 0 0;">
+                            <span class="material-icons-outlined">
                               <a href="javascript:popup()" class="feedback04">
                                 mode_comment 
                               </a>
@@ -121,128 +121,127 @@
                         <div class="box2"> 
                         <img class="profile" src="./images/present.jpg">
                         </div>
-                        <div 여기어쩌지????> 
+                        <div> 
                             <a href="#" class="feedback02">ppgppg_0</a>
-                            <span style="font-size: 12px;">님</span> 
+                            <span class="feedback04-02">님</span> 
                             <a href="#" class="feedback02">외 245명이</a>
-                            <span style="font-size: 12px;">좋아합니다.</span> 
+                            <span class="feedback04-02">좋아합니다.</span> 
                         </div> 
                     </div>
-                    <div style="text-align: left; padding-left: 15px;"> 
+                    <div class="follow"> 
                         <a class="feedback02" href="#">kbh_oO</a>
-                        <span style="font-size: 12px;">눈으로 만든 우리 최뽀글!</span> 
+                        <span>눈으로 만든 우리 최뽀글!</span> 
                     </div>
                     
                     <a href="javascript:popup()" class="btn">댓글 3개 모두 보기</a>
-                    <div class="popup" id="pop1" style="display: none; justify-content: center; align-items: center;">
-                      <div onclick="closePopup()" style="color:white; cursor:pointer; position:absolute; 
-                      top:0; right:0;font-size:2em; color:white; font-weight:bold;">
+                    <div class="popup" id="pop1">
+                      <div onclick="closePopup()">
                         X
                       </div>
-                      <div class="wrap" style="display:flex; background-color:white;">
-                        <div style="width: 540px; height: 720px;">
+                      <div>
+                        <div>
                           <img style="width: 100%;" src="images/myPuppyThatIMade1.jpg"> 
                         </div>
-                      <div style="width: 450px; height: 650px; left: 62%; padding-top: 5px;">
-                          <div class="dp" style="border-bottom:1px solid gainsboro; padding: 12px 5px 12px 15px;">
-                              <div class="box2">
-                                  <img class="profile" src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
-                              </div>
-                              <div class="reply">
-                                <div class="feedback06" style="display: flex; flex-direction: column; padding: 0 267px 0 12px;">
-                                  <div><a href="#" style="color: black;"> kbh_oO · 팔로잉 </a></div>
-                                  <div><a href="#" style="color: black; font-weight: lighter;"> 서울 </a></div>
-                                </div>   
-                                <div class="material-icons-outlined"> more_horiz </div>
-                              </div>
-                          </div>
-                          <div class="dp" style="padding: 20px 0 30px 15px;">
-                              <div class="box2">
-                                  <img class="profile" src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
-                              </div>
-                              <div class="feedback02" style="text-align: left; padding-left: 12px;">
-                                  <a href="#" style="color: black;"> kbh_oO </a> 
-                                  <span style="font-weight: lighter;">눈으로 만든 우리 최뽀글!<br><br></span>
-                                  <a href="#" style="color: gray; font-weight: lighter;"> 3주 </a>
-                              </div>
-                          </div>
-                          <div style="border:1px gainsboro; border-style: none none solid none;">
-                              <div class="reply">
-                                <div style="padding: 0 0 20px 15px">
-                                    <div class="box2">
-                                        <img class="profile" src="./images/Waterpuppy.jpg">
-                                    </div>
-                                    <div class="feedback02" style="text-align: left; padding-left: 12px;">
-                                        <a href="#" style="color: black;"> ta_mida </a> 
-                                        <span style="font-weight: lighter;">나도 만들어줘ㅠㅠ <br><br></span>
-                                        <div> 
-                                            <a href="#" style="font-weight: lighter;"> 3주 </a> 
-                                            <a href="#"> 답글 달기 </a> 
-                                        </div>
-                                    </div>
+                        <div>
+                            <div class="dp">
+                                <div class="box2">
+                                    <img class="profile" src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
                                 </div>
-                                <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
-                              </div>
-                              <div class="reply">
-                                <div style="padding: 0 0 20px 15px;">
-                                  <div class="box2">
-                                      <img class="profile" src="images/Friends8.jpg">
-                                  </div>
-                                  <div class="feedback02" style="text-align: left; padding-left: 12px;">
-                                      <a href="#" style="color: black;"> 4353kmg </a> 
-                                      <span style="font-weight: lighter;">ㅋㅋㅋ귀엽네 <br><br></span>
-                                      <div> 
-                                          <a href="#" style="font-weight: lighter;"> 3주 </a> 
-                                          <a href="#">답글 달기</a> 
+                                <div class="reply">
+                                  <div class="feedback06" id="nic">
+                                    <div><a href="#"> kbh_oO · 팔로잉 </a></div>
+                                    <div><a href="#"> 서울 </a></div>
+                                  </div>   
+                                  <div class="material-icons-outlined"> more_horiz </div>
+                                </div>
+                            </div>
+                            <div class="dp" id="pr-name">
+                                <div class="box2">
+                                    <img class="profile" src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
+                                </div>
+                                <div class="feedback02">
+                                    <a href="#"> kbh_oO </a> 
+                                    <span>눈으로 만든 우리 최뽀글!<br><br></span>
+                                    <a href="#"> 3주 </a>
+                                </div>
+                            </div>
+                            <div id="comment">
+                                <div class="reply">
+                                  <div>
+                                      <div class="box2">
+                                          <img class="profile" src="./images/Waterpuppy.jpg">
+                                      </div>
+                                      <div class="feedback02">
+                                          <a href="#" style="color: black;"> ta_mida </a> 
+                                          <span style="font-weight: lighter;">나도 만들어줘ㅠㅠ <br><br></span>
+                                          <div> 
+                                              <a href="#" style="font-weight: lighter;"> 3주 </a> 
+                                              <a href="#"> 답글 달기 </a> 
+                                          </div>
                                       </div>
                                   </div>
+                                  <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
                                 </div>
-                                <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
-                              </div>
-                              <div class="reply">
-                                <div style="padding: 0 0 20px 15px;">
+                                <div class="reply">
+                                  <div style="padding: 0 0 20px 15px;">
                                     <div class="box2">
-                                        <img class="profile" 
-                                        src="images/k1.jpg">
+                                        <img class="profile" src="images/Friends8.jpg">
                                     </div>
                                     <div class="feedback02" style="text-align: left; padding-left: 12px;">
-                                        <a href="#" style="color: black;"> inchi5252 </a> 
-                                        <span style="font-weight: lighter;">오늘 날씨 완전 좋습니다🤣👍 <br><br></span>
+                                        <a href="#" style="color: black;"> 4353kmg </a> 
+                                        <span style="font-weight: lighter;">ㅋㅋㅋ귀엽네 <br><br></span>
                                         <div> 
                                             <a href="#" style="font-weight: lighter;"> 3주 </a> 
-                                            <a href="#"> 답글 달기 </a> 
+                                            <a href="#">답글 달기</a> 
                                         </div>
                                     </div>
                                   </div>
                                   <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
                                 </div>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                          </div>
-                          <div>
-                              <div class="reply" style="padding: 12px 0 5px 13px;">
-                                  <div>
-                                    <span class="material-icons-outlined" data-state="false" onclick="like(this)"> favorite_border </span>
-                                    
-                                      <span style="padding-right: 4px;" class="material-icons-outlined"> mode_comment </span>
-                                      <span class="material-icons-outlined"> send </span>
+                                <div class="reply">
+                                  <div style="padding: 0 0 20px 15px;">
+                                      <div class="box2">
+                                          <img class="profile" 
+                                          src="images/k1.jpg">
+                                      </div>
+                                      <div class="feedback02" style="text-align: left; padding-left: 12px;">
+                                          <a href="#" style="color: black;"> inchi5252 </a> 
+                                          <span style="font-weight: lighter;">오늘 날씨 완전 좋습니다🤣👍 <br><br></span>
+                                          <div> 
+                                              <a href="#" style="font-weight: lighter;"> 3주 </a> 
+                                              <a href="#"> 답글 달기 </a> 
+                                          </div>
+                                      </div>
+                                    </div>
+                                    <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
                                   </div>
-                                  <div>
-                                    <span class="material-icons-outlined" data-state="false" onclick="book(this)"> bookmark_border </span>     
-                                  </div>
-                              </div>
-                              <div style="text-align: left; padding: 0 0 80px 15px;">
-                                  <a href="#" class="feedback02" style="color: black;"> 좋아요 246개<br></a>
-                                  <a href="#" style="font-size: 8px; color: gray;"> 12월 8일 </a>
-                              </div>
-                          </div>
-                          
-                          <div>
-                              <input type="text" class="form-control feed_box2" placeholder="🙂 &nbsp;댓글 달기...">
-                          </div>
-                      </div>
+                                  <br>
+                                  <br>
+                                  <br>
+                                  <br>
+                            </div>
+                            <div>
+                                <div class="reply" style="padding: 12px 0 5px 13px;">
+                                    <div>
+                                      <span class="material-icons-outlined" data-state="false" onclick="like(this)"> favorite_border </span>
+                                      
+                                        <span style="padding-right: 4px;" class="material-icons-outlined"> mode_comment </span>
+                                        <span class="material-icons-outlined"> send </span>
+                                    </div>
+                                    <div>
+                                      <span class="material-icons-outlined" data-state="false" onclick="book(this)"> bookmark_border </span>     
+                                    </div>
+                                </div>
+                                <div style="text-align: left; padding: 0 0 80px 15px;">
+                                    <a href="#" class="feedback02" style="color: black;"> 좋아요 246개<br></a>
+                                    <a href="#" style="font-size: 8px; color: gray;"> 12월 8일 </a>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <input type="text" class="form-control feed_box2" placeholder="🙂 &nbsp;댓글 달기...">
+                            </div>
+                        </div>
                       </div>  
                     </div>
                     <div class="dim"></div>
