@@ -253,6 +253,7 @@ body :hover {
   text-align: left;
   padding-left: 12px;
 }
+
 #comment > div:nth-of-type(1) .feedback02 {
   font-weight: lighter;
 }
@@ -272,11 +273,43 @@ body :hover {
 }
 #comment
   > div:nth-of-type(2)
+  > div:nth-of-type(2)
+  > div
+  > div
+  > a:nth-of-type(2) {
+  font-weight: bold;
+}
+#comment > div:nth-of-type(3) > div > div:nth-of-type(2) {
+  font-weight: lighter;
+}
+#comment > div:nth-of-type(3) > div > div:nth-of-type(2) > a {
+  color: black;
+  font-weight: bold;
+}
+#comment
+  > div:nth-of-type(3)
   > div
   > div:nth-of-type(2)
   > div
   > a:nth-of-type(2) {
   font-weight: bold;
+}
+#pack > div {
+  padding: 12px 0 5px 13px;
+}
+#pack > div > div > span:nth-of-type(2) {
+  padding-right: 4px;
+}
+#pack > div:nth-of-type(2) {
+  text-align: left;
+  padding: 0 0 80px 15px;
+}
+#pack > div:nth-of-type(2) > a {
+  color: black;
+}
+#pack > div:nth-of-type(2) > a:nth-of-type(2) {
+  font-size: 8px;
+  color: gray;
 }
 
 .popup:target {
@@ -299,11 +332,48 @@ body :hover {
 }
 
 #right_chucheon {
+  min-width: 335px;
   width: 320px;
   height: 1000px;
   position: sticky;
   margin-top: 30px;
   margin-left: 20px;
+}
+#right_chucheon > div > div {
+  display: flex;
+  padding: 5px 0 15px 10px;
+}
+#right_chucheon > div > div > div:nth-of-type(2) > a:nth-of-type(2) {
+  font-weight: lighter;
+  color: black;
+}
+#right_chucheon > div > div:nth-of-type(2) {
+  padding: 0 14px 0 9px;
+}
+#right_chucheon > div > div:nth-of-type(2) > div {
+  color: gray;
+}
+#right_chucheon > div > div:nth-of-type(3) > div > div:nth-of-type(2) > div {
+  color: gray;
+}
+#right_chucheon > div > div:nth-of-type(4) > div > div:nth-of-type(2) > div {
+  color: gray;
+}
+#right_chucheon > div > div:nth-of-type(5) > div > div:nth-of-type(2) > div {
+  color: gray;
+}
+#right_chucheon > div > div:nth-of-type(6) > div > div:nth-of-type(2) > div {
+  color: gray;
+}
+#right_chucheon > div > div:nth-of-type(7) > div > div:nth-of-type(2) > div {
+  color: gray;
+}
+#right_chucheon > div > div:nth-of-type(8) {
+  text-align: left;
+  font-size: 10px;
+  color: gray;
+  opacity: 0.5;
+  padding: 10px 0 0px 16px;
 }
 
 .chucheon {
@@ -403,7 +473,7 @@ span[class^="material-icons"] {
 }
 /* 스토리 바 */
 .story {
-  border: solid 1px gainsboro;
+  border: 1px solid gainsboro;
   background-color: white;
   margin: 10px 0 20px 0;
 }
