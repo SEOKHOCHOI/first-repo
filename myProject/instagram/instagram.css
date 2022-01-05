@@ -256,7 +256,8 @@ body :hover {
   font-size: 14px;
   padding: 0 190px 0 210px;
 }
-#pop02 > div > div > span:nth-of-type(2) {
+#pop02 > div > div > span:nth-of-type(2) > a {
+  color: black;
   font-size: 25px;
 }
 #pop02 > div > div:nth-of-type(2) {
@@ -276,6 +277,37 @@ body :hover {
   font-weight: bold;
   opacity: 0.3;
   padding: 0 0 13px 16px;
+}
+#pop02 > div > div:nth-of-type(3) > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#pop02 > div > div:nth-of-type(3) > div > div {
+  display: flex;
+}
+
+#pop02
+  > div
+  > div:nth-of-type(3)
+  > div
+  > div
+  > div:nth-of-type(2)
+  > div:nth-of-type(1)
+  > a {
+  color: black;
+  padding-left: 6px;
+}
+#pop02
+  > div
+  > div:nth-of-type(3)
+  > div
+  > div
+  > div:nth-of-type(2)
+  > div:nth-of-type(2)
+  > a {
+  padding-left: 2px;
+  font-weight: lighter;
 }
 
 #pop02 > div > div:nth-of-type(4) {
