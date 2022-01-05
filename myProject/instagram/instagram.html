@@ -1,370 +1,365 @@
 <!doctype html>
 <html lang="ko">
 
-    <head>    
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 
-        <link href="instagram.css" rel="stylesheet">
-        <link rel = "shortcut icon" href = "images/instagram.png">
-        <title>Instagram</title> 
-        <script src="instagram.js"></script>
-    </head>
+      <link href="instagram.css" rel="stylesheet">
+      <link rel = "shortcut icon" href = "images/instagram.png">
+      <title>Instagram</title> 
+      <script src="instagram.js"></script>
+  </head>
 
-    <body>
-      <div id="intro"></div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="nav-t container-fluid">
-              <div>    
-                  <a class="navbar-brand" href="#">
-                    <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png">
-                  </a>
+  <body>
+
+  <div id="intro"></div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="nav-t container-fluid">
+      <div>    
+        <a class="navbar-brand" href="#">
+          <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png">
+        </a>
+      </div>
+      <div> 
+        <input class="form-control me-2" id="Search" type="search" placeholder="🔍︎ Search" aria-label="Search">
+      </div>   
+      <ul class="icons">
+        <li class="material-icons"> home </li>
+        <li class="material-icons-outlined"> send </li>
+        <li class="material-icons-outlined"> add_box </li>
+        <li class="material-icons-outlined"> explore </li>
+        <li class="material-icons-outlined"> favorite_border </li>
+        <li class="background01">
+        <img class="profile" src="/myProject/instagram/images/present.jpg">
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="dp all">   
+    <div class="left">
+      <div class="story">
+        <div id="top_falower">
+          <div>
+            <a href="#a" class="feedback04">
+              <div class="box fav">
+                <img class="profile" src="./images/Friends6.jpg">
+              </div>
+              <div class="feedback05"> jy.1212 </div>
+            </a>
+          </div>
+          <div>
+            <a href="#a" class="feedback04">
+              <div class="box fav">
+                <img class="profile" src="images/Friends7.jpg">
+              </div>
+              <div class="feedback05"> uwepp </div>
+            </a>
+          </div>
+          <div>
+            <a href="#a" class="feedback04">
+              <div class="box fav">
+                <img class="profile" src="images/Friends8.jpg">
+              </div>
+              <div class="feedback05"> 4353kmg </div>
+            </a>
+          </div>
+          <div>
+            <a href="#a" class="feedback04">
+              <div class="box fav">
+                <img class="profile" src="images/Friends9.jpg">
+              </div>
+              <div class="feedback05"> love_luv </div>
+            </a>
+          </div>
+          <div>
+            <a href="#a" class="feedback04">
+              <div class="box fav">
+                <img class="profile" src="images/Friends10.jpg">
+              </div>
+              <div class="feedback05"> strong00 </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="feed_box">   
+        <div class="dp dp2">
+          <div class="box2">
+            <img class="profile" src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
+          </div>
+          <div class="feedback06">
+            <div><a href="#" class="feedback04">kbh_oO</a></div>
+            <div><a href="#"class="feedback04-02"> 서울 </a></div>
+          </div>
+        </div>
+        <div>
+          <img style="width: 100%;" src="./images/myPuppyThatIMade1.jpg"> 
+          <div class="reply reply02">
+            <div>
+              <span class="material-icons-outlined" data-state="false" onclick="like(this)"> favorite_border </span>
+              <span class="material-icons-outlined">
+                <a href="javascript:popup()" class="feedback04">
+                  mode_comment 
+                </a>
+              </span>
+              <span class="material-icons-outlined">
+                <a href="#a" class="feedback04">send</a>
+              </span>
+            </div>
+            <div>
+              <span class="material-icons-outlined" data-state="false" onclick="book(this)"> bookmark_border</span>  
+            </div>
+          </div>
+            <div class="dp dp3">
+              <div class="box2"> 
+                <img class="profile" src="./images/present.jpg">
               </div>
               <div> 
-                  <input class="form-control me-2" id="Search" type="search" placeholder="🔍︎ Search" aria-label="Search">
-              </div>   
-                  <ul class="icons">
-                      <li class="material-icons"> home </li>
-                      <li class="material-icons-outlined"> send </li>
-                      <li class="material-icons-outlined"> add_box </li>
-                      <li class="material-icons-outlined"> explore </li>
-                      <li class="material-icons-outlined"> favorite_border </li>
-                      <li class="background01">
-                          <img class="profile" src="/myProject/instagram/images/present.jpg">
-                      </li>
-                  </ul>
+                <a href="#" class="feedback02">ppgppg_0</a>
+                <span class="feedback04-02">님</span> 
+                <a href="#" class="feedback02">외 245명이</a>
+                <span class="feedback04-02">좋아합니다.</span> 
               </div>
-          </nav>
-
-
-        <div class="dp all">   
-            <div class="left">
-                <div class="story">
-                    <div id="top_falower">
-                        <div>
-                          <a href="#a" class="feedback04">
-                            <div class="box fav">
-                              <img class="profile" src="./images/Friends6.jpg">
-                            </div>
-                            <div class="feedback05"> jy.1212 </div>
-                          </a>
-                        </div>
-                        <div>
-                          <a href="#a" class="feedback04">
-                            <div class="box fav">
-                                <img class="profile" src="images/Friends7.jpg">
-                            </div>
-                            <div class="feedback05"> uwepp </div>
-                          </a>
-                        </div>
-                        <div>
-                          <a href="#a" class="feedback04">
-                            <div class="box fav">
-                                <img class="profile" src="images/Friends8.jpg">
-                            </div>
-                            <div class="feedback05"> 4353kmg </div>
-                          </a>
-                        </div>
-                        <div>
-                          <a href="#a" class="feedback04">
-                            <div class="box fav">
-                                <img class="profile" src="images/Friends9.jpg">
-                            </div>
-                            <div class="feedback05"> love_luv </div>
-                          </a>
-                        </div>
-                        <div>
-                          <a href="#a" class="feedback04">
-                            <div class="box fav">
-                                <img class="profile" src="images/Friends10.jpg">
-                            </div>
-                            <div class="feedback05"> strong00 </div>
-                          </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="feed_box">   
-                    <div class="dp dp2">
-                        <div class="box2">
-                            <img class="profile" src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
-                        </div>
-                        <div class="feedback06">
-                            <div><a href="#" class="feedback04">kbh_oO</a></div>
-                            <div><a href="#"class="feedback04-02"> 서울 </a></div>
-                        </div>
-                    </div>
-                <div>
-                    <img style="width: 100%;" src="./images/myPuppyThatIMade1.jpg"> 
-                    <div class="reply reply02">
-                        <div>
-                            <span class="material-icons-outlined" data-state="false" onclick="like(this)"> favorite_border </span>
-                            <span class="material-icons-outlined">
-                              <a href="javascript:popup()" class="feedback04">
-                                mode_comment 
-                              </a>
-                            </span>
-                            <span class="material-icons-outlined">
-                              <a href="#a" class="feedback04">send</a>
-                            </span>
-                        </div>
-                        <div>
-                          <span class="material-icons-outlined" data-state="false" onclick="book(this)"> bookmark_border</span>  
-                        </div>
-                    </div>
-                    <div class="dp dp3">
-                        <div class="box2"> 
-                        <img class="profile" src="./images/present.jpg">
-                        </div>
-                        <div> 
-                            <a href="#" class="feedback02">ppgppg_0</a>
-                            <span class="feedback04-02">님</span> 
-                            <a href="#" class="feedback02">외 245명이</a>
-                            <span class="feedback04-02">좋아합니다.</span> 
-                        </div> 
-                    </div>
-                    <div class="follow"> 
-                        <a class="feedback02" href="#">kbh_oO</a>
-                        <span>눈으로 만든 우리 최뽀글!</span> 
-                    </div>
-                    
-                    <a href="javascript:popup()" class="btn">댓글 3개 모두 보기</a>
-                    <div class="popup" id="pop1">
-                      <div onclick="closePopup()">
-                        X
-                      </div>
-                      <div>
-                        <div>
-                          <img style="width: 100%;" src="images/myPuppyThatIMade1.jpg"> 
-                        </div>
-                        <div>
-                            <div class="dp">
-                                <div class="box2">
-                                    <img class="profile" src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
-                                </div>
-                                <div class="reply">
-                                  <div class="feedback06" id="nic">
-                                    <div><a href="#"> kbh_oO · 팔로잉 </a></div>
-                                    <div><a href="#"> 서울 </a></div>
-                                  </div>   
-                                  <div class="material-icons-outlined"> more_horiz </div>
-                                </div>
-                            </div>
-                            <div class="dp" id="pr-name">
-                                <div class="box2">
-                                    <img class="profile" src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
-                                </div>
-                                <div class="feedback02">
-                                    <a href="#"> kbh_oO </a> 
-                                    <span>눈으로 만든 우리 최뽀글!<br><br></span>
-                                    <a href="#"> 3주 </a>
-                                </div>
-                            </div>
-                            <div id="comment">
-                                <div class="reply">
-                                  <div class="padding">
-                                      <div class="box2">
-                                          <img class="profile" src="./images/Waterpuppy.jpg">
-                                      </div>
-                                      <div class="feedback02 padding02">
-                                          <a href="#"> ta_mida </a> 
-                                          <span>나도 만들어줘ㅠㅠ <br><br></span>
-                                          <div> 
-                                              <a href="#"> 3주 </a> 
-                                              <a href="#"> 답글 달기 </a> 
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
-                                </div>
-                                <div class="reply">
-                                  <div class="padding">
-                                    <div class="box2">
-                                        <img class="profile" src="images/Friends8.jpg">
-                                    </div>
-                                    <div class="feedback02 padding02">
-                                        <a href="#"> 4353kmg </a> 
-                                        <span>ㅋㅋㅋ귀엽네 <br><br></span>
-                                        <div> 
-                                            <a href="#"> 3주 </a> 
-                                            <a href="#">답글 달기</a> 
-                                        </div>
-                                    </div>
-                                  </div>
-                                  <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
-                                </div>
-                                <div class="reply">
-                                  <div class="padding">
-                                      <div class="box2">
-                                          <img class="profile" 
-                                          src="images/k1.jpg">
-                                      </div>
-                                      <div class="feedback02 padding02">
-                                          <a href="#"> inchi5252 </a> 
-                                          <span>오늘 날씨 완전 좋습니다🤣👍 <br><br></span>
-                                          <div> 
-                                              <a href="#"> 3주 </a> 
-                                              <a href="#"> 답글 달기 </a> 
-                                          </div>
-                                      </div>
-                                    </div>
-                                    <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
-                                  </div>
-                                  <br>
-                                  <br>
-                                  <br>
-                                  <br>
-                            </div>
-                            <div id="pack">
-                                <div class="reply">
-                                    <div>
-                                      <span class="material-icons-outlined" data-state="false" onclick="like(this)"> favorite_border </span>
-                                      <span class="material-icons-outlined"> mode_comment </span>
-                                      <span class="material-icons-outlined"> send </span>
-                                    </div>
-                                    <div>
-                                      <span class="material-icons-outlined" data-state="false" onclick="book(this)"> bookmark_border </span>     
-                                    </div>
-                                </div>
-                                <div>
-                                    <a href="#" class="feedback02"> 좋아요 246개<br></a>
-                                    <a href="#"> 12월 8일 </a>
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <input type="text" class="form-control feed_box2" placeholder="🙂 &nbsp;댓글 달기...">
-                            </div>
-                        </div>
-                      </div>  
-                    </div>
-                    <div class="dim"></div>
-                    <div class="follow3"> 
-                        <span><a href="#" class="feedback02"> ta_mida </a>나도 만들어줘ㅠㅠ</span> 
-                        <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
-                        </span>
-                    </div>
-                    <div class="follow3"> 
-                        <span><a href="#" class="feedback02"> 4353kmg </a>ㅋㅋㅋ귀엽네</span>
-                        <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
-                        </span> 
-                    </div>
-                    <div class="follow4"> <br>3주 전 </div>
-                    <div>
-                        <input type="text" class="form-control feed_box2" placeholder="🙂 &nbsp;댓글 달기...">
-                    </div>
-                </div>
             </div>
-            <div class="story"></div>
-        </div>
-            <div id="right_chucheon"> <!-- 오른쪽 화면(고정된) -->
+            <br>
+            <div class="follow"> 
+              <a class="feedback02" href="#">kbh_oO</a>
+              <span>눈으로 만든 우리 최뽀글!</span> 
+            </div>
+              
+          <a href="javascript:popup()" class="btn">댓글 3개 모두 보기</a>
+          <div class="popup" id="pop1">
+            <div onclick="closePopup()">
+              X
+            </div>
             <div>
-                <div>
-                    <div class="box">
-                        <img class="profile" src="images/myDog.jpg">
-                    </div>
-                    <div class="follow">
-                        <a href="#" class="feedback02"> c__ppg</a>
-                        <a href="#" class="feedback"><br>서울 </a>
-                    </div>
-                </div>
-                <div class="reply">  
-                  <div class="feedback03"> 회원님을 위한 추천 </div>
-                  <div> 
-                    <a class="feedback02" href="#"> 모두보기 </a> 
+              <div>
+                <img style="width: 100%;" src="images/myPuppyThatIMade1.jpg"> 
+              </div>
+              <div>
+                <div class="dp">
+                  <div class="box2">
+                    <img class="profile" src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
                   </div>
-                </div>    
-                <div class="chucheon"> 
-                  <div>
-                    <div class="box2">
-                        <img class="profile" src="./images/Friends1.jpg" />
-                    </div>
-                    <div class="follow">
-                        <a href='#' class="feedback02"> pwh1112 </a> 
-                        <div> 인기 </div>
-                    </div>
+                  <div class="reply">
+                    <div class="feedback06" id="nic">
+                      <div><a href="#"> kbh_oO · 팔로잉 </a></div>
+                      <div><a href="#"> 서울 </a></div>
+                    </div>   
+                    <div class="material-icons-outlined"> more_horiz </div>
                   </div>
-                        <a href="#" class="feedback03"> 팔로우 </a>
                 </div>
-                <div class="chucheon">
-                  <div>
-                    <div class="box2">
-                        <img class="profile" src="images/Friends2.jpg" />
-                    </div>
-                    <div class="follow">
-                        <a href='#' class="feedback02"> songsuh </a>
-                        <div> 인기 </div>
-                    </div>
+                <div class="dp" id="pr-name">
+                  <div class="box2">
+                    <img class="profile" src="https://cdn.imweb.me/upload/S201804035ac2eaeae4be6/44e146276b6c0.jpg">
                   </div>
-                  <a href="#" class="feedback03">팔로우</a>
-                </div>
-                <div class="chucheon">
-                  <div>
-                    <div class="box2">
-                        <img class="profile" src="images/Friends3.jpg">
-                    </div>
-                    <div class="follow">
-                      <a href='#' class="feedback02"> cch_009 </a>
-                      <div>__mwa2님 외 31명이 팔로우 합니다</div>
-                    </div>
+                  <div class="feedback02">
+                    <a href="#"> kbh_oO </a> 
+                    <span>눈으로 만든 우리 최뽀글!<br><br></span>
+                    <a href="#"> 3주 </a>
                   </div>
-                  <a href="#" class="feedback03">팔로우</a>
                 </div>
-                <div class="chucheon">
-                  <div>
-                    <div class="box2">
-                      <img class="profile" src="images/Friends4.jpg">
-                    </div>
-                    <div class="follow">
-                      <a href='#' class="feedback02"> lhsurur </a>                            
-                      <div> qwe223님 외 19명이 팔로우 합니다 </div>
-                    </div>
-                  </div>
-                    <a href="#" class="feedback03">팔로우</a>
-                </div>
-                <div class="chucheon">
-                  <div>
+                <div id="comment">
+                  <div class="reply">
+                    <div class="padding">
                       <div class="box2">
-                          <img class="profile" src="images/Friends5.jpg">
+                        <img class="profile" src="./images/Waterpuppy.jpg">
                       </div>
-                      <div class="follow">
-                          <a href=# class="feedback02"> jmwmt0602 </a>
-                          <div> 회원님을 팔로우 합니다 </div>
+                      <div class="feedback02 padding02">
+                        <a href="#"> ta_mida </a> 
+                        <span>나도 만들어줘ㅠㅠ <br><br></span>
+                        <div> 
+                          <a href="#"> 3주 </a> 
+                          <a href="#"> 답글 달기 </a> 
+                        </div>
                       </div>
+                    </div>
+                    <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
                   </div>
-
-                  <div>
-                      <a href="#" class="feedback03">팔로우</a>
+                  <div class="reply">
+                    <div class="padding">
+                      <div class="box2">
+                        <img class="profile" src="images/Friends8.jpg">
+                      </div>
+                      <div class="feedback02 padding02">
+                        <a href="#"> 4353kmg </a> 
+                        <span>ㅋㅋㅋ귀엽네 <br><br></span>
+                        <div> 
+                          <a href="#"> 3주 </a> 
+                          <a href="#">답글 달기</a> 
+                        </div>
+                      </div>
+                    </div>
+                    <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
                   </div>
+                  <div class="reply">
+                    <div class="padding">
+                      <div class="box2">
+                        <img class="profile" src="images/k1.jpg">
+                      </div>
+                      <div class="feedback02 padding02">
+                        <a href="#"> inchi5252 </a> 
+                        <span>오늘 날씨 완전 좋습니다🤣👍 <br><br></span>
+                        <div> 
+                          <a href="#"> 3주 </a> 
+                          <a href="#"> 답글 달기 </a> 
+                        </div>
+                      </div>
+                    </div>
+                    <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
                 </div>
-                <div>
-                  <div> 
-                    소개·도움말·홍보 센터·API채용 정보·<br>
-                    개인정보처리방침·약관·위치·인기 계정·해시태그·언어
-                    <br>
-                    <br>
-                    © 2021 INSTAGRAM FROM META 
-                  </div> 
+                <div id="pack">
+                  <div class="reply">
+                    <div>
+                      <span class="material-icons-outlined" data-state="false" onclick="like(this)"> favorite_border </span>
+                      <span class="material-icons-outlined"> mode_comment </span>
+                      <span class="material-icons-outlined"> send </span>
+                    </div>
+                    <div>
+                      <span class="material-icons-outlined" data-state="false" onclick="book(this)"> bookmark_border </span>     
+                    </div>
+                  </div>
+                  <div>
+                    <a href="#" class="feedback02"> 좋아요 246개<br></a>
+                    <a href="#"> 12월 8일 </a>
+                  </div>
                 </div>    
+                <div>
+                  <input type="text" class="form-control feed_box2" placeholder="🙂 &nbsp;댓글 달기...">
+                </div>
+              </div>
+            </div>  
+          </div>
+          <div class="dim"></div>
+            <div class="follow3"> 
+              <span><a href="#" class="feedback02"> ta_mida </a>나도 만들어줘ㅠㅠ</span> 
+              <span class="heart" data-state="false" onclick="love(this)"> ♡ </span> 
+            </div>
+            <div class="follow3"> 
+              <span><a href="#" class="feedback02"> 4353kmg </a>ㅋㅋㅋ귀엽네</span>
+              <span class="heart" data-state="false" onclick="love(this)"> ♡ </span>
+            </div>
+            <div class="follow4"> <br>3주 전 </div>
+            <div>
+                <input type="text" class="form-control feed_box2" placeholder="🙂 &nbsp;댓글 달기...">
             </div>
           </div>
         </div>
-        <!-- Optional JavaScript; choose one of the two! -->
-        <!-- Option 1: Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
-
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <!--
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-        -->
-    </body>
-
+        <div class="story"></div>
+      </div>
+      <div id="right_chucheon"> <!-- 오른쪽 화면(고정된) -->
+        <div>
+          <div>
+            <div class="box">
+              <img class="profile" src="images/myDog.jpg">
+            </div>
+            <div class="follow">
+              <a href="#" class="feedback02"> c__ppg</a>
+              <a href="#" class="feedback"><br>서울 </a>
+            </div>
+          </div>
+          <div class="reply">  
+            <div class="feedback03"> 회원님을 위한 추천 </div>
+              <div> 
+                <a class="feedback02" href="#"> 모두보기 </a> 
+              </div>
+            </div>    
+            <div class="chucheon"> 
+              <div>
+                <div class="box2">
+                  <img class="profile" src="./images/Friends1.jpg" />
+                </div>
+                <div class="follow">
+                  <a href='#' class="feedback02"> pwh1112 </a> 
+                  <div> 인기 </div>
+                </div>
+              </div>
+                <a href="#" class="feedback03"> 팔로우 </a>
+            </div>
+            <div class="chucheon">
+              <div>
+                <div class="box2">
+                  <img class="profile" src="images/Friends2.jpg" />
+                </div>
+                <div class="follow">
+                  <a href='#' class="feedback02"> songsuh </a>
+                  <div> 인기 </div>
+                </div>
+              </div>
+              <a href="#" class="feedback03">팔로우</a>
+            </div>
+            <div class="chucheon">
+            <div>
+              <div class="box2">
+                <img class="profile" src="images/Friends3.jpg">
+              </div>
+              <div class="follow">
+                <a href='#' class="feedback02"> cch_009 </a>
+                <div>__mwa2님 외 31명이 팔로우 합니다</div>
+              </div>
+            </div>
+            <a href="#" class="feedback03">팔로우</a>
+          </div>
+          <div class="chucheon">
+            <div>
+              <div class="box2">
+                <img class="profile" src="images/Friends4.jpg">
+              </div>
+              <div class="follow">
+                <a href='#' class="feedback02"> lhsurur </a>                            
+                <div> qwe223님 외 19명이 팔로우 합니다 </div>
+              </div>
+            </div>
+            <a href="#" class="feedback03">팔로우</a>
+          </div>
+          <div class="chucheon">
+            <div>
+              <div class="box2">
+                <img class="profile" src="images/Friends5.jpg">
+              </div>
+              <div class="follow">
+                <a href=# class="feedback02"> jmwmt0602 </a>
+                <div> 회원님을 팔로우 합니다 </div>
+              </div>
+            </div>
+            <div>
+              <a href="#" class="feedback03">팔로우</a>
+            </div>
+          </div>
+          <div>
+            <div> 
+              소개·도움말·홍보 센터·API채용 정보·<br>
+              개인정보처리방침·약관·위치·인기 계정·해시태그·언어
+              <br>
+              <br>
+              © 2021 INSTAGRAM FROM META 
+            </div> 
+          </div>    
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous">
+    </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
 </html>
