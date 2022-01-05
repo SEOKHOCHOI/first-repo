@@ -21,6 +21,16 @@ function closePopup(){
 document.getElementById('pop1').style.display='none';
 }
 
+function popup02(){
+  let pop = document.getElementById('pop02');
+  pop.style.display='flex';
+  }
+  
+  function closePopup02(){
+  document.getElementById('pop02').style.display='none';
+  }
+  
+
 function like(elem){
   let state = JSON.parse(elem.dataset.state);
   elem.dataset.state=!state;
