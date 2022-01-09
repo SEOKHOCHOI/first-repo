@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script> <!-- 실제 배포시 development를 production으로 -->
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    </head>
+    <body>
+        <div id="root"></div> <!-- <div id = "root"><button>Like</button></div> 라는 결과나와. -->
+        <script>
+            const e = React.createElement;
+
+            class LikeButton extends React.Component {
+                constructor(props) {
+                    super(props);
+                    this.state = {
+                        liked: false,
+                    };
+                }
+ 
+                render() {
+                    return e('button',{ onClick: () => { this.setState({ liked: true }) }, type: 'submit' }, 
+                    this.state.liked === true ? 'Liked' : 'Like',
+                    ); // <button onclick= "() => { console.log('clicked') }" type= "submit">Like</button>만들겠다 라는 뜻. 만든다X
+                       // $('button').text('Liked');  기존엔 이렇게 직접 바꿔줬어야함.
+                }
+            }
+        </script>
+        <script>
+            ReactDOM.render(e(LikeButton), document.querySelector('#root'));// 대소문자 주의
+        </script>
+    </body>
+</html>
